@@ -1,0 +1,7 @@
+﻿result_key,item_index_zero_based,score_final_candidate,score_final_source_path
+MAIN|HAMD-17|PDCH标签99人|Qwen3.7-Max|不思考|C07|065A,3,1,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\qwen3.7-max\PDCH_HAMD_100人\data\output\qwen3.7-max\07_全文_规整_评分_不清洗\065A.json
+MAIN|HAMD-17|PDCH标签99人|Qwen3.7-Max|不思考|C15|026B,3,2,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\qwen3.7-max\PDCH_HAMD_100人\data\output\qwen3.7-max\15_事件序列_规整_评分_不清洗\026B.json
+MAIN|HAMD-17|PDCH共同24人验证|Qwen3.7-Max|不思考|C04|069A,5,0,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\qwen3.7-max\PDCH_HAMD_24人\data\output\qwen3.7-max\04_全文_不规整_评分_清洗\069A.json
+MAIN|HAMD-17|PDCH共同24人验证|Qwen3.7-Max|不思考|C07|004A,6,0,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\qwen3.7-max\PDCH_HAMD_24人\data\output\qwen3.7-max\07_全文_规整_评分_不清洗\004A.json
+MAIN|HAMD-17|PDCH共同24人验证|Qwen3.7-Max|不思考|C15|045A,4,1,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\qwen3.7-max\PDCH_HAMD_24人\data\output\qwen3.7-max\15_事件序列_规整_评分_不清洗\045A.json
+MAIN|HAMD-17|PDCH共同24人验证|Qwen3.7-Max|不思考|C16|026A,5,0,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\qwen3.7-max\PDCH_HAMD_24人\data\output\qwen3.7-max\16_事件序列_规整_评分_清洗\026A.json

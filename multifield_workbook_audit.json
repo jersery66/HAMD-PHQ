@@ -1,0 +1,56 @@
+{
+  "outputPath": "E:\\数据库\\代码\\Data\\PDCH\\实验\\outputs\\pdch_multifield_analysis_20260805\\PDCH_PHQ_HAMD_多字段深度分析总表_20260806_中英字段版_最终.xlsx",
+  "sheets": [
+    "01_核心结论",
+    "02_字段覆盖审计",
+    "03_基线与条件效应",
+    "04_置信度校准",
+    "05_高置信错误",
+    "06_概率置信一致性",
+    "07_理由文本特征",
+    "08_评分标准遵循",
+    "09_证据质量",
+    "10_零分理由类型",
+    "11_解释链条一致性",
+    "12_全局局部一致性",
+    "13_跨条件稳定性",
+    "14_证据重复使用",
+    "15_维度适配规律",
+    "16_被试难度",
+    "17_跨模型一致与分歧",
+    "18_总分误差抵消",
+    "19_独立事件权重",
+    "20_输出可靠性",
+    "21_方法公式字段",
+    "22_完整结果索引"
+  ],
+  "sourceAudit": {
+    "input_hashes": {
+      "outputs\\pdch_all_results_fields_20260802\\work\\subject_results.ndjson": "fe3f144682a615dc21be45e7e46ea6dbe26cdbd68283881d39e522e2e001e517",
+      "outputs\\pdch_all_results_fields_20260802\\work\\item_results.ndjson": "e9771febcf122191f3d5324e900779c97725fe2c9b47b87362e1409d40921e54",
+      "outputs\\pdch_all_results_fields_20260802\\work\\unmapped_fields.ndjson": "e1abbd70e87e79652a401afa60f536ef2068f795b328135cfec49bde4df59e9d"
+    },
+    "subject_rows_main_c01_c16": 19296,
+    "item_rows_main_c01_c16_after_dedup": 123192,
+    "item_duplicate_rows": 1,
+    "score_final_candidate_n": 6,
+    "reasoning_missing_before_reparse_n": 14,
+    "reasoning_recovered_from_variant_n": 12,
+    "reasoning_missing_after_reparse_n": 2,
+    "probability_grade_rows": 9648,
+    "raw_json_modified": false,
+    "gold_written_to_prediction": false,
+    "score9_converted_to_zero": false,
+    "generated_at": "2026-08-06T10:33:48.102212+08:00"
+  },
+  "formulaErrorScan": {
+    "status": "pass",
+    "formula_cells": 0,
+    "error_sheets": [],
+    "merged_cells": 0,
+    "worksheet_count": 22,
+    "formula_card_images": 8,
+    "bilingual_headers": true,
+    "verified_at": "2026-08-06T11:06:00+08:00"
+  }
+}

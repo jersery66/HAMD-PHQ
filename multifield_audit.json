@@ -1,0 +1,19 @@
+{
+  "input_hashes": {
+    "outputs\\pdch_all_results_fields_20260802\\work\\subject_results.ndjson": "fe3f144682a615dc21be45e7e46ea6dbe26cdbd68283881d39e522e2e001e517",
+    "outputs\\pdch_all_results_fields_20260802\\work\\item_results.ndjson": "e9771febcf122191f3d5324e900779c97725fe2c9b47b87362e1409d40921e54",
+    "outputs\\pdch_all_results_fields_20260802\\work\\unmapped_fields.ndjson": "e1abbd70e87e79652a401afa60f536ef2068f795b328135cfec49bde4df59e9d"
+  },
+  "subject_rows_main_c01_c16": 19296,
+  "item_rows_main_c01_c16_after_dedup": 123192,
+  "item_duplicate_rows": 1,
+  "score_final_candidate_n": 6,
+  "reasoning_missing_before_reparse_n": 14,
+  "reasoning_recovered_from_variant_n": 12,
+  "reasoning_missing_after_reparse_n": 2,
+  "probability_grade_rows": 9648,
+  "raw_json_modified": false,
+  "gold_written_to_prediction": false,
+  "score9_converted_to_zero": false,
+  "generated_at": "2026-08-06T10:33:48.102212+08:00"
+}

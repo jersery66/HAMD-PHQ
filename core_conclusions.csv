@@ -1,0 +1,8 @@
+﻿结论主题,观察结果,如何理解,证据文件,结论层级
+数据冻结,正式主分析被试级19296条，维度级去重后123192条,所有后续分析均来自不可变原始结果的派生表,multifield_audit.json,数据审计
+字段修复,原始缺理由14条，恢复12条，修复后仍缺2条,只重解析模型原响应字段，不使用金标准填补,field_coverage.csv; score_final_candidate_audit.csv,数据审计
+证据完整性,阳性维度评分的证据提供率接近100%；总体证据和0分证据需分开解释,空证据不能统一等同于模型失败，需区分明确否认和未提及,evidence_summary.csv; zero_reason_types.csv,机制分析
+置信度,置信度字段完整，但不同模型的取值离散度和高置信错误不同,不能只比较平均置信度，应同时看校准、熵、概率间隔和高置信错误,confidence_summary.csv; probability_summary.csv; high_confidence_error_summary.csv,机制分析
+处理条件机制,条件稳定性表同时记录评分变化、证据Jaccard、理由Jaccard和置信度变化,可区分文本处理改变了证据选择、理由表达还是评分映射,condition_stability_summary.csv,条件效应
+总分解释,总分误差与逐维度绝对误差分别计算，并报告抵消比例,总分改善不能自动解释为每个维度都改善,cancellation_summary.csv,敏感性分析
+独立事件,事件权重、零权重比例和有效事件数单独列为探索性结果,C17-C24不进入C01-C16主模型排名,event_weight_grouped.csv,探索性
