@@ -9,6 +9,23 @@
 
 ## 覆盖范围
 
+## 维度级明细（本次补充）
+
+此前的 `PDCH_PHQ_HAMD_all_results_all_fields_20260802.xlsx` 是“被试×模型×条件”的总览表，维度内容主要打包在 JSON 列中，确实不便于直接查看。本次补充了可直接筛选的维度级工作簿：
+
+| 文件 | 维度明细行 | 内容 |
+|---|---:|---|
+| `PDCH_PHQ_dimension_level_all_fields_20260806.xlsx` | 36,288 | PHQ-8，DeepSeek、GLM、Qwen，全部评分条件 |
+| `PDCH_HAMD_GLM-5.2_dimension_level_all_fields_20260806.xlsx` | 19,992 | HAMD-17，GLM-5.2 |
+| `PDCH_HAMD_Kimi-K2.6_dimension_level_all_fields_20260806.xlsx` | 33,457 | HAMD-17，Kimi-K2.6 |
+| `PDCH_HAMD_Qwen3.7-Max_dimension_level_all_fields_20260806.xlsx` | 33,456 | HAMD-17，Qwen3.7-Max |
+
+每个明细工作簿的 `03A_维度级完整字段` 都是一行一个“被试×模型×模式×条件×维度”，直接包含：
+
+`维度ID`、`模型维度名称`、`模型维度得分`、`真实维度得分`、`维度置信度`、`维度理由依据`、`维度评分理由`、`是否触发`、`是否为9值无法评估`、`金标准维度名称`、`维度归类`、`维度最高分`、有向/绝对/标准化误差、条件名称、基线标记、被试ID、结果唯一键和源 JSON 路径。
+
+因此现在可以直接按 `条件`、`模型`、`被试ID` 或 `维度ID` 排查每个维度的评分、置信度、证据和理由，不需要手动展开 JSON。HAMD 明细按模型拆成 3 个文件，是为了避免单个超大工作簿在 Excel 导出时内存溢出；字段结构完全一致。
+
 | 内容 | 数量 | 说明 |
 |---|---:|---|
 | C01–C16 主分析被试×条件结果 | 19,296 | 当前主分析源 JSON，已解析并进入完整字段底表 |
@@ -45,3 +62,7 @@
 |---|---|
 | `PDCH_PHQ_HAMD_multifield_analysis_bilingual_20260806.xlsx` | `5355b4a14ebe71e3021d7a3b4a6847f75d8716caad0f6a659a042d2cf472b3dd` |
 | `PDCH_PHQ_HAMD_all_results_all_fields_20260802.xlsx` | `e50765e4b3fe51eb76b4240211e516f0fd01e56b1c227ad7bd37cf514dc41447` |
+| `PDCH_PHQ_dimension_level_all_fields_20260806.xlsx` | `3ee06c01113dee71e1b6f2a38fb924bc5f67390403e88ed40ba38219d1a4aa4c` |
+| `PDCH_HAMD_GLM-5.2_dimension_level_all_fields_20260806.xlsx` | `2aa072c661867f6d9af192487427af779fd9fc15110e40049b69c18fa564a837` |
+| `PDCH_HAMD_Kimi-K2.6_dimension_level_all_fields_20260806.xlsx` | `819c09a31215fd3de330a65828fde131d7837e87825b34ab481b90f1718eadb4` |
+| `PDCH_HAMD_Qwen3.7-Max_dimension_level_all_fields_20260806.xlsx` | `e8945badf118c0e4d706d199e3cb26d22b055c8c94f5c90fc5f36217ad28e42` |
