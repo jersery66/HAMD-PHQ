@@ -854,6 +854,7 @@ def main() -> int:
                     "exact_sha256": exact_hash,
                     "datasets": set(),
                     "conditions": set(),
+                    "scopes": set(),
                     "prompts": set(),
                     "prompt": prompt,
                     "prompt_source": source.get("path", ""),
@@ -862,8 +863,33 @@ def main() -> int:
             pool = template_pool[key]
             pool["datasets"].add(ds)
             pool["conditions"].add(cid)
+            pool["scopes"].add("condition")
             pool["prompts"].add(exact_hash)
             templates_by_ds_cond[(ds, cid)] = pool
+        # The three non-conditional preprocessing prompts are fixed prompts
+        # too.  They are kept in the template inventory even though the
+        # result workbook has no one-row-per-preprocessing-call log.
+        for front_name, prompt in source.get("front", {}).items():
+            exact_hash = sha256_text(prompt)
+            normalized_hash = sha256_text(normalize_prompt(prompt))
+            pool = template_pool.get(normalized_hash)
+            if pool is None:
+                pool = {
+                    "normalized_sha256": normalized_hash,
+                    "exact_sha256": exact_hash,
+                    "datasets": set(),
+                    "conditions": set(),
+                    "scopes": set(),
+                    "prompts": set(),
+                    "prompt": prompt,
+                    "prompt_source": source.get("path", ""),
+                    "source_status": source.get("status", ""),
+                }
+                template_pool[normalized_hash] = pool
+            pool["datasets"].add(ds)
+            pool["conditions"].add(f"NC_{front_name}")
+            pool["scopes"].add("nonconditional")
+            pool["prompts"].add(exact_hash)
     sorted_pools = sorted(template_pool.values(), key=lambda x: (x["normalized_sha256"], x["exact_sha256"]))
     for i, pool in enumerate(sorted_pools, 1):
         pool["prompt_template_id"] = f"PROMPT_{i:06d}"
@@ -903,10 +929,13 @@ def main() -> int:
             "normalized_sha256": pool["normalized_sha256"],
             "dataset": ";".join(sorted(pool["datasets"])),
             "scale": ";".join(sorted(pool["datasets"])),
-            "model": "shared across observed models" if len(pool["models"]) > 1 else ";".join(sorted(pool["models"])),
-            "mode": "shared across observed modes" if len(pool["modes"]) > 1 else ";".join(sorted(pool["modes"])),
-            "condition": ";".join(f"C{x:02d}" for x in sorted(pool["conditions"])),
-            "pathway": "itemwise_score/direct_grade; see condition dictionary",
+            "model": "shared front prompt" if not pool["models"] else "shared across observed models" if len(pool["models"]) > 1 else ";".join(sorted(pool["models"])),
+            "mode": "shared front prompt" if not pool["modes"] else "shared across observed modes" if len(pool["modes"]) > 1 else ";".join(sorted(pool["modes"])),
+            "condition": ";".join(
+                f"C{x:02d}" if isinstance(x, int) else str(x)
+                for x in sorted(pool["conditions"], key=str)
+            ),
+            "pathway": "nonconditional" if pool["scopes"] == {"nonconditional"} else "itemwise_score/direct_grade; see condition dictionary",
             **components,
             "full_static_prompt": prompt,
             "static_character_count": len(prompt),
@@ -930,7 +959,7 @@ def main() -> int:
             "source_sheet": "02_统一结果索引",
             "prompt_source": pool["prompt_source"],
             "extraction_status": pool["source_status"],
-            "notes": "仅固定system prompt；被试文本、事件、路径和输出未纳入hash。normalized hash只做CRLF/行尾空格/连续空行规范化。",
+            "notes": "仅固定system prompt；被试文本、事件、路径和输出未纳入hash。normalized hash只做CRLF/行尾空格/连续空行规范化。非条件提示词没有在结果工作簿中逐次记录，occurrence_n/subject_n为0不代表未运行。" if pool["scopes"] == {"nonconditional"} else "仅固定system prompt；被试文本、事件、路径和输出未纳入hash。normalized hash只做CRLF/行尾空格/连续空行规范化。",
         }
         template_rows.append(row)
 
@@ -964,6 +993,20 @@ def main() -> int:
             continue
         template = next(x for x in template_rows if x["prompt_template_id"] == pool["prompt_template_id"])
         feature_rows.append(feature_row(ctx, template, template_features[pool["prompt_template_id"]]))
+    for ds, source in prompt_sources.items():
+        for front_index, (front_name, _prompt) in enumerate(source.get("front", {}).items(), 1):
+            prompt_hash = sha256_text(normalize_prompt(source["front"][front_name]))
+            pool = template_pool.get(prompt_hash)
+            if not pool:
+                continue
+            template = next(x for x in template_rows if x["prompt_template_id"] == pool["prompt_template_id"])
+            front_ctx = {
+                "dataset": ds,
+                "model": "shared front prompt",
+                "mode": "shared",
+                "condition": f"NC{front_index:02d}_{front_name}",
+            }
+            feature_rows.append(feature_row(front_ctx, template, template_features[pool["prompt_template_id"]]))
 
     pair_rows: list[dict[str, Any]] = []
     for ctx in sorted(contexts.values(), key=lambda x: (x["dataset"], x["model"], x["mode"])):

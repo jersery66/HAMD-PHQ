@@ -1,6 +1,6 @@
 ﻿dataset,model,mode,pathway,baseline_condition,target_condition,baseline_template_id,target_template_id,intended_manipulation,baseline_prompt_version,target_prompt_version,baseline_prompt_version_assessment,target_prompt_version_assessment,exact_same,normalized_same,changed_line_n,added_line_n,removed_line_n,added_text,removed_text,unified_diff,changed_prompt_features,unchanged_prompt_features,unexpected_changes,single_factor_status,interpretation_allowed,notes
-HAMD-17,GLM-5.2,不思考,评分路径,C03,C04,PROMPT_000005,PROMPT_000005,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,GLM-5.2,不思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,不思考,评分路径,C03,C04,PROMPT_000006,PROMPT_000006,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,GLM-5.2,不思考,评分路径,C03,C07,PROMPT_000006,PROMPT_000011,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -11,7 +11,7 @@ HAMD-17,GLM-5.2,不思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规�
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,GLM-5.2,不思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,不思考,评分路径,C03,C11,PROMPT_000006,PROMPT_000005,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -22,8 +22,8 @@ HAMD-17,GLM-5.2,不思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事�
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,GLM-5.2,不思考,等级路径,C01,C02,PROMPT_000003,PROMPT_000003,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,GLM-5.2,不思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,不思考,等级路径,C01,C02,PROMPT_000004,PROMPT_000004,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,GLM-5.2,不思考,等级路径,C01,C05,PROMPT_000004,PROMPT_000018,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -34,7 +34,7 @@ HAMD-17,GLM-5.2,不思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规�
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,GLM-5.2,不思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,不思考,等级路径,C01,C09,PROMPT_000004,PROMPT_000028,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -45,8 +45,8 @@ HAMD-17,GLM-5.2,不思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事�
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,GLM-5.2,思考,评分路径,C03,C04,PROMPT_000005,PROMPT_000005,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,GLM-5.2,思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,思考,评分路径,C03,C04,PROMPT_000006,PROMPT_000006,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,GLM-5.2,思考,评分路径,C03,C07,PROMPT_000006,PROMPT_000011,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -57,7 +57,7 @@ HAMD-17,GLM-5.2,思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整/�
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,GLM-5.2,思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,思考,评分路径,C03,C11,PROMPT_000006,PROMPT_000005,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -68,8 +68,8 @@ HAMD-17,GLM-5.2,思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件�
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,GLM-5.2,思考,等级路径,C01,C02,PROMPT_000003,PROMPT_000003,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,GLM-5.2,思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,思考,等级路径,C01,C02,PROMPT_000004,PROMPT_000004,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,GLM-5.2,思考,等级路径,C01,C05,PROMPT_000004,PROMPT_000018,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -80,7 +80,7 @@ HAMD-17,GLM-5.2,思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整/�
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,GLM-5.2,思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,GLM-5.2,思考,等级路径,C01,C09,PROMPT_000004,PROMPT_000028,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -91,8 +91,8 @@ HAMD-17,GLM-5.2,思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件�
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C04,PROMPT_000005,PROMPT_000005,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C04,PROMPT_000006,PROMPT_000006,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C07,PROMPT_000006,PROMPT_000011,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -103,7 +103,7 @@ HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25,multiple_versions_in_context,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C11,PROMPT_000006,PROMPT_000005,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25,multiple_versions_in_context,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -114,8 +114,8 @@ HAMD-17,Kimi-K2.6,不思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change; 运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
-HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C02,PROMPT_000003,PROMPT_000003,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C02,PROMPT_000004,PROMPT_000004,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C05,PROMPT_000004,PROMPT_000018,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -126,7 +126,7 @@ HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25,multiple_versions_in_context,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C09,PROMPT_000004,PROMPT_000028,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25,multiple_versions_in_context,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -137,8 +137,8 @@ HAMD-17,Kimi-K2.6,不思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
-HAMD-17,Kimi-K2.6,思考,评分路径,C03,C04,PROMPT_000005,PROMPT_000005,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Kimi-K2.6,思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,思考,评分路径,C03,C04,PROMPT_000006,PROMPT_000006,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Kimi-K2.6,思考,评分路径,C03,C07,PROMPT_000006,PROMPT_000011,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -149,7 +149,7 @@ HAMD-17,Kimi-K2.6,思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,Kimi-K2.6,思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,思考,评分路径,C03,C11,PROMPT_000006,PROMPT_000005,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -160,8 +160,8 @@ HAMD-17,Kimi-K2.6,思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,Kimi-K2.6,思考,等级路径,C01,C02,PROMPT_000003,PROMPT_000003,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Kimi-K2.6,思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,思考,等级路径,C01,C02,PROMPT_000004,PROMPT_000004,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Kimi-K2.6,思考,等级路径,C01,C05,PROMPT_000004,PROMPT_000018,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -172,7 +172,7 @@ HAMD-17,Kimi-K2.6,思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,Kimi-K2.6,思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Kimi-K2.6,思考,等级路径,C01,C09,PROMPT_000004,PROMPT_000028,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -183,54 +183,8 @@ HAMD-17,Kimi-K2.6,思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,Qwen3.7-Max,不思考,评分路径,C03,C04,PROMPT_000005,PROMPT_000005,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Qwen3.7-Max,不思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
-+++ target
-@@ -1,7 +1,7 @@
- # Role
- 你是一名具备丰富临床经验的心理学家和精神科评估专家。
- # Instruction
--以下输入文本为【临床访谈文本】。
-+以下输入文本为【临床记录文本】。
- 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
- 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
- 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,Qwen3.7-Max,不思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
-+++ target
-@@ -1,7 +1,7 @@
- # Role
- 你是一名具备丰富临床经验的心理学家和精神科评估专家。
- # Instruction
--以下输入文本为【临床访谈文本】。
-+以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
- 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
- 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
- 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,Qwen3.7-Max,不思考,等级路径,C01,C02,PROMPT_000003,PROMPT_000003,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Qwen3.7-Max,不思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
-+++ target
-@@ -1,7 +1,7 @@
- # Role
- 你是一名具备丰富临床经验的心理学家和精神科评估专家。
- # Instruction
--以下输入文本为【临床访谈文本】。
-+以下输入文本为【临床记录文本】。
- # Step
- 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
- 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,Qwen3.7-Max,不思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
-+++ target
-@@ -1,7 +1,7 @@
- # Role
- 你是一名具备丰富临床经验的心理学家和精神科评估专家。
- # Instruction
--以下输入文本为【临床访谈文本】。
-+以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
- # Step
- 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
- 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C04,PROMPT_000005,PROMPT_000005,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Qwen3.7-Max,不思考,评分路径,C03,C04,PROMPT_000006,PROMPT_000006,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Qwen3.7-Max,不思考,评分路径,C03,C07,PROMPT_000006,PROMPT_000011,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -241,7 +195,7 @@ HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C07,PROMPT_000005,PROMPT_000009,规�
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Qwen3.7-Max,不思考,评分路径,C03,C11,PROMPT_000006,PROMPT_000005,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -252,8 +206,8 @@ HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C11,PROMPT_000005,PROMPT_000004,事�
  你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
  以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
  大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C02,PROMPT_000003,PROMPT_000003,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Qwen3.7-Max,不思考,等级路径,C01,C02,PROMPT_000004,PROMPT_000004,清洗,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Qwen3.7-Max,不思考,等级路径,C01,C05,PROMPT_000004,PROMPT_000018,规整/规范化,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -264,7 +218,7 @@ HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C05,PROMPT_000003,PROMPT_000015,规�
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
+HAMD-17,Qwen3.7-Max,不思考,等级路径,C01,C09,PROMPT_000004,PROMPT_000028,事件序列输入范围,word-2026-06-25; 正式使用提示词-2026-06-25,word-2026-06-25; 正式使用提示词-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -275,8 +229,54 @@ HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C09,PROMPT_000003,PROMPT_000022,事�
  # Step
  1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
  2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
-PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C04,PROMPT_000016,PROMPT_000016,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C07,PROMPT_000016,PROMPT_000012,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
+HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C04,PROMPT_000006,PROMPT_000006,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C07,PROMPT_000006,PROMPT_000011,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床记录文本】。
+ 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+ 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+ 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
+HAMD-17,Qwen3.7-Max,思考,评分路径,C03,C11,PROMPT_000006,PROMPT_000005,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+ 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+ 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+ 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
+HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C02,PROMPT_000004,PROMPT_000004,清洗,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C05,PROMPT_000004,PROMPT_000018,规整/规范化,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床记录文本】。
+ # Step
+ 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+ 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
+HAMD-17,Qwen3.7-Max,思考,等级路径,C01,C09,PROMPT_000004,PROMPT_000028,事件序列输入范围,word-2026-06-25,word-2026-06-25,candidate_source_version,candidate_source_version,no,no,8,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+ # Step
+ 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+ 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",temporal_constraint,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定提示词中仅检测到一个理论特征改变；仍需人工抽查差分文本。
+PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C04,PROMPT_000019,PROMPT_000019,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C07,PROMPT_000019,PROMPT_000014,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -287,7 +287,7 @@ PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C07,PROMPT_000016,PROMPT_000012,�
  Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
  The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
  Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C11,PROMPT_000016,PROMPT_000001,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C11,PROMPT_000019,PROMPT_000002,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -298,8 +298,8 @@ PHQ-8,DeepSeek-V4-Pro,思考,评分路径,C03,C11,PROMPT_000016,PROMPT_000001,�
  Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
  The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
  Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C02,PROMPT_000007,PROMPT_000007,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
-PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C05,PROMPT_000007,PROMPT_000013,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C02,PROMPT_000008,PROMPT_000008,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
+PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C05,PROMPT_000008,PROMPT_000016,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -310,7 +310,7 @@ PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C05,PROMPT_000007,PROMPT_000013,�
  Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
  # Step
  1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C09,PROMPT_000007,PROMPT_000010,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C09,PROMPT_000008,PROMPT_000012,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -321,8 +321,8 @@ PHQ-8,DeepSeek-V4-Pro,思考,等级路径,C01,C09,PROMPT_000007,PROMPT_000010,�
  Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
  # Step
  1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change; 运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
-PHQ-8,GLM-5.2,思考,评分路径,C03,C04,PROMPT_000016,PROMPT_000016,清洗,PHQ8-word-2026-06-27; word-2026-06-25,PHQ8-word-2026-06-27; word-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-PHQ-8,GLM-5.2,思考,评分路径,C03,C07,PROMPT_000016,PROMPT_000012,规整/规范化,PHQ8-word-2026-06-27; word-2026-06-25,PHQ8-word-2026-06-27,multiple_versions_in_context,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,GLM-5.2,思考,评分路径,C03,C04,PROMPT_000019,PROMPT_000019,清洗,PHQ8-word-2026-06-27; word-2026-06-25,PHQ8-word-2026-06-27; word-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+PHQ-8,GLM-5.2,思考,评分路径,C03,C07,PROMPT_000019,PROMPT_000014,规整/规范化,PHQ8-word-2026-06-27; word-2026-06-25,PHQ8-word-2026-06-27,multiple_versions_in_context,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -333,7 +333,7 @@ PHQ-8,GLM-5.2,思考,评分路径,C03,C07,PROMPT_000016,PROMPT_000012,规整/规
  Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
  The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
  Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change; 运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
-PHQ-8,GLM-5.2,思考,评分路径,C03,C11,PROMPT_000016,PROMPT_000001,事件序列输入范围,PHQ8-word-2026-06-27; word-2026-06-25,PHQ8-word-2026-06-27; word-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,GLM-5.2,思考,评分路径,C03,C11,PROMPT_000019,PROMPT_000002,事件序列输入范围,PHQ8-word-2026-06-27; word-2026-06-25,PHQ8-word-2026-06-27; word-2026-06-25,multiple_versions_in_context,multiple_versions_in_context,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -344,8 +344,8 @@ PHQ-8,GLM-5.2,思考,评分路径,C03,C11,PROMPT_000016,PROMPT_000001,事件序�
  Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
  The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
  Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,GLM-5.2,思考,等级路径,C01,C02,PROMPT_000007,PROMPT_000007,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
-PHQ-8,GLM-5.2,思考,等级路径,C01,C05,PROMPT_000007,PROMPT_000013,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,GLM-5.2,思考,等级路径,C01,C02,PROMPT_000008,PROMPT_000008,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
+PHQ-8,GLM-5.2,思考,等级路径,C01,C05,PROMPT_000008,PROMPT_000016,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -356,7 +356,7 @@ PHQ-8,GLM-5.2,思考,等级路径,C01,C05,PROMPT_000007,PROMPT_000013,规整/规
  Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
  # Step
  1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,GLM-5.2,思考,等级路径,C01,C09,PROMPT_000007,PROMPT_000010,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,GLM-5.2,思考,等级路径,C01,C09,PROMPT_000008,PROMPT_000012,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -367,8 +367,8 @@ PHQ-8,GLM-5.2,思考,等级路径,C01,C09,PROMPT_000007,PROMPT_000010,事件序�
  Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
  # Step
  1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C04,PROMPT_000016,PROMPT_000016,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C07,PROMPT_000016,PROMPT_000012,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C04,PROMPT_000019,PROMPT_000019,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C07,PROMPT_000019,PROMPT_000014,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -379,7 +379,7 @@ PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C07,PROMPT_000016,PROMPT_000012,规整
  Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
  The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
  Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C11,PROMPT_000016,PROMPT_000001,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C11,PROMPT_000019,PROMPT_000002,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27; word-2026-06-25,candidate_source_version,multiple_versions_in_context,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -390,8 +390,8 @@ PHQ-8,Qwen3.7-Max,思考,评分路径,C03,C11,PROMPT_000016,PROMPT_000001,事件
  Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
  The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
  Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change; 运行元数据prompt_version不同或缺失，DOCX静态差分不足以证明实际请求文本相同,uncertain,no_clean_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。；运行元数据版本未能在该pair内保持一致，需人工核对实际请求记录。
-PHQ-8,Qwen3.7-Max,思考,等级路径,C01,C02,PROMPT_000007,PROMPT_000007,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
-PHQ-8,Qwen3.7-Max,思考,等级路径,C01,C05,PROMPT_000007,PROMPT_000013,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,Qwen3.7-Max,思考,等级路径,C01,C02,PROMPT_000008,PROMPT_000008,清洗,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,yes,yes,0,0,0,,,,,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,,clean_single_factor,single_factor_interpretation,固定system prompt完全相同；预期操纵发生在运行时输入条件，而非提示词文字。
+PHQ-8,Qwen3.7-Max,思考,等级路径,C01,C05,PROMPT_000008,PROMPT_000016,规整/规范化,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role
@@ -402,7 +402,7 @@ PHQ-8,Qwen3.7-Max,思考,等级路径,C01,C05,PROMPT_000007,PROMPT_000013,规整
  Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
  # Step
  1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.",,evidence_requirement;evidence_quote_required;explicit_scoring_anchors;negation_handling;missing_information_rule;temporal_constraint;frequency_requirement;inference_permission;speaker_restriction;abstention_permission;output_rigidity;itemwise_reasoning_requirement;aggregation_instruction;uncertainty_requirement,feature coding did not detect semantic change,mostly_single_factor,single_factor_interpretation,仅出现未被特征编码捕捉的文字差异；需要人工复核。
-PHQ-8,Qwen3.7-Max,思考,等级路径,C01,C09,PROMPT_000007,PROMPT_000010,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
+PHQ-8,Qwen3.7-Max,思考,等级路径,C01,C09,PROMPT_000008,PROMPT_000012,事件序列输入范围,PHQ8-word-2026-06-27,PHQ8-word-2026-06-27,candidate_source_version,candidate_source_version,no,no,8,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
 +++ target
 @@ -1,7 +1,7 @@
  # Role

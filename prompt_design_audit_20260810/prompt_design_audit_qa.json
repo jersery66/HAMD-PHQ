@@ -20,13 +20,13 @@
       "PHQ-8|GLM-5.2|思考": 6,
       "PHQ-8|Qwen3.7-Max|思考": 6
     },
-    "feature_review_n": 144,
+    "feature_review_n": 152,
     "feature_review_covered_by_manual_review": true,
     "frozen_input_has_no_outcome_headers": true,
     "frozen_bad_headers": [],
     "same_condition_multiple_templates": {},
     "xlsx_exists": true,
-    "xlsx_sha256": "8fcd9cbdfba7d3de54fa45ba1eb797e02a9fa1f1504fe2d221a8ec7778c83019",
+    "xlsx_sha256": "b857f1be4fdb09f3525335edd3e83f6c537b1201a96bc18079baa8e5fd2f1976",
     "xlsx_zip_valid": true,
     "xlsx_sheet_names": [
       "01_核心说明",

@@ -52,14 +52,14 @@
       "docx_sha256": "a3d2fe4ca94b1d34ac771141b2527191cdd82dc0352b04d760df54846b843f05"
     }
   },
-  "unique_prompt_templates": 22,
+  "unique_prompt_templates": 28,
   "csv_rows": {
     "field_inventory": 186,
-    "templates": 22,
+    "templates": 28,
     "condition_dictionary": 24,
     "pairwise_diff": 54,
-    "feature_coding": 168,
-    "manual_review": 153,
+    "feature_coding": 174,
+    "manual_review": 161,
     "manipulation_audit": 54,
     "frozen_input": 168,
     "data_quality": 5,

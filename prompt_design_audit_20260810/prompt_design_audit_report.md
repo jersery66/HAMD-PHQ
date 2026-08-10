@@ -10,7 +10,7 @@
 ## 2. C01-C16 模板稳定性
 
 - 9个观察上下文均有完整 C01-C16（每个16行）；pair审计共 54 行，即每个上下文6组预设pair。
-- 唯一静态模板 22 个；同一 dataset×condition 未发现多个 template ID。
+- 唯一静态模板 28 个；同一 dataset×condition 未发现多个 template ID。
 - HAMD metadata 中观察到的 prompt_version：word-2026-06-25; 正式使用提示词-2026-06-25。
 - PHQ metadata 中观察到的 prompt_version：PHQ8-word-2026-06-27; word-2026-06-25。
 - 版本标签不是prompt hash；同一量表出现多个版本时只记录为版本不确定/需人工核对，不能直接宣称不同模型或思考模式使用完全相同的实际请求文本。
@@ -36,13 +36,13 @@
 
 ## 4. 冻结的提示词特征
 
-- 05_prompt_feature_coding.csv：168 个上下文行；每个特征都带 value、原文证据、自动置信度和复核标记。
+- 05_prompt_feature_coding.csv：174 个上下文行；每个特征都带 value、原文证据、自动置信度和复核标记。
 - 特征来自固定DOCX文本，不使用MAE、等级准确率、证据覆盖率或其他模型表现结果。
 - 复杂度字段是描述变量；estimated_token_count为字符数/4的粗略估计，不是供应商tokenizer计费量。
 
 ## 5. 人工复核
 
-- 待复核行数：153；其中低置信度/不确定特征和pair版本/单因素问题均已进入06_prompt_feature_manual_review.csv。
+- 待复核行数：161；其中低置信度/不确定特征和pair版本/单因素问题均已进入06_prompt_feature_manual_review.csv。
 - reviewer_code、reviewer_note、resolved 保持空白，不替人工作结论。
 
 ## 6. 输出与停止

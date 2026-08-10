@@ -77,7 +77,9 @@
 
 ## Prompt 特征编码
 
-`05_prompt_feature_coding.csv` 一行对应一个观察到的 `dataset × model × mode × condition × prompt_template_id`。特征只从固定 prompt 原文编码，并为每个判断保留：
+`02_unique_prompt_templates.csv` 除 C01–C24 条件模板外，还保留两个本地 DOCX 中各自的3个非条件预处理模板。非条件模板在结果工作簿中没有逐次调用日志，因此其 `occurrence_n/subject_n=0` 只表示“源结果表没有逐次记录”，不表示“提示词未运行”。
+
+`05_prompt_feature_coding.csv` 一行对应一个观察到的 `dataset × model × mode × condition × prompt_template_id`；另加 `shared front prompt` 行对两个量表的3个非条件模板进行提示词本身的编码。特征只从固定 prompt 原文编码，并为每个判断保留：
 
 `feature_value`、`feature_evidence_quote`、`auto_confidence`、`review_required`。
 
