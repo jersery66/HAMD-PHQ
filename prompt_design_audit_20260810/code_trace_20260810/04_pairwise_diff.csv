@@ -1,0 +1,139 @@
+﻿dataset,prompt_source_variant,pathway,baseline_condition,target_condition,intended_manipulation,intended_manipulation_zh,baseline_template_id,target_template_id,exact_same,normalized_same,changed_line_n,added_line_n,removed_line_n,added_text,removed_text,unified_diff,observed_changes,unexpected_changes,single_factor_status,interpretation_allowed,notes
+HAMD-17,HAMD_code,itemwise_score,C03,C04,cleaning,清洗,PROMPT_2F50ED43849A,PROMPT_2F50ED43849A,yes,yes,0,0,0,,,,prompt unchanged; manipulation is input-path only,no,clean_single_factor,single_factor_interpretation,
+HAMD-17,HAMD_code,itemwise_score,C03,C07,standardization,规整,PROMPT_2F50ED43849A,PROMPT_6D34E5D22513,no,no,2,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床记录文本】。
+ 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+ 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+ 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+HAMD-17,HAMD_code,itemwise_score,C03,C11,text_scope,文本范围,PROMPT_2F50ED43849A,PROMPT_1D8CACFEAFF2,no,no,2,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+ 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+ 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+ 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+HAMD-17,HAMD_code,direct_grade,C01,C02,cleaning,清洗,PROMPT_1A06DFC3233F,PROMPT_1A06DFC3233F,yes,yes,0,0,0,,,,prompt unchanged; manipulation is input-path only,no,clean_single_factor,single_factor_interpretation,
+HAMD-17,HAMD_code,direct_grade,C01,C05,standardization,规整,PROMPT_1A06DFC3233F,PROMPT_901D51584105,no,no,2,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床记录文本】。
+ # Step
+ 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+ 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+HAMD-17,HAMD_code,direct_grade,C01,C09,text_scope,文本范围,PROMPT_1A06DFC3233F,PROMPT_F9B6FD25D16D,no,no,2,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+ # Step
+ 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+ 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+HAMD-17,HAMD_docx,itemwise_score,C03,C04,cleaning,清洗,PROMPT_2F50ED43849A,PROMPT_2F50ED43849A,yes,yes,0,0,0,,,,prompt unchanged; manipulation is input-path only,no,clean_single_factor,single_factor_interpretation,
+HAMD-17,HAMD_docx,itemwise_score,C03,C07,standardization,规整,PROMPT_2F50ED43849A,PROMPT_6D34E5D22513,no,no,2,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床记录文本】。
+ 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+ 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+ 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+HAMD-17,HAMD_docx,itemwise_score,C03,C11,text_scope,文本范围,PROMPT_2F50ED43849A,PROMPT_1D8CACFEAFF2,no,no,2,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+ 你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+ 以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+ 大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+HAMD-17,HAMD_docx,direct_grade,C01,C02,cleaning,清洗,PROMPT_1A06DFC3233F,PROMPT_1A06DFC3233F,yes,yes,0,0,0,,,,prompt unchanged; manipulation is input-path only,no,clean_single_factor,single_factor_interpretation,
+HAMD-17,HAMD_docx,direct_grade,C01,C05,standardization,规整,PROMPT_1A06DFC3233F,PROMPT_901D51584105,no,no,2,1,1,以下输入文本为【临床记录文本】。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床记录文本】。
+ # Step
+ 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+ 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+HAMD-17,HAMD_docx,direct_grade,C01,C09,text_scope,文本范围,PROMPT_1A06DFC3233F,PROMPT_F9B6FD25D16D,no,no,2,1,1,以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。,以下输入文本为【临床访谈文本】。,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ 你是一名具备丰富临床经验的心理学家和精神科评估专家。
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+ # Step
+ 1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+ 2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+PHQ-8,PHQ_docx,itemwise_score,C03,C04,cleaning,清洗,PROMPT_9874DE0BB3FE,PROMPT_9874DE0BB3FE,yes,yes,0,0,0,,,,prompt unchanged; manipulation is input-path only,no,clean_single_factor,single_factor_interpretation,
+PHQ-8,PHQ_docx,itemwise_score,C03,C07,standardization,规整,PROMPT_9874DE0BB3FE,PROMPT_861C0F2D67EE,no,no,2,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-The following input text is a mental health interview transcript.
++The following input text is a mental health assessment narrative.
+ Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
+ The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
+ Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+PHQ-8,PHQ_docx,itemwise_score,C03,C11,text_scope,文本范围,PROMPT_9874DE0BB3FE,PROMPT_0FEEC210D42F,no,no,2,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-The following input text is a mental health interview transcript.
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
+ Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
+ The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
+ Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+PHQ-8,PHQ_docx,direct_grade,C01,C02,cleaning,清洗,PROMPT_56B1BF4822F7,PROMPT_56B1BF4822F7,yes,yes,0,0,0,,,,prompt unchanged; manipulation is input-path only,no,clean_single_factor,single_factor_interpretation,
+PHQ-8,PHQ_docx,direct_grade,C01,C05,standardization,规整,PROMPT_56B1BF4822F7,PROMPT_87439E4FE0CD,no,no,2,1,1,The following input text is a mental health assessment narrative.,The following input text is a mental health interview transcript.,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-The following input text is a mental health interview transcript.
++The following input text is a mental health assessment narrative.
+ Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+ 1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"
+PHQ-8,PHQ_docx,direct_grade,C01,C09,text_scope,文本范围,PROMPT_56B1BF4822F7,PROMPT_7219878D18E6,no,no,2,1,1,"The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.",The following input text is a mental health interview transcript.,"--- baseline
++++ target
+@@ -1,7 +1,7 @@
+ # Role
+ Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-The following input text is a mental health interview transcript.
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
+ Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+ 1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.",input descriptor wording only,no,mostly_single_factor,single_factor_interpretation,"descriptor wording is treated as input metadata, not a new psychological prompt mechanism"

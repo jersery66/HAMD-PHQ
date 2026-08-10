@@ -1,0 +1,64 @@
+{
+  "created_at": "2026-08-10T13:04:30",
+  "status": "PASS_WITH_REVIEW",
+  "source_workbook": {
+    "path": "E:\\数据库\\代码\\Data\\PDCH\\实验\\github_upload_20260806\\PDCH_PHQ_HAMD_所有模型所有条件_提示词字段完整修正版_20260807.xlsx",
+    "size_bytes": 125056024,
+    "actual_xlsx": true,
+    "sha256_before": "b3286e7dbb28dc40f218b9ae35f87da7307cf7a0b7cb7da49e042eea327284e2",
+    "sha256_after": "b3286e7dbb28dc40f218b9ae35f87da7307cf7a0b7cb7da49e042eea327284e2",
+    "unchanged": true
+  },
+  "conditions_total": 24,
+  "c01_c16_complete": true,
+  "data_path_keys": [
+    "C1",
+    "C1_clean",
+    "C2",
+    "C2_clean",
+    "C3",
+    "C3_clean",
+    "C4",
+    "C4_clean",
+    "C5",
+    "C5_clean",
+    "C6",
+    "C6_clean"
+  ],
+  "variants": {
+    "HAMD_code": {
+      "dataset": "HAMD-17",
+      "source_file": "_新结构_待启用/scripts/word_prompt_templates.py",
+      "source_file_sha256": "b0bfc5d83939b9efe0233641b0a018548432d142fa96c7bd60cc7e27bb0fbae6",
+      "condition_n": 24,
+      "extraction_status": "code_builder_extracted"
+    },
+    "HAMD_docx": {
+      "dataset": "HAMD-17",
+      "source_file": "正式使用提示词.docx",
+      "source_file_sha256": "68b20fdf093a3a060f6e2ac12b18cc5d5b90763d966880aec5a49832686a5436",
+      "condition_n": 24,
+      "extraction_status": "extracted_from_docx"
+    },
+    "PHQ_docx": {
+      "dataset": "PHQ-8",
+      "source_file": "_新结构_待启用/PHQ全量189人_调用就绪/prompts/PHQ8_prompt_set_3_nonconditional_24_conditions_English.docx",
+      "source_file_sha256": "a3d2fe4ca94b1d34ac771141b2527191cdd82dc0352b04d760df54846b843f05",
+      "condition_n": 24,
+      "extraction_status": "extracted_from_docx"
+    }
+  },
+  "run_manifest_n": 351,
+  "version_source_ambiguity_n": 3,
+  "pair_rows": 18,
+  "pair_status_counts": {
+    "clean_single_factor": 6,
+    "mostly_single_factor": 12
+  },
+  "manual_review_n": 3,
+  "frozen_input_rows": 48,
+  "frozen_input_forbidden_fields": [],
+  "source_files_missing": [],
+  "no_api_key_written": true,
+  "no_result_association_performed": true
+}

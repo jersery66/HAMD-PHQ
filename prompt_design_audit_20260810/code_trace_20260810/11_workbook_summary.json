@@ -1,0 +1,44 @@
+{
+  "path": "E:\\数据库\\代码\\Data\\PDCH\\实验\\github_upload_20260806\\PDCH_PHQ_HAMD_所有模型所有条件_提示词字段完整修正版_20260807.xlsx",
+  "size_bytes": 125056024,
+  "sha256_before": "b3286e7dbb28dc40f218b9ae35f87da7307cf7a0b7cb7da49e042eea327284e2",
+  "is_actual_xlsx": true,
+  "scan_status": "zip_xml_dimensions",
+  "sheet_n": 8,
+  "sheets": [
+    {
+      "name": "01_字段对照",
+      "dimension_ref": "A1:E18"
+    },
+    {
+      "name": "02_统一结果索引",
+      "dimension_ref": "A1:AZ65923"
+    },
+    {
+      "name": "03_等级结果明细",
+      "dimension_ref": "A1:AH9649"
+    },
+    {
+      "name": "04_评分维度明细",
+      "dimension_ref": "A1:AG123194"
+    },
+    {
+      "name": "05_独立事件明细",
+      "dimension_ref": "A1:AB46627"
+    },
+    {
+      "name": "06_覆盖审计",
+      "dimension_ref": "A1:S337"
+    },
+    {
+      "name": "07_提示词字段映射",
+      "dimension_ref": "A1:K25"
+    },
+    {
+      "name": "08_字段字典",
+      "dimension_ref": "A1:D15"
+    }
+  ],
+  "sha256_after": "b3286e7dbb28dc40f218b9ae35f87da7307cf7a0b7cb7da49e042eea327284e2",
+  "unchanged": true
+}

@@ -1,0 +1,625 @@
+﻿dataset,prompt_source_variant,condition,prompt_template_id,feature,feature_value,feature_evidence_quote,auto_confidence,review_required,coding_basis
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C01,PROMPT_1A06DFC3233F,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C02,PROMPT_1A06DFC3233F,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C03,PROMPT_2F50ED43849A,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C04,PROMPT_2F50ED43849A,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C05,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C06,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C07,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C08,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C09,PROMPT_F9B6FD25D16D,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C10,PROMPT_F9B6FD25D16D,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C11,PROMPT_1D8CACFEAFF2,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C12,PROMPT_1D8CACFEAFF2,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C13,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C14,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C15,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_code,C16,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C01,PROMPT_1A06DFC3233F,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C02,PROMPT_1A06DFC3233F,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C03,PROMPT_2F50ED43849A,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C04,PROMPT_2F50ED43849A,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C05,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C06,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C07,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C08,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C09,PROMPT_F9B6FD25D16D,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C10,PROMPT_F9B6FD25D16D,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C11,PROMPT_1D8CACFEAFF2,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C12,PROMPT_1D8CACFEAFF2,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C13,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,evidence_requirement,required,- key_evidence 摘自输入文本。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,evidence_quote_required,yes,"  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,explicit_scoring_anchors,partial,"  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",",medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,temporal_constraint,generic,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,inference_permission,moderate,2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C14,PROMPT_901D51584105,uncertainty_requirement,confidence_required,"  ""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C15,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,evidence_requirement,required,- key_evidence 摘自输入文本或填 null。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,evidence_quote_required,yes,"  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],",high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,explicit_scoring_anchors,partial,你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,negation_handling,explicit,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,missing_information_rule,abstain_9,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,temporal_constraint,explicit_window,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,frequency_requirement,explicit,4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,inference_permission,moderate,2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。,medium,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,abstention_permission,required_when_insufficient,14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,output_rigidity,strict_json_schema,- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,itemwise_reasoning_requirement,yes,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+HAMD-17,HAMD_docx,C16,PROMPT_6D34E5D22513,uncertainty_requirement,confidence_required,- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C01,PROMPT_56B1BF4822F7,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C02,PROMPT_56B1BF4822F7,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C03,PROMPT_9874DE0BB3FE,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C04,PROMPT_9874DE0BB3FE,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C05,PROMPT_87439E4FE0CD,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C06,PROMPT_87439E4FE0CD,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C07,PROMPT_861C0F2D67EE,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C08,PROMPT_861C0F2D67EE,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C09,PROMPT_7219878D18E6,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C10,PROMPT_7219878D18E6,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C11,PROMPT_0FEEC210D42F,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C12,PROMPT_0FEEC210D42F,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C13,PROMPT_681A5DA7D521,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,evidence_requirement,required,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,evidence_quote_required,yes,"""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,explicit_scoring_anchors,partial,Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,temporal_constraint,generic,"2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,frequency_requirement,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,inference_permission,moderate,key_evidence must be extracted from the input text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,itemwise_reasoning_requirement,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C14,PROMPT_681A5DA7D521,uncertainty_requirement,confidence_required,"""confidence_score"": 0.00,",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C15,PROMPT_BDD97133A644,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,evidence_requirement,required,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,evidence_quote_required,yes,"""key_evidence"": ""direct quote or null"",",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,explicit_scoring_anchors,partial,Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,negation_handling,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,missing_information_rule,unspecified,,high,yes,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,temporal_constraint,explicit_window,Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,frequency_requirement,explicit,The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,inference_permission,moderate,key_evidence must be extracted from the input text or filled as null.,medium,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,speaker_restriction,absent,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,abstention_permission,no,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,output_rigidity,free_text,,high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,itemwise_reasoning_requirement,yes,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used
+PHQ-8,PHQ_docx,C16,PROMPT_BDD97133A644,uncertainty_requirement,confidence_required,"Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.",high,no,prompt text/code output only; no model performance fields used

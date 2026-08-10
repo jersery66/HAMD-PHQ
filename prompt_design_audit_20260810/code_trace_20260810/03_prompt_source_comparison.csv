@@ -1,0 +1,1921 @@
+﻿left_source_variant,right_source_variant,left_dataset,right_dataset,condition,left_template_id,right_template_id,exact_same,normalized_same,changed_line_n,added_line_n,removed_line_n,unified_diff,notes
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C01,PROMPT_1A06DFC3233F,PROMPT_1A06DFC3233F,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C02,PROMPT_1A06DFC3233F,PROMPT_1A06DFC3233F,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C03,PROMPT_2F50ED43849A,PROMPT_2F50ED43849A,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C04,PROMPT_2F50ED43849A,PROMPT_2F50ED43849A,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C05,PROMPT_901D51584105,PROMPT_901D51584105,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C06,PROMPT_901D51584105,PROMPT_901D51584105,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C07,PROMPT_6D34E5D22513,PROMPT_6D34E5D22513,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C08,PROMPT_6D34E5D22513,PROMPT_6D34E5D22513,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C09,PROMPT_F9B6FD25D16D,PROMPT_F9B6FD25D16D,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C10,PROMPT_F9B6FD25D16D,PROMPT_F9B6FD25D16D,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C11,PROMPT_1D8CACFEAFF2,PROMPT_1D8CACFEAFF2,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C12,PROMPT_1D8CACFEAFF2,PROMPT_1D8CACFEAFF2,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C13,PROMPT_901D51584105,PROMPT_901D51584105,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C14,PROMPT_901D51584105,PROMPT_901D51584105,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C15,PROMPT_6D34E5D22513,PROMPT_6D34E5D22513,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,HAMD_docx,HAMD-17,HAMD-17,C16,PROMPT_6D34E5D22513,PROMPT_6D34E5D22513,yes,yes,0,0,0,,HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C01,PROMPT_1A06DFC3233F,PROMPT_56B1BF4822F7,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++The following input text is a mental health interview transcript.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C02,PROMPT_1A06DFC3233F,PROMPT_56B1BF4822F7,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++The following input text is a mental health interview transcript.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C03,PROMPT_2F50ED43849A,PROMPT_9874DE0BB3FE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview transcript.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C04,PROMPT_2F50ED43849A,PROMPT_9874DE0BB3FE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview transcript.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C05,PROMPT_901D51584105,PROMPT_87439E4FE0CD,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a mental health assessment narrative.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C06,PROMPT_901D51584105,PROMPT_87439E4FE0CD,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a mental health assessment narrative.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C07,PROMPT_6D34E5D22513,PROMPT_861C0F2D67EE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health assessment narrative.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C08,PROMPT_6D34E5D22513,PROMPT_861C0F2D67EE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health assessment narrative.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C09,PROMPT_F9B6FD25D16D,PROMPT_7219878D18E6,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C10,PROMPT_F9B6FD25D16D,PROMPT_7219878D18E6,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C11,PROMPT_1D8CACFEAFF2,PROMPT_0FEEC210D42F,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C12,PROMPT_1D8CACFEAFF2,PROMPT_0FEEC210D42F,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C13,PROMPT_901D51584105,PROMPT_681A5DA7D521,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C14,PROMPT_901D51584105,PROMPT_681A5DA7D521,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C15,PROMPT_6D34E5D22513,PROMPT_BDD97133A644,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_code,PHQ_docx,HAMD-17,PHQ-8,C16,PROMPT_6D34E5D22513,PROMPT_BDD97133A644,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C01,PROMPT_1A06DFC3233F,PROMPT_56B1BF4822F7,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++The following input text is a mental health interview transcript.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C02,PROMPT_1A06DFC3233F,PROMPT_56B1BF4822F7,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
++The following input text is a mental health interview transcript.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C03,PROMPT_2F50ED43849A,PROMPT_9874DE0BB3FE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview transcript.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C04,PROMPT_2F50ED43849A,PROMPT_9874DE0BB3FE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview transcript.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C05,PROMPT_901D51584105,PROMPT_87439E4FE0CD,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a mental health assessment narrative.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C06,PROMPT_901D51584105,PROMPT_87439E4FE0CD,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a mental health assessment narrative.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C07,PROMPT_6D34E5D22513,PROMPT_861C0F2D67EE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health assessment narrative.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C08,PROMPT_6D34E5D22513,PROMPT_861C0F2D67EE,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health assessment narrative.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C09,PROMPT_F9B6FD25D16D,PROMPT_7219878D18E6,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C10,PROMPT_F9B6FD25D16D,PROMPT_7219878D18E6,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C11,PROMPT_1D8CACFEAFF2,PROMPT_0FEEC210D42F,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C12,PROMPT_1D8CACFEAFF2,PROMPT_0FEEC210D42F,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床访谈事件序列】。该文本基于汉密尔顿抑郁量表（HAMD-17）症状维度进行事件划分，按事件发生顺序排列，包含事件标记（如事件01、事件02）。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a mental health interview event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C13,PROMPT_901D51584105,PROMPT_681A5DA7D521,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C14,PROMPT_901D51584105,PROMPT_681A5DA7D521,no,no,31,16,15,"--- baseline
++++ target
+@@ -1,22 +1,23 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Severity categories are interpreted using the PHQ-8 total score: 0–4=No or minimal; 5–9=Mild; 10–14=Moderate; 15–24=Severe.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索和 HAMD-17 症状维度与严重程度各维度，判断来访者当前的整体抑郁严重程度等级。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues and PHQ-8 symptom items and severity, determine the current overall depression severity level of the participant.
+ # End Goal
+-基于输入文本线索和 HAMD-17 症状维度与严重程度，推断来访者当前的整体抑郁严重程度等级。
++Based on the input text clues and PHQ-8 symptom items and severity, infer the current overall depression severity level of the participant.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- class_probabilities 中四个类别的概率之和为 1。
+-- key_evidence 摘自输入文本。
+-- reasoning_chain 需说明从证据提取到等级判断的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++The probabilities of the four categories in class_probabilities must sum to 1.
++key_evidence must be extracted from the input text.
++reasoning_chain should explain the reasoning path from evidence extraction to severity-level judgment.
++Format:
+ {
+-  ""severity_level"": ""正常 / 轻度抑郁 / 中度抑郁 / 重度抑郁"",
+-  ""key_evidence"": [""原文引用1"", ""原文引用2"", ""...""],
+-  ""confidence_score"": 0.00,
+-  ""class_probabilities"": {""正常"":0.0, ""轻度抑郁"":0.0, ""中度抑郁"":0.0, ""重度抑郁"":0.0},
+-  ""reasoning_chain"": ""基于输入文本线索和HAMD-17症状维度与严重程度的整体推断过程""
++""severity_level"": ""No or minimal / Mild / Moderate / Severe"",
++""key_evidence"": [""direct quote 1"", ""direct quote 2"", ""...""],
++""confidence_score"": 0.00,
++""class_probabilities"": {""No or minimal"": 0.0, ""Mild"": 0.0, ""Moderate"": 0.0, ""Severe"": 0.0},
++""reasoning_chain"": ""Overall reasoning process based on input text clues, PHQ-8 symptom items, and severity.""
+ }",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C15,PROMPT_6D34E5D22513,PROMPT_BDD97133A644,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。
+HAMD_docx,PHQ_docx,HAMD-17,PHQ-8,C16,PROMPT_6D34E5D22513,PROMPT_BDD97133A644,no,no,68,34,34,"--- baseline
++++ target
+@@ -1,41 +1,41 @@
+ # Role
+-你是一名具备丰富临床经验的心理学家和精神科评估专家。
++Act like you are a psychologist and mental health assessment professional with extensive clinical experience.
+ # Instruction
+-以下输入文本为【临床记录文本】。
+-你的任务是基于该文本，对来访者进行汉密尔顿抑郁量表（HAMD-17）抑郁症状评分。
+-以下是汉密尔顿抑郁量表（HAMD-17）的选项标准、所涵盖的症状维度与严重程度定义：
+-大部分项目采用0～4分的5级评分法，各级标准为：（0）无；（1）轻度；（2）中度；（3）重度；（4）极重度；少数项目采用0～2分的3级评分法，各级标准为：（0）无；（1）轻～中度；（2）重度。
+-1. 抑郁情绪：0=正常，没有抑郁情绪；1=只在问到时才诉述；2=在访谈中自发地表达；3=不用言语也可以从表情、姿势、声音或欲哭中流露出这种情绪；4=病人的自发言语和非语言表达（表情，动作）几乎完全表现为这种情绪。
+-2. 有罪感：0=正常，没有有罪感；1=责备自己，感到自己已连累他人；2=认为自己犯了罪，或反复思考以往的过失和错误；3=认为目前的疾病，是对自己错误的惩罚，或有罪恶妄想；4=罪恶妄想伴有指责或威胁性幻觉。
+-3. 自杀：0=正常，没有自杀；1=觉得活着没有意义；2=希望自己已经死去，或常想到与死有关的事；3=消极观念（自杀念头）；4=有严重自杀行为。
+-4. 入睡困难（初段失眠，采用0～2分的3级评分法。各级的标准为：（0）无；（1）轻～中度；（2）重度）：0=正常，没有入睡困难；1=主诉有入睡困难，上床半小时后仍不能入睡（要注意平时病人入睡的时间）；2=主诉每晚均有入睡困难。
+-5. 睡眠不深（中段失眠）：0=正常，没有睡眠不深；1=睡眠浅，多恶梦；2=半夜（晚12点钟以前）曾醒来（不包括上厕所）。
+-6. 早醒（末段失眠）：0=正常，没有早醒；1=有早醒，比平时早醒1小时，但能重新入睡（应排除平时的习惯）；2=早醒后无法重新入睡。
+-7. 工作和兴趣：0=正常，没有丧失工作和兴趣；1=提问时才诉述；2=自发地直接或间接表达对活动、工作或学习失去兴趣，如感到没精打采，犹豫不决，不能坚持或需强迫自己去工作或活动；3=活动时间减少或成效下降，住院病人每天参加病房劳动或娱乐不满3小时；4=因目前的疾病而停止工作，住院者不参加任何活动或者没有他人帮助便不能完成病室日常事务（注意不能凡住院就打4分）。
+-8. 迟滞（指思维和言语缓慢，注意力难以集中，主动性减退）：0=正常，没有迟滞；1=精神检查中发现轻度阻滞；2=精神检查中发现明显阻滞；3=精神检查进行困难；4=完全不能回答问题（木僵）。
+-9. 激越：0=正常，没有激越；1=检查时有些心神不定；2=明显心神不定或小动作多；3=不能静坐，检查中曾起立；4=搓手、咬手指、扯头发、咬嘴唇。
+-10. 精神性焦虑：0=正常，没有精神性焦虑；1=问及时诉述；2=自发地表达；3=表情和言谈流露出明显忧虑；4=明显惊恐。
+-11. 躯体性焦虑（指焦虑的生理症状，包括：口干、腹胀、腹泻、打呃、腹绞痛、心悸、头痛、过度换气和叹气，以及尿频和出汗）：0=正常，没有躯体性焦虑；1=轻度；2=中度，有肯定的上述症状；3=重度，上述症状严重，影响生活或需要处理；4=严重影响生活和活动。
+-12. 胃肠道症状：0=正常，没有胃肠道症状；1=食欲减退，但不需他人鼓励便自行进食；2=进食需他人催促或请求和需要应用泻药或助消化药。
+-13. 全身症状：0=正常，没有全身症状；1=四肢，背部或颈部沉重感，背痛、头痛、肌肉疼痛，全身乏力或疲倦；2=症状明显。
+-14. 性症状（指性欲减退，月经紊乱等）：0=正常，没有性症状；1=轻度；2=重度；9=不能肯定，或该项对被评者不适合（不计入总分）。
+-15. 疑病：0=正常，没有疑病；1=对身体过分关注；2=反复考虑健康问题；3=有疑病妄想；4=伴幻觉的疑病妄想。
+-16. 体重减轻：0=正常，没有体重减轻；1=患者诉述可能有体重减轻或一周内体重减轻超过0.5公斤；2=患者诉述肯定体重减轻或一周内体重减轻超过1公斤。
+-17. 自知力：0=知道自己有病，表现为抑郁；1=知道自己有病，但归咎伙食太差，环境问题，工作过忙，病毒感染或需要休息；2=完全否认有病。
++The following input text is a standardized assessment event sequence. It is segmented according to the symptom items of the Patient Health Questionnaire-8 (PHQ-8), arranged in chronological order, and contains event markers such as Event 01 and Event 02.
++Your task is to score the depressive symptoms of the participant using the Patient Health Questionnaire-8 (PHQ-8) based on this text.
++The Patient Health Questionnaire-8 (PHQ-8) includes the following symptom items and frequency criteria.
++Each item is scored according to how often the symptom occurred in the past two weeks: 0=Not at all; 1=Several days; 2=More than half the days; 3=Nearly every day.
++1. Little interest or pleasure in doing things.
++2. Feeling down, depressed, irritable, or hopeless.
++3. Trouble falling or staying asleep, or sleeping too much.
++4. Feeling tired or having little energy.
++5. Poor appetite or overeating.
++6. Feeling bad about oneself, feeling like a failure, or feeling that one has let oneself or one's family down.
++7. Trouble concentrating on things, such as work, reading, or watching television.
++8. Moving or speaking so slowly that other people could have noticed, or being so fidgety or restless that one has been moving around more than usual.
+ # Step
+-1. 通读输入文本，提取其中提及的汉密尔顿抑郁量表（HAMD-17）症状维度与严重程度相关临床证据。
+-2. 基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++1. Read the input text and extract symptom-related evidence related to PHQ-8 symptom items and severity.
++2. Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # End Goal
+-基于输入文本线索，评估来访者在 HAMD-17 量表17个维度上的得分，并计算total_score。
++Based on the input text clues, evaluate the scores of the participant on the 8 PHQ-8 items and calculate total_score.
+ # Narrow
+-- 仅输出纯 JSON 对象，不要输出任何代码块标记（如 ```json）。
+-- key_evidence 摘自输入文本或填 null。
+-- 每个维度需输出 reasoning（打分的临床推断依据）和 confidence_score（0.00-1.00）。
+-- 维度14（性症状）若输入文本中无相关线索或无法判断，则 score 可取 9（含义为""不能肯定或不适合作答""），该值不计入总分。
+-- reasoning_chain 需说明输入文本覆盖范围对各维度评分的影响，并包含从证据提取到评分的推断路径。
+-- 格式如下：
++Output only a pure JSON object. Do not output any code block markers such as ```json.
++key_evidence must be extracted from the input text or filled as null.
++Each item must include reasoning, the clinical inference basis for scoring, and confidence_score from 0.00 to 1.00.
++Each item score ranges from 0 to 3. total_score is the sum of the 8 item scores and ranges from 0 to 24.
++reasoning_chain should explain how the input text coverage affects each item score and include the reasoning path from evidence extraction to scoring.
++Format:
+ {
+-  ""dimensions"": [{""dimension_id"":1,""dimension_name"":""抑郁情绪"",""score"":0,""key_evidence"":""原文引用或null"",""reasoning"":""该维度打分的临床推断依据"",""confidence_score"":0.00}],
+-  ""total_score"": 0,
+-  ""reasoning_chain"": ""从输入文本证据和HAMD-17症状维度与严重程度到各维度评分的推断路径""
++""items"": [
++{
++""item_id"": 1,
++""item_name"": ""Little interest or pleasure in doing things"",
++""score"": 0,
++""key_evidence"": ""direct quote or null"",
++""reasoning"": ""Clinical inference basis for scoring this item."",
++""confidence_score"": 0.00
+ }
++],
++""total_score"": 0,
++""reasoning_chain"": ""Reasoning path from input-text evidence and PHQ-8 symptom items and severity to item scores.""
++}",HAMD/PHQ使用不同量表提示词是预期差异；该表不是条件效应比较。

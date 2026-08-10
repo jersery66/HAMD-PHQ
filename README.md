@@ -7,6 +7,22 @@
 1. `PDCH_PHQ_HAMD_multifield_analysis_bilingual_20260806.xlsx`：22 个工作表的多字段深度分析总表。适合先看结论、字段覆盖、基线与条件效应、置信度、证据、理由文本、维度规律、被试难度、模型分歧和输出可靠性。表头采用“中文 (english)”格式，每个 sheet 都写明目的、数据范围、方法、公式、意义和限制，并保留 8 张公式卡片图片。
 2. `PDCH_PHQ_HAMD_all_results_all_fields_20260802.xlsx`：完整字段底表。`03_全部主结果` 一行对应一个被试×模型×思考模式×条件，保留总分、等级、逐维度分数、置信度、概率、证据、理由和源文件；`05_未映射字段` 保存字段级 SHA-256，`04_探索性索引` 保留 C17–C24 的被试级索引，`07_字段字典` 用于字段追溯。
 
+## C01–C16代码级实验条件追溯（2026-08-10）
+
+`prompt_design_audit_20260810/code_trace_20260810/` 是本次新增的代码级审计模块。它直接读取本地 `9eval_main.py`、`word_prompt_templates.py`、运行 manifest 和实际提示词 DOCX，建立：
+
+`条件 → 输入路径/处理 → Prompt组装路径 → Prompt版本/来源 → 评分路径 → 思考模式控制`
+
+先看：
+
+1. `PDCH_PHQ_HAMD_代码级条件追溯_20260810.xlsx`：可读总表，第一页先给代码级结论。
+2. `01_condition_code_trace.csv`：C01–C16逐条件权威映射。
+3. `04_pairwise_diff.csv`：六组理论pair的固定提示词diff。
+4. `06_remaining_manual_review.csv`：只保留3条代码无法消除的版本来源冲突；不需要再逐条审核旧的161条语义编码。
+5. `07_frozen_input.csv`：下一阶段可用的提示词解释变量，不含gold、prediction、MAE、准确率等结果字段。
+
+本模块不重新计算模型性能，也不根据结果反向定义提示词特征。源125 MB工作簿仅作只读完整性核验，SHA-256前后保持一致。
+
 ## 维度级明细（本次补充）
 
 此前的 `PDCH_PHQ_HAMD_all_results_all_fields_20260802.xlsx` 是“被试×模型×条件”的总览表，维度内容主要打包在 JSON 列中，确实不便于直接查看。本次补充了可直接筛选的维度级工作簿：
