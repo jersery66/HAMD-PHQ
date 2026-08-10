@@ -32,7 +32,7 @@
 
 ## Prompt版本溯源
 
-逐个扫描本地运行 manifest，记录 `prompt_version`、`prompt_docx`、运行模式、模型、条件范围和 source mode。若同一版本同时出现 `code_builder` 与 `docx_override`，进入剩余人工复核，而不是擅自选择其中一种。
+逐个扫描本地运行 manifest，记录 `prompt_version`、`prompt_docx`、运行模式、模型、条件范围和 source mode。若同一版本同时出现 `code_builder` 与 `docx_override`，先区分主运行与安全探针，再比较可获得的固定提示词 normalized hash；主运行只有在来源内容无法证明一致时才进入剩余人工复核。同内容复用本身不构成问题。
 
 ## Pairwise diff
 
@@ -51,8 +51,8 @@
 
 ## 人工复核边界
 
-`06_remaining_manual_review.csv` 仅保留：同一版本多个来源模式、真实 pair diff 歧义或源文件解析不确定。`reviewer_code`、`reviewer_note`、`resolved` 保持空白。原先自动生成的161条语义分类表不作为本阶段工作负担。
+`06_remaining_manual_review.csv` 仅保留：主运行中同一版本多个来源且固定内容无法证明一致、真实 pair diff 歧义或源文件解析不确定。非主运行安全探针、同内容提示词复用不进入人工审核；原先自动生成的161条语义分类表不作为本阶段工作负担。
 
 ## QA
 
-程序核验：C01–C16覆盖、模板 hash→ID唯一、pair主键唯一、冻结表无结果字段、源工作簿前后 SHA 不变、DOCX/代码源文件存在。`PASS_WITH_REVIEW` 只表示有少量待确认来源冲突，不表示源数据或条件解析失败。
+程序核验：C01–C16覆盖、模板 hash→ID唯一、pair主键唯一、冻结表无结果字段、源工作簿前后 SHA 不变、DOCX/代码源文件存在。`PASS_WITH_REVIEW` 只表示仍有少量主运行来源冲突；若无未解决复核行则为`PASS`。这不表示源数据或条件解析失败。

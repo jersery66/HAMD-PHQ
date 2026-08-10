@@ -699,9 +699,16 @@ def make_source_rows(project_root: Path, repo_root: Path, scripts_dir: Path, sou
     return rows
 
 
-def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
+MANUAL_REVIEW_FIELDS = [
+    "review_id", "review_type", "dataset", "prompt_version", "prompt_source_variant",
+    "condition", "source_evidence", "manifest_examples", "reason", "reviewer_code",
+    "reviewer_note", "resolved",
+]
+
+
+def write_csv(path: Path, rows: list[dict[str, Any]], fieldnames: list[str] | None = None) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    fields: list[str] = []
+    fields: list[str] = list(fieldnames or [])
     for row in rows:
         for key in row:
             if key not in fields:
@@ -713,17 +720,50 @@ def write_csv(path: Path, rows: list[dict[str, Any]]) -> None:
             writer.writerow({key: row.get(key, "") for key in fields})
 
 
+def _variant_for_source_mode(dataset: str, source_mode: str, variants: dict[str, dict[str, Any]]) -> dict[str, Any] | None:
+    candidates = [
+        value for value in variants.values()
+        if value.get("dataset") == dataset
+        and ((source_mode == "code_builder" and value.get("source_kind") == "code_builder")
+             or (source_mode == "docx_override" and value.get("source_kind") == "docx_override"))
+    ]
+    return candidates[0] if len(candidates) == 1 else None
+
+
+def _prompt_signature(variant: dict[str, Any]) -> tuple[str, ...]:
+    return tuple(
+        hashlib.sha256(normalize_prompt(variant["prompts"].get(cid, "")).encode("utf-8")).hexdigest()
+        for cid in range(1, 17)
+    )
+
+
+def _primary_source_modes(rows: list[dict[str, Any]]) -> set[str]:
+    primary = {row["source_mode"] for row in rows if str(row.get("is_primary_run", "")).lower() == "yes"}
+    return primary or {row["source_mode"] for row in rows}
+
+
 def build_manual_review(run_rows: list[dict[str, Any]], template_rows: list[dict[str, Any]], pair_rows: list[dict[str, Any]], variants: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     version_sources: dict[str, set[str]] = defaultdict(set)
     version_manifest_paths: dict[str, list[str]] = defaultdict(list)
+    version_runs: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for run in run_rows:
         key = f"{run['dataset']}|{run['prompt_version']}"
         version_sources[key].add(run["source_mode"])
         version_manifest_paths[key].append(run["manifest_path"])
+        version_runs[key].append(run)
     for key, sources in sorted(version_sources.items()):
-        if len(sources) > 1:
-            dataset, version = key.split("|", 1)
+        if len(sources) <= 1:
+            continue
+        dataset, version = key.split("|", 1)
+        primary_sources = _primary_source_modes(version_runs[key])
+        source_variants = [_variant_for_source_mode(dataset, mode, variants) for mode in sorted(primary_sources)]
+        signatures = {_prompt_signature(variant) for variant in source_variants if variant is not None}
+        # A reused version label is not a problem when the primary run uses one
+        # source, or when all available primary source variants are byte/normalized
+        # identical.  Non-primary safety probes are retained in provenance only.
+        content_is_same = len(source_variants) == len(primary_sources) and len(signatures) == 1
+        if len(primary_sources) > 1 and not content_is_same:
             rows.append({
                 "review_id": f"version_source_ambiguity:{key}",
                 "review_type": "same_prompt_version_multiple_source_modes",
@@ -731,7 +771,7 @@ def build_manual_review(run_rows: list[dict[str, Any]], template_rows: list[dict
                 "prompt_version": version,
                 "source_evidence": ";".join(sorted(sources)),
                 "manifest_examples": ";".join(version_manifest_paths[key][:5]),
-                "reason": "同一prompt_version在运行manifest中同时出现code_builder和docx_override；需要确认该版本标签是否被复用。",
+                "reason": "同一prompt_version的主运行使用多个来源，且固定提示词内容无法由代码/hash证明一致。",
                 "reviewer_code": "",
                 "reviewer_note": "",
                 "resolved": "",
@@ -768,6 +808,11 @@ def build_manual_review(run_rows: list[dict[str, Any]], template_rows: list[dict
 
 def write_report(output_dir: Path, workbook_info: dict[str, Any], conditions: list[dict[str, Any]], variants: dict[str, dict[str, Any]], trace_rows: list[dict[str, Any]], pair_rows: list[dict[str, Any]], manual_rows: list[dict[str, Any]], run_rows: list[dict[str, Any]]) -> None:
     pair_summary = Counter(row["single_factor_status"] for row in pair_rows)
+    version_modes: dict[str, set[str]] = defaultdict(set)
+    for run in run_rows:
+        version_modes[f"{run['dataset']}|{run['prompt_version']}"].add(run["source_mode"])
+    observed_mixtures = sum(1 for modes in version_modes.values() if len(modes) > 1)
+    unresolved_source_mixtures = sum(1 for row in manual_rows if row["review_type"] == "same_prompt_version_multiple_source_modes")
     lines = [
         "# PDCH C01-C16代码级提示词与实验条件追溯",
         "",
@@ -778,7 +823,7 @@ def write_report(output_dir: Path, workbook_info: dict[str, Any], conditions: li
         f"- `9eval_main.py` 的 `CONDITIONS` 共解析到 {len(conditions)} 条，C01-C16全部纳入。",
         f"- C01-C16的输入路径由 `DATA_PATHS` 和 `clean`/`C` 字段决定；固定提示词由 `build_system_prompt → build_condition_prompt` 组装。",
         f"- `PDCH_PROMPT_DOCX` 存在时，`word_prompt_templates.py` 在导入时用 `prompt_docx_loader.load_prompt_docx` 覆盖条件提示词；因此“代码生成”和“DOCX覆盖”被分开追溯。",
-        f"- 观察到的运行manifest为 {len(run_rows)} 个（含历史/探针记录），同一版本的来源模式冲突待复核 {sum(1 for r in manual_rows if r['review_type']=='same_prompt_version_multiple_source_modes')} 条。",
+        f"- 观察到的运行manifest为 {len(run_rows)} 个（含历史/探针记录）；同一版本多来源记录 {observed_mixtures} 组，其中经主运行筛选和提示词hash比对后仍需复核 {unresolved_source_mixtures} 组。",
         f"- 六组理论pair的代码级提示词状态计数：{dict(pair_summary)}。即使提示词正文完全相同，清洗/规整/文本范围仍然可能通过输入路径发生操纵；不能把输入操纵误写成prompt文字操纵。",
         "",
         "## 如何读主表",
@@ -786,7 +831,7 @@ def write_report(output_dir: Path, workbook_info: dict[str, Any], conditions: li
         "1. `01_condition_code_trace.csv`：先看每个条件的 `input_path_expression`、`input_code_key`、`prompt_builder_call` 和 `runtime_prompt_source`。",
         "2. `03_prompt_source_comparison.csv`：只比较HAMD/PHQ不同提示词来源的正文，不解释为条件效应。",
         "3. `04_pairwise_diff.csv`：六组pair的实际固定prompt diff；`mostly_single_factor`只表示输入描述文字变化，不把它当成新的心理机制。",
-        "4. `06_remaining_manual_review.csv`：只保留代码无法消除的版本来源冲突或真实diff歧义；不再要求逐条审核原来的161条语义编码。",
+        "4. `06_remaining_manual_review.csv`：只保留代码和提示词hash无法消除的主运行来源冲突或真实diff歧义；同内容复用和非主运行安全探针不进入人工审核。",
         "",
         "## 研究边界",
         "",
@@ -900,7 +945,7 @@ def main() -> int:
         "10_run_contexts.csv": run_rows,
     }
     for filename, rows in csv_map.items():
-        write_csv(output_dir / filename, rows)
+        write_csv(output_dir / filename, rows, MANUAL_REVIEW_FIELDS if filename == "06_remaining_manual_review.csv" else None)
     (output_dir / "11_workbook_summary.json").write_text(json.dumps(workbook_info, ensure_ascii=False, indent=2), encoding="utf-8")
 
     result_fields = {"gold", "prediction", "predicted_score", "mae", "nae", "accuracy", "sensitivity", "specificity", "bias", "f1", "correct", "true_score", "model_score"}
@@ -917,7 +962,8 @@ def main() -> int:
         "data_path_keys": sorted(data_paths),
         "variants": {key: {"dataset": value["dataset"], "source_file": value["source_file"], "source_file_sha256": value["source_file_sha256"], "condition_n": len(value["prompts"]), "extraction_status": value["extraction_status"]} for key, value in variants.items()},
         "run_manifest_n": len(run_rows),
-        "version_source_ambiguity_n": sum(1 for sources in version_mode_counts.values() if len(sources) > 1),
+        "version_source_mode_mixture_observed_n": sum(1 for sources in version_mode_counts.values() if len(sources) > 1),
+        "version_source_ambiguity_n": sum(1 for row in manual_rows if row["review_type"] == "same_prompt_version_multiple_source_modes"),
         "pair_rows": len(pair_rows),
         "pair_status_counts": dict(Counter(row["single_factor_status"] for row in pair_rows)),
         "manual_review_n": len(manual_rows),

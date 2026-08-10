@@ -7,7 +7,7 @@
 - `9eval_main.py` 的 `CONDITIONS` 共解析到 24 条，C01-C16全部纳入。
 - C01-C16的输入路径由 `DATA_PATHS` 和 `clean`/`C` 字段决定；固定提示词由 `build_system_prompt → build_condition_prompt` 组装。
 - `PDCH_PROMPT_DOCX` 存在时，`word_prompt_templates.py` 在导入时用 `prompt_docx_loader.load_prompt_docx` 覆盖条件提示词；因此“代码生成”和“DOCX覆盖”被分开追溯。
-- 观察到的运行manifest为 351 个（含历史/探针记录），同一版本的来源模式冲突待复核 3 条。
+- 观察到的运行manifest为 351 个（含历史/探针记录）；同一版本多来源记录 3 组，其中经主运行筛选和提示词hash比对后仍需复核 0 组。
 - 六组理论pair的代码级提示词状态计数：{'clean_single_factor': 6, 'mostly_single_factor': 12}。即使提示词正文完全相同，清洗/规整/文本范围仍然可能通过输入路径发生操纵；不能把输入操纵误写成prompt文字操纵。
 
 ## 如何读主表
@@ -15,7 +15,7 @@
 1. `01_condition_code_trace.csv`：先看每个条件的 `input_path_expression`、`input_code_key`、`prompt_builder_call` 和 `runtime_prompt_source`。
 2. `03_prompt_source_comparison.csv`：只比较HAMD/PHQ不同提示词来源的正文，不解释为条件效应。
 3. `04_pairwise_diff.csv`：六组pair的实际固定prompt diff；`mostly_single_factor`只表示输入描述文字变化，不把它当成新的心理机制。
-4. `06_remaining_manual_review.csv`：只保留代码无法消除的版本来源冲突或真实diff歧义；不再要求逐条审核原来的161条语义编码。
+4. `06_remaining_manual_review.csv`：只保留代码和提示词hash无法消除的主运行来源冲突或真实diff歧义；同内容复用和非主运行安全探针不进入人工审核。
 
 ## 研究边界
 

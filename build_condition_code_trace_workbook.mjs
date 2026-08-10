@@ -80,7 +80,7 @@ async function main() {
     ["核心结论1", `CONDITIONS共${qa.conditions_total}条；C01-C16完整解析=${qa.c01_c16_complete ? "是" : "否"}。`],
     ["核心结论2", "条件先改变输入路径/输入类型；提示词由9eval_main.py → word_prompt_templates.py组装。设置PDCH_PROMPT_DOCX时，DOCX正文覆盖代码默认正文。"],
     ["核心结论3", `六组pair状态：${JSON.stringify(qa.pair_status_counts)}。C03→C04、C01→C02固定prompt不变，是输入清洗；C03→C07、C01→C05只有输入descriptor文字差异。`],
-    ["核心结论4", `同一版本的运行来源模式冲突${qa.version_source_ambiguity_n}组，因此目前只保留${qa.manual_review_n}条剩余复核；不再要求人工审核原来的161条语义编码。`],
+    ["核心结论4", `观察到同一版本多来源记录${qa.version_source_mode_mixture_observed_n ?? qa.version_source_ambiguity_n}组；经主运行筛选和提示词内容hash比对后，未解决人工复核${qa.manual_review_n}条。同内容复用和安全探针不阻塞分析。`],
     ["思考模式", "不是C01-C16条件字段；由PDCH_ENABLE_THINKING覆盖，未设置时GLM/MiniMax按代码回退为true，其余按false。"],
     ["数据边界", "本模块不读取gold/prediction/MAE/accuracy等结果变量做任何关联；冻结输入也不含这些字段。"],
     ["源工作簿", summary.path],

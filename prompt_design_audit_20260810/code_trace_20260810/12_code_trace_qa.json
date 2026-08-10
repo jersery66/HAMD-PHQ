@@ -1,6 +1,6 @@
 {
-  "created_at": "2026-08-10T13:04:30",
-  "status": "PASS_WITH_REVIEW",
+  "created_at": "2026-08-10T15:36:40",
+  "status": "PASS",
   "source_workbook": {
     "path": "E:\\数据库\\代码\\Data\\PDCH\\实验\\github_upload_20260806\\PDCH_PHQ_HAMD_所有模型所有条件_提示词字段完整修正版_20260807.xlsx",
     "size_bytes": 125056024,
@@ -49,13 +49,14 @@
     }
   },
   "run_manifest_n": 351,
-  "version_source_ambiguity_n": 3,
+  "version_source_mode_mixture_observed_n": 3,
+  "version_source_ambiguity_n": 0,
   "pair_rows": 18,
   "pair_status_counts": {
     "clean_single_factor": 6,
     "mostly_single_factor": 12
   },
-  "manual_review_n": 3,
+  "manual_review_n": 0,
   "frozen_input_rows": 48,
   "frozen_input_forbidden_fields": [],
   "source_files_missing": [],
