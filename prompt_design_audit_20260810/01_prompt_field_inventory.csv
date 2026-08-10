@@ -1,0 +1,187 @@
+﻿sheet,original_column,inferred_role,dtype,row_n,nonmissing_n,missing_rate,unique_n,example_value,notes
+01_字段对照,字段用途,analysis_or_other,text,17,17,0.0,17,总览,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+01_字段对照,字段/结构,analysis_or_other,text,17,17,0.0,17,量表_scale；队列_cohort；模型_model；思考模式_thinking_mode；条件_condition；被试ID_subject_id,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+01_字段对照,来源与方法,analysis_or_other,text,17,17,0.0,17,来自结果索引和源JSON路径，按量表×队列×模型×思考模式×条件×被试定位,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+01_字段对照,怎么解释,analysis_or_other,text,17,17,0.0,17,用于筛选、复核和回溯单条结果,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+01_字段对照,缺失是否异常,analysis_or_other,text,17,17,0.0,17,这些主键字段缺失才是结构异常,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,量表_scale,design_metadata/key,text,65922,65922,0.0,2,PHQ-8,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,队列_cohort,design_metadata/key,text,65922,65922,0.0,3,DAIC-WOZ全量189人,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,模型_model,design_metadata/key,text,65922,65922,0.0,4,DeepSeek-V4-Pro,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,思考模式_thinking_mode,design_metadata/key,text,65922,65922,0.0,2,思考,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,条件编号_condition_id,design_metadata/key,text,65922,65922,0.0,24,1,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,条件_condition,design_metadata/key,text,65922,65922,0.0,24,C01,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,条件全名_condition_full_name,design_metadata/key,text,65922,65922,0.0,24,01_全文_不规整_等级_不清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,输入范围_input_scope,design_metadata/key,text,65922,65922,0.0,3,全文,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,规整状态_standardization,design_metadata/key,text,65922,65922,0.0,2,不规整,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,清洗状态_cleaning,design_metadata/key,text,65922,65922,0.0,1,清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,输出任务_output_task,analysis_or_other,text,65922,65922,0.0,2,等级,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,基线标记_baseline,design_metadata/key,text,65922,65922,0.0,3,C01原始全文等级基线,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,被试ID_subject_id,design_metadata/key,text,65922,65922,0.0,289,300,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,事件ID_event_id,design_metadata/key,text,65922,46626,0.29270957,57,01,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,记录层级_record_level,design_metadata/key,text,65922,65922,0.0,2,被试,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,解析状态_parse_status,analysis_or_other,text,65922,65922,0.0,1,ok,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,解析备注_parse_note,analysis_or_other,empty,65922,0,1.0,0,,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,模型原始等级_model_severity_level,model_output/raw_response,text,65922,34203,0.48115955,14,No or minimal,这是模型返回或解析后的输出，不是固定提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,模型报告总分_model_total_score,model_output/derived_analysis,text,65922,31717,0.51887079,40,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,评分总分映射等级_score_mapped_level_derived,model_output/derived_analysis,text,65922,31717,0.51887079,8,无或极轻,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,等级来源_level_source,model_output/derived_analysis,text,65922,65922,0.0,4,模型直接输出severity_level,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,整体置信度_overall_confidence,model_output/derived_analysis,numeric,65922,56272,0.14638512,47,0.98,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,关键证据_key_evidence,model_output/derived_analysis,json,65922,56274,0.14635478,41866,"[""good"",""no"",""it's pretty easy"",""i like reading books i enjoy i enjoy cooking um exercising is great"",""the other day"",""no""]",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,理由推理_reasoning,model_output/derived_analysis,text,65922,65893,0.00043991,65877,"The participant reports feeling 'good' today, denies feeling down when asked directly, and has no history of depression diagnosis. Sleep is described as 'pretty easy,' and they engage in multiple enjoyable activities (reading, cooking, exercising). They also report feeling happy 'the other day.' There is no evidence...",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,类别概率_class_probabilities,model_output/derived_analysis,json,65922,43850,0.33481994,1340,"{""No or minimal"":0.98,""Mild"":0.02,""Moderate"":0.0,""Severe"":0.0}",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,金标准总分_gold_total,analysis_or_other,numeric,65922,65839,0.00125906,32,2,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,金标准等级_gold_level,model_output/derived_analysis,text,65922,65839,0.00125906,8,无或极轻,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,源JSON路径_source_json,provenance_metadata,text,65922,65922,0.0,21164,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\deepseek-v4-pro\PHQ_全量189人\thinking\data\output\deepseek-v4-pro\01_全文_不规整_等级_不清洗\300.json,运行来源、路径或元数据；不等于提示词正文。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,运行与金标准上下文JSON_run_context,provenance_metadata,json,65922,19296,0.70729043,19296,"{""analysis_grade_correct_primary"":1,""analysis_subset"":""test47"",""analysis_tier"":""主分析"",""cleaning"":""不清洗"",""condition_id"":1,""enriched_response_keys"":""severity_level | key_evidence | confidence_score | class_probabilities | reasoning_chain | metadata"",""file_modified_time"":""2026-07-27T19:14:39"",""file_size_bytes"":2726,""glob...",运行来源、路径或元数据；不等于提示词正文。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,完整元数据JSON_metadata,provenance_metadata,json,65922,19296,0.70729043,246,"{""extra"":{},""metadata_condition_id"":1,""metadata_dataset_source"":""DAIC-WOZ-PHQ8"",""metadata_max_tokens"":32768,""metadata_modality"":""text-only"",""metadata_model"":""deepseek-v4-pro"",""metadata_prompt_language"":""en"",""metadata_prompt_version"":""PHQ8-word-2026-06-27"",""metadata_run_id"":1,""metadata_temperature"":0,""metadata_top_k""...",运行来源、路径或元数据；不等于提示词正文。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,分析口径模型报告总分_analysis_model_reported_total,design_metadata/key,text,65922,9648,0.85364522,40,0,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,分析口径逐题和_analysis_item_sum,analysis_or_other,text,65922,9648,0.85364522,41,0,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,分析口径直接等级_analysis_direct_level,model_output/derived_analysis,text,65922,9646,0.85367556,4,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,分析口径总分映射等级_analysis_score_mapped_level,model_output/derived_analysis,text,65922,9648,0.85364522,4,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,分析主总分绝对误差_analysis_primary_total_abs_error,model_output/derived_analysis,numeric,65922,9648,0.85364522,31,2,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,分析主等级绝对误差_analysis_primary_level_abs_error,model_output/derived_analysis,text,65922,19294,0.70732077,4,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,输出结构_output_structure,analysis_or_other,text,65922,19296,0.70729043,2,等级_直接分类,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,逐维度操作性求和(排除9)_operational_item_sum_excluding_9,analysis_or_other,text,65922,9648,0.85364522,41,0,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,报告总分减逐维度和_reported_total_minus_item_sum,analysis_or_other,numeric,65922,9648,0.85364522,17,0,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,逐维度平均置信度_mean_dimension_confidence,model_output/derived_analysis,numeric,65922,9648,0.85364522,531,0.91875,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,总体理由依据_overall_reason_evidence,model_output/derived_analysis,text,65922,9614,0.85416098,9548,good | no | it's pretty easy | i like reading books i enjoy i enjoy cooking um exercising is great | the other day | no,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,总体理由推理_overall_reasoning,model_output/derived_analysis,text,65922,19296,0.70729043,19296,"The participant reports feeling 'good' today, denies feeling down when asked directly, and has no history of depression diagnosis. Sleep is described as 'pretty easy,' and they engage in multiple enjoyable activities (reading, cooking, exercising). They also report feeling happy 'the other day.' There is no evidence...",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,触发维度_triggered_dimensions,analysis_or_other,text,65922,5073,0.92304542,2004,抑郁情绪 | 有罪感 | 自杀 | 入睡困难 | 睡眠不深 | 工作和兴趣 | 精神性焦虑 | 躯体性焦虑 | 胃肠道症状 | 全身症状,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,无法评估维度ID_unassessable_dimension_ids,analysis_or_other,text,65922,2036,0.96911501,1,14,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,分析主等级_analysis_primary_level,model_output/derived_analysis,text,65922,19294,0.70732077,4,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,全部维度置信度JSON_all_dimension_confidence_json,model_output/derived_analysis,json,65922,9648,0.85364522,8923,"{""1"":0.95,""2"":0.95,""3"":0.95,""4"":0.9,""5"":0.9,""6"":0.9,""7"":0.9,""8"":0.9}",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,全部维度理由依据JSON_all_dimension_evidence_json,model_output/derived_analysis,json,65922,9648,0.85364522,9530,"{""1"":""i like reading books i enjoy i enjoy cooking; i like to play sports i enjoy uh going out with friends and family playing games"",""2"":""do you feel down: no"",""3"":""how easy is it for you to get a good night's sleep: uh it's pretty easy; do you feel that way often: uh yes"",""4"":"""",""5"":"""",""6"":"""",""7"":"""",""8"":""""}",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,全部维度评分理由JSON_all_dimension_reasoning_json,model_output/derived_analysis,json,65922,9648,0.85364522,9648,"{""1"":""Participant explicitly describes multiple activities they enjoy and regularly engage in, indicating no loss of interest or pleasure."",""2"":""When directly asked about feeling down, participant denies it. No other statements indicate depressed mood, irritability beyond a normal frustration two weeks ago, or hopel...",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,全部维度模型分数JSON_all_dimension_scores_json,model_output/derived_analysis,json,65922,9648,0.85364522,6506,"{""1"":{""absolute_error"":0.0,""max_score"":3,""name"":""Little interest or pleasure in doing things"",""normalized_absolute_error"":0.0,""pred"":0,""score9_unassessable"":0,""signed_error"":0.0,""true"":0},""2"":{""absolute_error"":0.0,""max_score"":3,""name"":""Feeling down, depressed, irritable, or hopeless"",""normalized_absolute_error"":0.0,...",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,额外输出信息JSON_extra_output_json,analysis_or_other,json,65922,19296,0.70729043,1,{},未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,完整raw_response_raw_response,model_output/raw_response,mixed,65922,19296,0.70729043,19296,"{\n  ""severity_level"": ""No or minimal"",\n  ""key_evidence"": [\n    ""good"",\n    ""no"",\n    ""it's pretty easy"",\n    ""i like reading books i enjoy i enjoy cooking um exercising is great"",\n    ""the other day"",\n    ""no""\n  ],\n  ""confidence_score"": 0.98,\n  ""class_probabilities"": {\n    ""No or minimal"": 0.98,\n    ""Mi...",这是模型返回或解析后的输出，不是固定提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+02_统一结果索引,事件权重_event_weight,design_metadata/key,numeric,65922,46626,0.29270957,1247,0.0909,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,量表_scale,design_metadata/key,text,9648,9648,0.0,2,PHQ-8,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,队列_cohort,design_metadata/key,text,9648,9648,0.0,3,DAIC-WOZ全量189人,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,模型_model,design_metadata/key,text,9648,9648,0.0,4,DeepSeek-V4-Pro,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,思考模式_thinking_mode,design_metadata/key,text,9648,9648,0.0,2,思考,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,条件编号_condition_id,design_metadata/key,text,9648,9648,0.0,8,1,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,条件_condition,design_metadata/key,text,9648,9648,0.0,8,C01,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,条件全名_condition_full_name,design_metadata/key,text,9648,9648,0.0,8,01_全文_不规整_等级_不清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,输入范围_input_scope,design_metadata/key,text,9648,9648,0.0,2,全文,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,规整状态_standardization,design_metadata/key,text,9648,9648,0.0,2,不规整,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,清洗状态_cleaning,design_metadata/key,text,9648,9648,0.0,1,清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,输出任务_output_task,analysis_or_other,text,9648,9648,0.0,1,等级,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,基线标记_baseline,design_metadata/key,text,9648,9648,0.0,2,C01原始全文等级基线,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,被试ID_subject_id,design_metadata/key,text,9648,9648,0.0,288,300,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,事件ID_event_id,design_metadata/key,empty,9648,0,1.0,0,,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,记录层级_record_level,design_metadata/key,text,9648,9648,0.0,1,被试,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,解析状态_parse_status,analysis_or_other,text,9648,9648,0.0,1,ok,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,解析备注_parse_note,analysis_or_other,empty,9648,0,1.0,0,,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,模型原始等级_model_severity_level,model_output/raw_response,text,9648,9648,0.0,11,No or minimal,这是模型返回或解析后的输出，不是固定提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,等级来源_level_source,model_output/derived_analysis,text,9648,9648,0.0,1,模型直接输出severity_level,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,金标准等级_gold_level,model_output/derived_analysis,text,9648,9648,0.0,8,无或极轻,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,整体置信度_overall_confidence,model_output/derived_analysis,numeric,9648,9648,0.0,43,0.98,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,关键证据_key_evidence,model_output/derived_analysis,json,9648,9648,0.0,9549,"[""good"",""no"",""it's pretty easy"",""i like reading books i enjoy i enjoy cooking um exercising is great"",""the other day"",""no""]",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,总体理由推理_reasoning_chain,model_output/derived_analysis,text,9648,9648,0.0,9648,"The participant reports feeling 'good' today, denies feeling down when asked directly, and has no history of depression diagnosis. Sleep is described as 'pretty easy,' and they engage in multiple enjoyable activities (reading, cooking, exercising). They also report feeling happy 'the other day.' There is no evidence...",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别概率_class_probabilities,model_output/derived_analysis,json,9648,9648,0.0,1043,"{""No or minimal"":0.98,""Mild"":0.02,""Moderate"":0.0,""Severe"":0.0}",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别1_probability_category_1,model_output/derived_analysis,text,9648,9648,0.0,3,No or minimal,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别1_probability_value_1,model_output/derived_analysis,numeric,9648,9648,0.0,50,0.98,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别2_probability_category_2,model_output/derived_analysis,text,9648,9648,0.0,3,Mild,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别2_probability_value_2,model_output/derived_analysis,numeric,9648,9648,0.0,69,0.02,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别3_probability_category_3,model_output/derived_analysis,text,9648,9648,0.0,3,Moderate,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别3_probability_value_3,model_output/derived_analysis,numeric,9648,9648,0.0,72,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别4_probability_category_4,model_output/derived_analysis,text,9648,9648,0.0,3,Severe,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,类别4_probability_value_4,model_output/derived_analysis,numeric,9648,9648,0.0,67,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,金标准总分_gold_total,analysis_or_other,numeric,9648,9648,0.0,32,2,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+03_等级结果明细,源JSON路径_source_json,provenance_metadata,text,9648,9648,0.0,9648,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\deepseek-v4-pro\PHQ_全量189人\thinking\data\output\deepseek-v4-pro\01_全文_不规整_等级_不清洗\300.json,运行来源、路径或元数据；不等于提示词正文。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,量表_scale,design_metadata/key,text,123193,123193,0.0,2,PHQ-8,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,队列_cohort,design_metadata/key,text,123193,123193,0.0,3,DAIC-WOZ全量189人,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,模型_model,design_metadata/key,text,123193,123193,0.0,4,DeepSeek-V4-Pro,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,思考模式_thinking_mode,design_metadata/key,text,123193,123193,0.0,2,思考,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,条件编号_condition_id,design_metadata/key,text,123193,123193,0.0,8,3,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,条件_condition,design_metadata/key,text,123193,123193,0.0,8,C03,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,条件全名_condition_full_name,design_metadata/key,text,123193,123193,0.0,8,03_全文_不规整_评分_不清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,输入范围_input_scope,design_metadata/key,text,123193,123193,0.0,2,全文,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,规整状态_standardization,design_metadata/key,text,123193,123193,0.0,2,不规整,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,清洗状态_cleaning,design_metadata/key,text,123193,123193,0.0,1,清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,输出任务_output_task,analysis_or_other,text,123193,123193,0.0,1,评分,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,基线标记_baseline,design_metadata/key,text,123193,123193,0.0,2,C03原始全文评分基线,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,被试ID_subject_id,design_metadata/key,text,123193,123193,0.0,288,300,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,事件ID_event_id,design_metadata/key,empty,123193,0,1.0,0,,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,记录层级_record_level,design_metadata/key,text,123193,123193,0.0,1,被试-维度/条目,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,解析状态_parse_status,analysis_or_other,text,123193,123193,0.0,1,ok,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,解析备注_parse_note,analysis_or_other,empty,123193,0,1.0,0,,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,维度或条目类型_unit_type,analysis_or_other,text,123193,123193,0.0,2,PHQ条目_item,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,维度或条目ID_unit_id,analysis_or_other,text,123193,123193,0.0,17,1,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,维度或条目名称_unit_name,analysis_or_other,text,123193,123193,0.0,86,Little interest or pleasure in doing things,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,模型分数_predicted_score,model_output/derived_analysis,text,123193,123193,0.0,6,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,金标准分数_gold_score,model_output/derived_analysis,numeric,123193,123193,0.0,6,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,误差_signed_error,model_output/derived_analysis,numeric,123193,121157,0.01652691,9,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,绝对误差_absolute_error,model_output/derived_analysis,numeric,123193,121157,0.01652691,5,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,模型报告总分_model_reported_total_score,model_output/derived_analysis,text,123193,123193,0.0,40,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,评分总分映射等级_score_mapped_level_derived,model_output/derived_analysis,text,123193,123193,0.0,8,无或极轻,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,等级来源_level_source,model_output/derived_analysis,text,123193,123193,0.0,1,由模型报告总分按量表阈值派生,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,条目/维度证据_key_evidence,model_output/derived_analysis,text,123193,105056,0.14722427,85245,"""i like reading books i enjoy i enjoy cooking; i like to play sports i enjoy uh going out with friends and family playing games""",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,条目/维度理由_reasoning,model_output/derived_analysis,text,123193,123179,0.00011364,119093,"Participant explicitly describes multiple activities they enjoy and regularly engage in, indicating no loss of interest or pleasure.",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,条目/维度置信度_confidence_score,model_output/derived_analysis,numeric,123193,123193,0.0,45,0.95,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,金标准总分_gold_total,analysis_or_other,numeric,123193,123193,0.0,32,2,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,金标准等级_gold_level,model_output/derived_analysis,text,123193,123193,0.0,8,无或极轻,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+04_评分维度明细,源JSON路径_source_json,provenance_metadata,text,123193,123193,0.0,9648,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\deepseek-v4-pro\PHQ_全量189人\thinking\data\output\deepseek-v4-pro\03_全文_不规整_评分_不清洗\300.json,运行来源、路径或元数据；不等于提示词正文。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,量表_scale,design_metadata/key,text,46626,46626,0.0,1,HAMD-17,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,队列_cohort,design_metadata/key,text,46626,46626,0.0,2,PDCH标签99人,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,模型_model,design_metadata/key,text,46626,46626,0.0,3,GLM-5.2,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,思考模式_thinking_mode,design_metadata/key,text,46626,46626,0.0,2,思考,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,条件编号_condition_id,design_metadata/key,text,46626,46626,0.0,8,17,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,条件_condition,design_metadata/key,text,46626,46626,0.0,8,C17,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,条件全名_condition_full_name,design_metadata/key,text,46626,46626,0.0,8,17_独立事件_不规整_等级_不清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,输入范围_input_scope,design_metadata/key,text,46626,46626,0.0,1,独立事件,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,规整状态_standardization,design_metadata/key,text,46626,46626,0.0,2,不规整,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,清洗状态_cleaning,design_metadata/key,text,46626,46626,0.0,1,清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,输出任务_output_task,analysis_or_other,text,46626,46626,0.0,2,等级,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,基线标记_baseline,design_metadata/key,text,46626,46626,0.0,1,否,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,被试ID_subject_id,design_metadata/key,text,46626,46626,0.0,100,001A,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,事件ID_event_id,design_metadata/key,text,46626,46626,0.0,57,01,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,记录层级_record_level,design_metadata/key,text,46626,46626,0.0,1,事件,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,事件权重_event_weight,design_metadata/key,numeric,46626,46626,0.0,1247,0.0909,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,模型原始等级_model_severity_level,model_output/raw_response,text,46626,24555,0.4733625,7,重度抑郁,这是模型返回或解析后的输出，不是固定提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,模型报告总分_model_score,model_output/derived_analysis,text,46626,22069,0.52668039,33,18,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,评分总分映射等级_score_mapped_level_derived,model_output/derived_analysis,text,46626,22069,0.52668039,4,中度抑郁,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,等级来源_level_source,model_output/derived_analysis,text,46626,46626,0.0,2,事件模型直接输出severity_level,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,关键证据_key_evidence,model_output/derived_analysis,json,46626,46626,0.0,32318,"[""来的时候在家不愿意出门，不愿意下楼，谁的电话也不接也不干活"",""没意思，我觉得个几乎是24小时，这个电视其实也没看进去，感觉到是混日子"",""没对什么是对什么都没有兴趣，对什么都没兴趣，出门拽都拽不出去"",""啥也不愿意干什么都跟我没关系好吧，啥都没兴趣了，什么都跟我没关系"",""做饭的兴趣都没了，都不啥啥都不做，啥都不干""]",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,理由_reasoning,model_output/derived_analysis,text,46626,46625,2.145e-05,46609,基于输入文本线索，来访者在HAMD-17的多个核心维度上表现出严重症状。1. 工作与活动：严重受损，表现为'不愿意出门'、'不干活'、'出门拽都拽不出去'，甚至丧失基本生活技能如'做饭的兴趣都没了'，提示该维度可能处于最高分值。2. 抑郁情绪：持续感到'没意思'、'混日子'。3. 兴趣减退（快感缺失）：'对什么都没兴趣'、'啥都不愿意干'。4. 迟滞：提及大脑反应速度下降。综合来看，来访者社会功能严重退缩，无法维持日常基本活动，符合重度抑郁的判断标准。由于缺乏睡眠、食欲、自杀等维度的信息，置信度保留在0.85。,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,置信度_confidence_score,model_output/derived_analysis,numeric,46626,46623,6.434e-05,33,0.85,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,类别概率_class_probabilities,model_output/derived_analysis,json,46626,24554,0.47338395,522,"{""正常"":0.0,""轻度抑郁"":0.05,""中度抑郁"":0.1,""重度抑郁"":0.85}",字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,金标准总分_gold_total,analysis_or_other,numeric,46626,46543,0.00178012,30,22,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,金标准等级_gold_level,model_output/derived_analysis,text,46626,46543,0.00178012,4,中度抑郁,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,源JSON路径_source_json,provenance_metadata,text,46626,46626,0.0,1868,E:\数据库\代码\Data\PDCH\实验\_新结构_待启用\runs\glm-5.2\PDCH_HAMD_100人\data\output\glm-5.2\17_独立事件_不规整_等级_不清洗\001A.json,运行来源、路径或元数据；不等于提示词正文。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+05_独立事件明细,事件原始字段JSON_event_raw_fields,design_metadata/key,json,46626,46626,0.0,46614,"{""severity_level"":""重度抑郁"",""key_evidence"":[""来的时候在家不愿意出门，不愿意下楼，谁的电话也不接也不干活"",""没意思，我觉得个几乎是24小时，这个电视其实也没看进去，感觉到是混日子"",""没对什么是对什么都没有兴趣，对什么都没兴趣，出门拽都拽不出去"",""啥也不愿意干什么都跟我没关系好吧，啥都没兴趣了，什么都跟我没关系"",""做饭的兴趣都没了，都不啥啥都不做，啥都不干""],""confidence_score"":0.85,""class_probabilities"":{""正常"":0.0,""轻度抑郁"":0.05,""中度抑郁"":0.1,""重度抑郁"":0.85},""reasoning_chain"":""基于...",实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,量表_scale,design_metadata/key,text,336,336,0.0,2,HAMD-17,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,队列_cohort,design_metadata/key,text,336,336,0.0,3,PDCH共同24人验证,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,模型_model,design_metadata/key,text,336,336,0.0,4,GLM-5.2,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,思考模式_thinking_mode,design_metadata/key,text,336,336,0.0,2,不思考,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,条件编号_condition_id,design_metadata/key,text,336,336,0.0,24,1,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,条件_condition,design_metadata/key,text,336,336,0.0,24,C01,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,条件全名_condition_full_name,design_metadata/key,text,336,336,0.0,24,01_全文_不规整_等级_不清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,输出任务_expected_output_task,analysis_or_other,text,336,336,0.0,2,等级,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,预期字段_schema_fields,analysis_or_other,text,336,336,0.0,3,等级: severity_level/key_evidence/confidence_score/class_probabilities/reasoning_chain,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,预期被试数_expected_subject_n,design_metadata/key,text,336,336,0.0,3,24,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,被试结果数_subject_result_n,design_metadata/key,numeric,336,336,0.0,5,24,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,被试缺失数_missing_subject_n,design_metadata/key,numeric,336,336,0.0,5,0,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,事件字段行数_event_field_n,design_metadata/key,numeric,336,336,0.0,11,0,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,等级字段非空数_direct_grade_present_n,model_output/derived_analysis,text,336,336,0.0,14,24,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,评分总分字段非空数_score_present_n,model_output/derived_analysis,numeric,336,336,0.0,15,0,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,证据字段非空数_evidence_present_n,model_output/derived_analysis,text,336,336,0.0,97,24,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,置信度字段非空数_confidence_present_n,model_output/derived_analysis,numeric,336,336,0.0,18,24,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,覆盖状态_coverage_status,analysis_or_other,text,336,336,0.0,2,完整,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+06_覆盖审计,基线说明_baseline_note,design_metadata/key,text,336,28,0.91666667,2,C01原始全文等级基线,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,条件_condition,design_metadata/key,text,24,24,0.0,24,C01,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,条件全名_condition_full_name,design_metadata/key,text,24,24,0.0,24,01_全文_不规整_等级_不清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,输入范围_input_scope,design_metadata/key,text,24,24,0.0,3,全文,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,规整状态_standardization,design_metadata/key,text,24,24,0.0,2,不规整,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,清洗状态_cleaning,design_metadata/key,text,24,24,0.0,1,清洗,实验设计、条件或主键元数据。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,输出类型_schema_type,analysis_or_other,text,24,24,0.0,3,等级,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,HAMD提示词字段_HAMD_prompt_fields,analysis_or_other,text,24,24,0.0,3,severity_level; key_evidence[]; confidence_score; class_probabilities{}; reasoning_chain,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,PHQ提示词字段_PHQ_prompt_fields,analysis_or_other,text,24,24,0.0,3,severity_level; key_evidence[]; confidence_score; class_probabilities{}; reasoning_chain,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,原始等级是否应有_direct_grade_expected,model_output/derived_analysis,text,24,24,0.0,2,是,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,原始评分是否应有_direct_score_expected,model_output/derived_analysis,text,24,24,0.0,2,否,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+07_提示词字段映射,等级派生字段_score_mapped_level,model_output/derived_analysis,text,24,24,0.0,2,不适用,字段名和实际内容属于模型输出或由结果派生的分析变量。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+08_字段字典,所属表_sheet,analysis_or_other,text,14,14,0.0,5,02_统一结果索引,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+08_字段字典,字段_field,analysis_or_other,text,14,14,0.0,14,模型原始等级_model_severity_level,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+08_字段字典,含义_meaning,analysis_or_other,text,14,14,0.0,14,模型直接输出的severity_level；只在等级提示词条件中有值,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。
+08_字段字典,缺失解释_missing,analysis_or_other,text,14,14,0.0,14,评分条件不要求该字段，结构性空值，不是模型漏答,未发现固定提示词结构标记；不能仅凭字段名把它当作提示词。 固定提示词正文不以字段名推断；本工作簿未观察到可直接复用的静态prompt字段。

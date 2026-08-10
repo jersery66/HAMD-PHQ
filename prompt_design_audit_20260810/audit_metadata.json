@@ -1,0 +1,70 @@
+{
+  "input_path": "E:\\数据库\\代码\\Data\\PDCH\\实验\\github_upload_20260806\\PDCH_PHQ_HAMD_所有模型所有条件_提示词字段完整修正版_20260807.xlsx",
+  "input_size": 125056024,
+  "input_sha256": "b3286e7dbb28dc40f218b9ae35f87da7307cf7a0b7cb7da49e042eea327284e2",
+  "input_sha256_after_generation": "b3286e7dbb28dc40f218b9ae35f87da7307cf7a0b7cb7da49e042eea327284e2",
+  "input_unchanged": true,
+  "workbook": {
+    "sheet_names": [
+      "01_字段对照",
+      "02_统一结果索引",
+      "03_等级结果明细",
+      "04_评分维度明细",
+      "05_独立事件明细",
+      "06_覆盖审计",
+      "07_提示词字段映射",
+      "08_字段字典"
+    ],
+    "sheet_rows": {
+      "01_字段对照": 17,
+      "02_统一结果索引": 65922,
+      "03_等级结果明细": 9648,
+      "04_评分维度明细": 123193,
+      "05_独立事件明细": 46626,
+      "06_覆盖审计": 336,
+      "07_提示词字段映射": 24,
+      "08_字段字典": 14
+    },
+    "sheet_cols": {
+      "01_字段对照": 5,
+      "02_统一结果索引": 52,
+      "03_等级结果明细": 34,
+      "04_评分维度明细": 33,
+      "05_独立事件明细": 28,
+      "06_覆盖审计": 19,
+      "07_提示词字段映射": 11,
+      "08_字段字典": 4
+    }
+  },
+  "contexts": 168,
+  "conditions_from_source": 24,
+  "prompt_sources": {
+    "HAMD-17": {
+      "status": "extracted_from_local_docx",
+      "path": "E:\\数据库\\代码\\Data\\PDCH\\实验\\_新结构_待启用\\hamd正式使用提示词.docx",
+      "language": "zh",
+      "docx_sha256": "68b20fdf093a3a060f6e2ac12b18cc5d5b90763d966880aec5a49832686a5436"
+    },
+    "PHQ-8": {
+      "status": "extracted_from_local_docx",
+      "path": "E:\\数据库\\代码\\Data\\PDCH\\实验\\_新结构_待启用\\PHQ全量189人_调用就绪\\prompts\\PHQ8_prompt_set_3_nonconditional_24_conditions_English.docx",
+      "language": "en",
+      "docx_sha256": "a3d2fe4ca94b1d34ac771141b2527191cdd82dc0352b04d760df54846b843f05"
+    }
+  },
+  "unique_prompt_templates": 22,
+  "csv_rows": {
+    "field_inventory": 186,
+    "templates": 22,
+    "condition_dictionary": 24,
+    "pairwise_diff": 54,
+    "feature_coding": 168,
+    "manual_review": 153,
+    "manipulation_audit": 54,
+    "frozen_input": 168,
+    "data_quality": 5,
+    "coding_rules": 20,
+    "result_index": 11
+  },
+  "stopping_rule": "本模块只生成提示词设计审计与冻结输入；不计算任何prompt feature与MAE/NAE/accuracy/bias/evidence drift的关联。"
+}

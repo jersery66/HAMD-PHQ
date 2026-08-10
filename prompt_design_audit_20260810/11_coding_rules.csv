@@ -1,0 +1,21 @@
+﻿feature_name,中文解释,允许值,原文证据规则,是否可进入下一阶段
+evidence_requirement,提示词是否要求提供证据；只按原文明确要求编码。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+evidence_quote_required,是否要求证据直接来自输入文本或原文引用。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+explicit_scoring_anchors,是否存在明确的分值/等级锚点；不把结果字段当锚点。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+negation_handling,是否明确处理否认、排除或无证据。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+missing_information_rule,缺少信息时的原文规则；未见规则编码 unspecified。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+temporal_constraint,是否限定过去两周、一周内或当前片段等时间窗口。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+frequency_requirement,是否要求或定义发生频率。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+inference_permission,上下文推断权限；没有原文支持编码 uncertain。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+speaker_restriction,是否限定只使用患者/来访者信息。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+abstention_permission,是否允许或要求信息不足时拒答/无法判断。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+output_rigidity,自由文本、结构化文本、JSON或严格JSON schema。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+itemwise_reasoning_requirement,是否要求逐条/逐维度推理。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+aggregation_instruction,是否要求条目分数、求和或等级转换。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+uncertainty_requirement,是否要求置信度、概率或不确定性文字。,按05_prompt_feature_coding.csv中的value列；另有evidence_quote、auto_confidence、review_required。,没有明确文本支持时不猜测；使用absent/none/unspecified/uncertain并进入人工复核。,待人工复核后冻结；本阶段不与任何性能字段关联。
+static_character_count,提示词静态文本复杂度辅助描述变量。,数值；estimated_token_count为字符数/4向上取整的粗略估计，不是API tokenizer计数。,直接由固定prompt文本计算。,可以作为冻结设计协变量，但不得提前与结果关联。
+static_line_count,提示词静态文本复杂度辅助描述变量。,数值；estimated_token_count为字符数/4向上取整的粗略估计，不是API tokenizer计数。,直接由固定prompt文本计算。,可以作为冻结设计协变量，但不得提前与结果关联。
+estimated_token_count,提示词静态文本复杂度辅助描述变量。,数值；estimated_token_count为字符数/4向上取整的粗略估计，不是API tokenizer计数。,直接由固定prompt文本计算。,可以作为冻结设计协变量，但不得提前与结果关联。
+numbered_rule_count,提示词静态文本复杂度辅助描述变量。,数值；estimated_token_count为字符数/4向上取整的粗略估计，不是API tokenizer计数。,直接由固定prompt文本计算。,可以作为冻结设计协变量，但不得提前与结果关联。
+instruction_count,提示词静态文本复杂度辅助描述变量。,数值；estimated_token_count为字符数/4向上取整的粗略估计，不是API tokenizer计数。,直接由固定prompt文本计算。,可以作为冻结设计协变量，但不得提前与结果关联。
+output_constraint_count,提示词静态文本复杂度辅助描述变量。,数值；estimated_token_count为字符数/4向上取整的粗略估计，不是API tokenizer计数。,直接由固定prompt文本计算。,可以作为冻结设计协变量，但不得提前与结果关联。

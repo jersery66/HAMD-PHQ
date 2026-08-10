@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "root": "E:\\数据库\\代码\\Data\\PDCH\\实验\\github_upload_20260806\\prompt_design_audit_20260810",
+  "checks": {
+    "source_sha256_unchanged": true,
+    "template_id_unique": true,
+    "normalized_hash_unique": true,
+    "observed_context_n": 9,
+    "c01_c16_contexts_with_16_conditions": 9,
+    "c01_c16_contexts_total": 9,
+    "pair_rows": 54,
+    "pair_group_counts": {
+      "HAMD-17|GLM-5.2|不思考": 6,
+      "HAMD-17|GLM-5.2|思考": 6,
+      "HAMD-17|Kimi-K2.6|不思考": 6,
+      "HAMD-17|Kimi-K2.6|思考": 6,
+      "HAMD-17|Qwen3.7-Max|不思考": 6,
+      "HAMD-17|Qwen3.7-Max|思考": 6,
+      "PHQ-8|DeepSeek-V4-Pro|思考": 6,
+      "PHQ-8|GLM-5.2|思考": 6,
+      "PHQ-8|Qwen3.7-Max|思考": 6
+    },
+    "feature_review_n": 144,
+    "feature_review_covered_by_manual_review": true,
+    "frozen_input_has_no_outcome_headers": true,
+    "frozen_bad_headers": [],
+    "same_condition_multiple_templates": {},
+    "xlsx_exists": true,
+    "xlsx_sha256": "8fcd9cbdfba7d3de54fa45ba1eb797e02a9fa1f1504fe2d221a8ec7778c83019",
+    "xlsx_zip_valid": true,
+    "xlsx_sheet_names": [
+      "01_核心说明",
+      "02_原始字段盘点",
+      "03_唯一提示词模板",
+      "04_条件设计字典",
+      "05_提示词差分",
+      "06_提示词特征",
+      "07_人工复核",
+      "08_操纵真实性",
+      "09_冻结分析输入",
+      "10_数据质量问题",
+      "11_编码规则",
+      "12_结果索引"
+    ],
+    "xlsx_sheet_names_exact": true,
+    "xlsx_formula_count": 0,
+    "xlsx_formula_errors": []
+  },
+  "issues": [],
+  "scope_guard": "No prompt-feature to performance association was computed."
+}

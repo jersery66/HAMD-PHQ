@@ -1,0 +1,13 @@
+{"kind":"workbook","id":"wb/lwiyyh","sheets":12}
+{"kind":"sheet","id":"ws/2tvp5z","name":"01_核心说明","index":0,"range":"A1:B18","address":"A1:B18"}
+{"kind":"sheet","id":"ws/dp2tyo","name":"02_原始字段盘点","index":1,"range":"A1:J187","address":"A1:J187"}
+{"kind":"sheet","id":"ws/w3gz6w","name":"03_唯一提示词模板","index":2,"range":"A1:AC23","address":"A1:AC23"}
+{"kind":"sheet","id":"ws/4kaus6","name":"04_条件设计字典","index":3,"range":"A1:P25","address":"A1:P25"}
+{"kind":"sheet","id":"ws/o0x3eg","name":"05_提示词差分","index":4,"range":"A1:AA55","address":"A1:AA55"}
+{"kind":"sheet","id":"ws/cv51if","name":"06_提示词特征","index":5,"range":"A1:BQ169","address":"A1:BQ169"}
+{"kind":"sheet","id":"ws/55lssp","name":"07_人工复核","index":6,"range":"A1:N154","address":"A1:N154"}
+{"kind":"sheet","id":"ws/aaxnq0","name":"08_操纵真实性","index":7,"range":"A1:U55","address":"A1:U55"}
+{"kind":"sheet","id":"ws/5767i8","name":"09_冻结分析输入","index":8,"range":"A1:AP169","address":"A1:AP169"}
+{"kind":"sheet","id":"ws/02zyhj","name":"10_数据质量问题","index":9,"range":"A1:H6","address":"A1:H6"}
+{"kind":"sheet","id":"ws/cau25x","name":"11_编码规则","index":10,"range":"A1:E21","address":"A1:E21"}
+{"kind":"sheet","id":"ws/2upcp4","name":"12_结果索引","index":11,"range":"A1:E12","address":"A1:E12"}
