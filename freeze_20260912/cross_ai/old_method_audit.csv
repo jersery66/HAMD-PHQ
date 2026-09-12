@@ -1,0 +1,8 @@
+scale,old_method,source,is_two_stage,note
+PHQ-8,A,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\PHQ_CROSS_AI_ANCHORED_outer_routes.csv,True,old anchored output: model-specific condition stage followed by AI stage
+PHQ-8,B,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\PHQ_CROSS_AI_ANCHORED_outer_routes.csv,True,old anchored output: model-specific condition stage followed by AI stage
+PHQ-8,C,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\PHQ_CROSS_AI_ANCHORED_outer_routes.csv,True,old anchored output: model-specific condition stage followed by AI stage
+HAMD-17,A,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\HAMD_CROSS_AI_ANCHORED_outer_routes.csv,True,old anchored output: model-specific condition stage followed by AI stage
+HAMD-17,B,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\HAMD_CROSS_AI_ANCHORED_outer_routes.csv,True,old anchored output: model-specific condition stage followed by AI stage
+HAMD-17,C,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\HAMD_CROSS_AI_ANCHORED_outer_routes.csv,True,old anchored output: model-specific condition stage followed by AI stage
+PHQ-8/HAMD-17,direct pooled Joint candidate pilot,outputs/pdch_phq189_cross_ai_heterogeneity_20260909 and outputs/pdch_hamd99_cross_ai_heterogeneity_20260909,False,direct all-AI×condition pilot retained as related exploratory result

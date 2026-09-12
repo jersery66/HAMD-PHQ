@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "freeze_root_exists",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "freeze_20260911"
+    },
+    {
+      "check": "freeze_source_hash",
+      "observed": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "expected": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv"
+    },
+    {
+      "check": "all_output_directories_catalogued",
+      "observed": 107,
+      "expected": 107,
+      "status": "PASS",
+      "evidence": "freeze_20260911\\ALL_OUTPUT_DIRECTORIES_INVENTORY.csv"
+    },
+    {
+      "check": "artifact_manifest_count",
+      "observed": 164,
+      "expected": 164,
+      "status": "PASS",
+      "evidence": "freeze_20260911\\FREEZE_ARTIFACT_MANIFEST.csv"
+    },
+    {
+      "check": "copied_artifact_hashes",
+      "observed": [],
+      "expected": [],
+      "status": "PASS",
+      "evidence": "freeze_20260911\\FREEZE_ARTIFACT_MANIFEST.csv"
+    },
+    {
+      "check": "source_paths_missing_after_freeze",
+      "observed": 8,
+      "expected": "allowed for moved Desktop reference files",
+      "status": "PASS",
+      "evidence": "freeze_20260911\\FREEZE_ARTIFACT_MANIFEST.csv"
+    },
+    {
+      "check": "zip_integrity_and_hashes",
+      "observed": [],
+      "expected": [],
+      "status": "PASS",
+      "evidence": "freeze_20260911\\FREEZE_ARTIFACT_MANIFEST.csv"
+    },
+    {
+      "check": "required_freeze_files",
+      "observed": [],
+      "expected": [],
+      "status": "PASS",
+      "evidence": "freeze_20260911"
+    },
+    {
+      "check": "raw_data_modified",
+      "observed": false,
+      "expected": false,
+      "status": "PASS",
+      "evidence": "freeze_20260911\\freeze_manifest.json"
+    },
+    {
+      "check": "llm_calls_zero",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "freeze_20260911\\freeze_manifest.json"
+    }
+  ],
+  "failed_checks": [],
+  "zip_member_counts": {
+    "freeze_20260911\\01_FROZEN_INPUT\\canonical_input_bundle.zip": 10,
+    "freeze_20260911\\02_FROZEN_STAGE2\\stage2_result_bundle.zip": 87,
+    "freeze_20260911\\03_FROZEN_CROSS_AI\\cross_ai_full_bundle.zip": 106,
+    "freeze_20260911\\90_INVENTORY_POINTERS\\prior_handoff_index.zip": 15,
+    "freeze_20260911\\00_RAW_LINEAGE\\pdch_raw_and_early_sources.zip": 11,
+    "freeze_20260911\\00_RAW_LINEAGE\\hamd_analysis_history.zip": 12,
+    "freeze_20260911\\00_RAW_LINEAGE\\daic_processed_research.zip": 1928,
+    "freeze_20260911\\00_RAW_LINEAGE\\ai24_condition_workbooks.zip": 17,
+    "freeze_20260911\\06_ADDITIONAL_ANALYSES\\missing_high_value_analyses.zip": 43239,
+    "freeze_20260911\\08_EARLY_PDCH_BRANCH\\early_selected_results.zip": 2415
+  },
+  "raw_data_modified": false,
+  "llm_calls": 0
+}

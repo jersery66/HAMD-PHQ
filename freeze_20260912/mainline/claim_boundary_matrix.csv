@@ -1,0 +1,11 @@
+claim_id,claim,status,what_can_be_written,what_cannot_be_written,primary_evidence
+C01,多个 condition 之间存在潜在互补信息,conditional,HAMD oracle 与条件差异支持存在信息互补的可能,不能把 oracle 当作可部署效果,Stage2/HAMD_06_oracle_upper_bound.csv
+C02,PHQ 简单融合可改善部分总分误差,conditional,primary142 中 Mean/B 在部分模型上降低总分 MAE,不能写成每个症状条目都更准,Stage2/PHQ_06_total_performance.csv
+C03,总分改善与条目真实性完全一致,not_supported,必须同时报告 item NAE、sum item AE、cancellation,不能只用总分 MAE 证明条目改善,Stage2/PHQ_04_QwenB_error_decomposition.csv; direct Joint mechanism
+C04,HAMD 存在稳定通用 winner,not_supported,可报告模型/条目/condition 异质性,不能建立跨模型通用 mapping,Stage2/three_strategy_decision_summary.csv; direct Joint route stability
+C05,HAMD16 可替代标准 HAMD17,forbidden,只能称 HAMD16 methodological core,不能改写为标准 HAMD17,Stage2/HAMD_12_core16_performance.csv
+C06,H14 是结构性可评估性瓶颈,supported_with_limits,报告 gold=9、AI 无效率、rescue 和 coverage,不能把 9 转成 0 或临床安全性结论,Stage2/HAMD_02_H14_evaluability_by_condition.csv
+C07,condition disagreement 可用于人工复核排序,promising_exploratory,作为选择性自动化探索信号,不能称临床安全性验证；缺少人工成本和双评者审核,Stage2/HAMD_07_disagreement_error.csv; HAMD_08_selective_prediction.csv
+C08,直接 Joint Cross-AI 已验证优于单模型,not_supported,报告候选池、路由和没有稳定优势的结果,不能宣布 Cross-AI 是最终评分方案,direct Joint result summary and comparisons
+C09,自动 evidence 字段具有内容效度,blocked,只能写自动匹配和待审核状态,"不能替代 2,000 行双评者人工审核",outputs/pdch_twostage_corrected_20260821/evidence_audit_blinded_sample.csv
+C10,当前研究具备临床部署或外部验证资格,forbidden,限定为内部 OOF/secondary replication 方法评估,不能写临床部署、诊断效度或独立外部验证,DATA_GAP_REPORT.md

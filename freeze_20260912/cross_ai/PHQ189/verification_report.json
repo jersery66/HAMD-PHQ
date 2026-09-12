@@ -1,0 +1,160 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "manifest_status",
+      "observed": "COMPLETE_EXPLORATORY_OOF",
+      "expected": "COMPLETE_EXPLORATORY_OOF",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\run_manifest.json"
+    },
+    {
+      "check": "source_hash_unchanged",
+      "observed": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "expected": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv"
+    },
+    {
+      "check": "index_hash_unchanged",
+      "observed": "1c5acfa6c293939b29cec5da08ed73cd9fdd5435546222a838a68d14c1207eec",
+      "expected": "1c5acfa6c293939b29cec5da08ed73cd9fdd5435546222a838a68d14c1207eec",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\02_统一结果索引.csv"
+    },
+    {
+      "check": "all189_fold_subjects",
+      "observed": 189,
+      "expected": 189,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_189_outer_folds.csv"
+    },
+    {
+      "check": "each_subject_once_per_repeat",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_189_outer_folds.csv"
+    },
+    {
+      "check": "outer_fold_rows",
+      "observed": 1890,
+      "expected": 1890,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_189_outer_folds.csv"
+    },
+    {
+      "check": "outer_route_rows",
+      "observed": 1600,
+      "expected": 1600,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_outer_routes.csv"
+    },
+    {
+      "check": "outer_route_strategies",
+      "observed": [
+        "CrossAI",
+        "WithinAI_DeepSeek",
+        "WithinAI_GLM",
+        "WithinAI_Qwen"
+      ],
+      "expected": [
+        "CrossAI",
+        "WithinAI_DeepSeek",
+        "WithinAI_GLM",
+        "WithinAI_Qwen"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_outer_routes.csv"
+    },
+    {
+      "check": "inner_candidate_rows",
+      "observed": 9600,
+      "expected": 9600,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_inner_candidate_metrics.csv"
+    },
+    {
+      "check": "inner_candidate_grid",
+      "observed": 24,
+      "expected": 24,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_inner_candidate_metrics.csv"
+    },
+    {
+      "check": "oof_rows",
+      "observed": 105840,
+      "expected": 105840,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_oof_predictions.csv"
+    },
+    {
+      "check": "oof_subjects",
+      "observed": 189,
+      "expected": 189,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_oof_predictions.csv"
+    },
+    {
+      "check": "oof_methods",
+      "observed": [
+        "C03_DeepSeek",
+        "C03_GLM",
+        "C03_Qwen",
+        "CrossAI",
+        "WithinAI_DeepSeek",
+        "WithinAI_GLM",
+        "WithinAI_Qwen"
+      ],
+      "expected": [
+        "C03_DeepSeek",
+        "C03_GLM",
+        "C03_Qwen",
+        "CrossAI",
+        "WithinAI_DeepSeek",
+        "WithinAI_GLM",
+        "WithinAI_Qwen"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_oof_predictions.csv"
+    },
+    {
+      "check": "performance_methods",
+      "observed": 7,
+      "expected": 7,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_performance.csv"
+    },
+    {
+      "check": "comparison_rows",
+      "observed": 18,
+      "expected": 18,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_comparisons.csv"
+    },
+    {
+      "check": "final_route_rows",
+      "observed": 8,
+      "expected": 8,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_final_development_routes.csv"
+    },
+    {
+      "check": "crossai_route_summary_rows",
+      "observed": 8,
+      "expected": 8,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_CROSS_AI_route_stability.csv"
+    },
+    {
+      "check": "no_external_validation_claim",
+      "observed": "pooled exploratory analysis only; no external-validation claim",
+      "expected": "pooled exploratory analysis only; no external-validation claim",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\run_manifest.json"
+    }
+  ],
+  "failed_checks": [],
+  "raw_data_modified": false,
+  "llm_calls": 0
+}

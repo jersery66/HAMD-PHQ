@@ -1,0 +1,120 @@
+{
+  "analysis_name": "HAMD/PHQ multicondition information fusion, evaluability and reliable scoring path",
+  "status": "COMPLETE_FOR_AVAILABLE_STAGE2_TABLES",
+  "source": "outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv",
+  "source_sha256": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+  "index": "outputs\\pdch_all_prompt_fields_corrected_20260807\\02_统一结果索引.csv",
+  "index_sha256": "1c5acfa6c293939b29cec5da08ed73cd9fdd5435546222a838a68d14c1207eec",
+  "folds": "outputs\\pdch_heterogeneous_condition_total_20260827\\fold_assignments.csv",
+  "folds_sha256": "d502c77e29c238e89f3b741f9ef05bc07ef503f115498d1e297e75cee6e96ad6",
+  "conditions": [
+    3,
+    4,
+    7,
+    8,
+    11,
+    12,
+    15,
+    16
+  ],
+  "phq_models": [
+    "DeepSeek-V4-Pro",
+    "GLM-5.2",
+    "Qwen3.7-Max"
+  ],
+  "hamd_models": [
+    "GLM-5.2",
+    "Kimi-K2.6",
+    "Qwen3.7-Max"
+  ],
+  "phq_split_counts": {
+    "all_subjects": 189,
+    "primary142": 142,
+    "test47": 47
+  },
+  "hamd_scope": "PDCH标签99人; HAMD24 excluded",
+  "test47_boundary": "held-out / secondary replication; no fit or tuning",
+  "nested_cv": {
+    "outer": "existing 10 repeats × 5 folds",
+    "inner": "5-fold KFold within outer training only",
+    "ridge_alpha": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "elasticnet_alpha": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "elasticnet_l1_ratio": [
+      0.1,
+      0.5,
+      0.9
+    ]
+  },
+  "rounding": "continuous fusion predictions clipped to item range then np.rint; original integer scores unchanged",
+  "sentinel": "HAMD gold H14=9 is unassessable; AI prediction 9 is invalid; no zero imputation",
+  "random_seed": 20260907,
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0",
+    "scikit-learn": "1.9.0"
+  },
+  "raw_data_modified": false,
+  "source_rows_normalized": 76680,
+  "stage1_check_status": "PASS",
+  "outputs": [
+    "00_source_manifest.csv",
+    "01_reproduction_check.csv",
+    "H14_fusion_accuracy.csv",
+    "HAMD_01_subject_benefit_strict17.csv",
+    "HAMD_02_H14_evaluability_by_condition.csv",
+    "HAMD_03_H14_rescue.csv",
+    "HAMD_04_accuracy_coverage.csv",
+    "HAMD_05_complete_incomplete_comparison.csv",
+    "HAMD_06_oracle_upper_bound.csv",
+    "HAMD_07_disagreement_error.csv",
+    "HAMD_08_selective_prediction.csv",
+    "HAMD_09_condition_sensitivity_taxonomy.csv",
+    "HAMD_10_severity_error.csv",
+    "HAMD_11_core16_oof_predictions.csv",
+    "HAMD_12_core16_performance.csv",
+    "HAMD_13_ridge_coefficients.csv",
+    "HAMD_14_performance_stability.csv",
+    "HAMD_PHQ_multicondition_results.xlsx",
+    "PHQ_01_QwenB_item_primary142.csv",
+    "PHQ_02_QwenB_item_test47.csv",
+    "PHQ_03_item_replication_direction.csv",
+    "PHQ_04_QwenB_error_decomposition.csv",
+    "PHQ_05_core_oof_predictions.csv",
+    "PHQ_06_total_performance.csv",
+    "PHQ_07_item_performance.csv",
+    "PHQ_08_error_mechanism.csv",
+    "PHQ_09_ridge_coefficients.csv",
+    "PHQ_10_statistical_comparisons.csv",
+    "PHQ_11_test47_fusion_performance.csv",
+    "PHQ_12_test47_fusion_item_performance.csv",
+    "PHQ_13_test47_fusion_coefficients.csv",
+    "PHQ_14_performance_stability.csv",
+    "VERIFICATION_REPORT.md",
+    "data_contract.csv",
+    "verification_checks.csv",
+    "verification_report.json",
+    "workbook_formula_error_scan.ndjson",
+    "workbook_inspect.ndjson"
+  ],
+  "stability_outputs": {
+    "PHQ": "PHQ_14_performance_stability.csv",
+    "HAMD": "HAMD_14_performance_stability.csv",
+    "outer_folds": 50,
+    "summary_rows_per_scale": 18
+  }
+}

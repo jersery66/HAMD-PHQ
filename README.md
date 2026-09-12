@@ -66,3 +66,9 @@
 | `PDCH_HAMD_GLM-5.2_dimension_level_all_fields_20260806.xlsx` | `2aa072c661867f6d9af192487427af779fd9fc15110e40049b69c18fa564a837` |
 | `PDCH_HAMD_Kimi-K2.6_dimension_level_all_fields_20260806.xlsx` | `819c09a31215fd3de330a65828fde131d7837e87825b34ab481b90f1718eadb4` |
 | `PDCH_HAMD_Qwen3.7-Max_dimension_level_all_fields_20260806.xlsx` | `e8945badf118c0e4d706d199e3cb26d22b055c8c94f5c90fc5f36217ad28e42` |
+
+## 2026-09-12 冻结结果公开版
+
+`freeze_20260912/` 是本地冻结包的可公开、可复核子集，包含文章主线、Stage 2 多条件融合、PHQ189/HAMD99 Cross-AI 维度异构、直接 Joint、支持性结果、来源审计和核验报告。
+
+公开版不包含原始 JSON、患者原话、API response、原始金标准、DAIC 原始 archive 或超大本地冻结 ZIP。请先阅读 [`freeze_20260912/README.md`](freeze_20260912/README.md)。

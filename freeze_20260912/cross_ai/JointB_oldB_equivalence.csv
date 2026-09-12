@@ -1,0 +1,3 @@
+scale,matched_rows,same_route_n,same_route_rate,old_route_source
+PHQ-8,400,231,0.5775,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\PHQ_CROSS_AI_ANCHORED_outer_routes.csv
+HAMD-17,850,537,0.6317647058823529,outputs\pdch_cross_ai_anchored_hamd_phq_20260909\HAMD_CROSS_AI_ANCHORED_outer_routes.csv

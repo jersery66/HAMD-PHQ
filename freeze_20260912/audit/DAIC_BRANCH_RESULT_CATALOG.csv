@@ -1,0 +1,13 @@
+﻿branch_id,analysis,scope,status,evidence_entry,article_use,boundary
+OFFICIAL142-PACKAGE,"verified manuscript package: C1-C5, C4 controls, C5 reviewed evidence, test sensitivity, MPNet source robustness",official train107 + dev35 = 142; test47 secondary,FROZEN/VALIDATED,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,separate DAIC-WOZ branch or cross-database background,do not merge with PDCH HAMD item scoring
+A2-TFIDF,five-condition TF-IDF + LR main analysis and OOF,official142,FROZEN,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC paper main result,single-source predictive sufficiency is not independent contribution
+A2-EMBEDDING,MPNet/BGE embedding robustness,official142,VALIDATED/SUPPLEMENT,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC supplement,do not select a universal best representation
+A2-C5-CONTROLS,reviewed evidence and C5 controls,official142,VALIDATED,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC supplement,C5-derived features are not a complete independent clinical source
+A2-FAKE-D,Real/Random/Matched/Fake-D pairing destruction and sensitivity,official142,FROZEN/SUPPLEMENT,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC mechanism supplement,negative contrast is not causal identification
+A2-SYMPTOM,symptom-level source analysis,official142,SUPPLEMENT,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC supplement,depends on C5-derived evidence
+A2-PHQ8-CONT,continuous PHQ-8 analysis,official142,SUPPLEMENT,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC supplement,does not replace locked binary primary result
+A2-INCREMENTAL,incremental validity and source contribution,official142,VALIDATED/SUPPLEMENT,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC discussion,conditional increment only; not causal decomposition
+PILOT-C2-LIWC,participant-text LIWC pilot,common140,EXPLORATORY,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,separate pilot,cannot compare directly to official142
+PILOT-AIDA,AIDA structured-feature audit,272 rows,BLOCKED,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,do not use,row-order linkage blocked; no formal model
+PILOT-SAMPLING,participant spectrum/sampling diagnostics,official142,EXPLORATORY/SUPPLEMENT,AI_HANDOFF_20260819/02_ANALYSIS_CATALOG.md,DAIC supplement,not a best-model test
+RAW-DAIC,raw participant archives,"190 archives, approximately 86GB",POINTER_ONLY,DAIC-WOZ\压缩包,data lineage only,not copied to C drive due size; do not pool with PDCH
