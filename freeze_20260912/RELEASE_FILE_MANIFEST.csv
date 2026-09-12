@@ -4,11 +4,11 @@ audit/DAIC_BRANCH_RESULT_CATALOG.csv,2422
 audit/EARLY_BRANCH_BOUNDARY.md,1739
 audit/EARLY_WORKSPACE_COUNTS.csv,602
 audit/EARLY_WORKSPACE_INVENTORY.csv,1774119
-audit/FREEZE_ARTIFACT_MANIFEST.csv,55502
+audit/FREEZE_ARTIFACT_MANIFEST.csv,58903
 audit/FREEZE_COMPLETENESS_AUDIT.csv,28006
 audit/FREEZE_COMPLETENESS_AUDIT.md,48928
-audit/freeze_manifest.json,5448
-audit/FREEZE_README.md,3144
+audit/freeze_manifest.json,5614
+audit/FREEZE_README.md,3389
 audit/FREEZE_VERIFICATION_REPORT.json,3108
 audit/FREEZE_VERIFICATION_REPORT.md,3030
 audit/FREEZE_ZIP_MEMBERS.csv,8489730
@@ -56,7 +56,7 @@ mainline/PAPER_EVIDENCE_MAP.csv,6071
 mainline/PAPER_KEY_RESULTS_TABLE.csv,10839
 mainline/PAPER_MAINLINE_PLAN.md,8601
 mainline/research_stage_ledger.csv,3760
-README.md,1491
+README.md,1530
 stage2/HAMD_02_H14_evaluability_by_condition.csv,1950
 stage2/HAMD_03_H14_rescue.csv,29761
 stage2/HAMD_06_oracle_upper_bound.csv,85194
@@ -75,6 +75,12 @@ stage2/PHQ_final_summary.md,350
 stage2/README_results.md,9917
 stage2/run_manifest.json,4018
 stage2/stage2_result_bundle.zip,44439658
+stage2/teacher_generalization/CROSS_SUBJECT_GENERALIZATION_CHECKS.csv,1315
+stage2/teacher_generalization/CROSS_SUBJECT_GENERALIZATION_MANIFEST.json,1280
+stage2/teacher_generalization/CROSS_SUBJECT_GENERALIZATION_TABLE.csv,3071
+stage2/teacher_generalization/CROSS_SUBJECT_GENERALIZATION_TABLE.xlsx,14643
+stage2/teacher_generalization/TEACHER_REQUEST_INTERPRETATION.md,2230
+stage2/teacher_generalization/THREE_STRATEGY_LEVEL_DECISIONS.csv,11635
 stage2/verification_report.json,6165
 supporting/corrected_condition_effects.csv,771475
 supporting/corrected_item_total_analysis.xlsx,2079454

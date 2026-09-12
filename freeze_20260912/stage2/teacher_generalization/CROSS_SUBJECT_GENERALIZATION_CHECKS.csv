@@ -1,0 +1,11 @@
+check,observed,expected,status,evidence
+stage2_run_manifest_complete,COMPLETE_FOR_AVAILABLE_STAGE2_TABLES,COMPLETE_FOR_AVAILABLE_STAGE2_TABLES,PASS,PDCH/实验\outputs\hamd_phq_multicondition_path_v1\run_manifest.json
+outer_design,10 repeats x 5 folds,10 repeats x 5 folds,PASS,PDCH/实验\outputs\hamd_phq_multicondition_path_v1\run_manifest.json
+inner_design,5-fold within outer training only,5-fold within outer training only,PASS,PDCH/实验\outputs\hamd_phq_multicondition_path_v1\run_manifest.json
+PHQ_subject_n,[142],[142],PASS,PDCH/实验\outputs\hamd_phq_multicondition_path_v1\PHQ_06_total_performance.csv
+HAMD_subject_n,[99],[99],PASS,PDCH/实验\outputs\hamd_phq_multicondition_path_v1\HAMD_12_core16_performance.csv
+PHQ_Qwen_B_total_MAE_supported,True,True,PASS,freeze_20260911\02_FROZEN_STAGE2\CROSS_SUBJECT_GENERALIZATION\CROSS_SUBJECT_GENERALIZATION_TABLE.csv
+HAMD_B_q_values_all_above_0.05,True,True,PASS,freeze_20260911\02_FROZEN_STAGE2\CROSS_SUBJECT_GENERALIZATION\CROSS_SUBJECT_GENERALIZATION_TABLE.csv
+test47_is_secondary_replication,secondary replication,secondary replication,PASS,PDCH/实验\outputs\hamd_phq_multicondition_path_v1\PHQ_11_test47_fusion_performance.csv
+raw_data_modified,False,False,PASS,derived package only
+new_llm_calls,0,0,PASS,derived package only

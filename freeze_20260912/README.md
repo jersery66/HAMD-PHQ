@@ -5,7 +5,7 @@
 ## 内容
 
 - `mainline/`：文章主线、证据地图、关键结果表和主张边界。
-- `stage2/`：PHQ/HAMD 多条件融合的摘要、关键 CSV、核验报告和结果 ZIP。
+- `stage2/`：PHQ/HAMD 多条件融合、老师要求的跨受试者外层泛化摘要、关键 CSV、核验报告和结果 ZIP。
 - `cross_ai/`：PHQ189/HAMD99 Cross-AI 维度异构、直接 Joint、比较表和参考版式工作簿。
 - `supporting/`：题总相关、点二列相关、误差抵消、coverage 和 HAMD16 支持性结果。
 - `lineage/`：从原始层到 AI24 条件层的来源目录、数据摘要和哈希，不含原始临床/API 数据。

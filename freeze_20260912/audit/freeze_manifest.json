@@ -17,7 +17,7 @@
   },
   "outputs_inventory_rows": 107,
   "pointer_only_directory_count": 59,
-  "artifact_count": 164,
+  "artifact_count": 170,
   "desktop_free_bytes_before": 838574080,
   "desktop_free_bytes_after": 735539200,
   "raw_data_modified": false,
@@ -77,7 +77,7 @@
     "00_RAW_LINEAGE/PDCH_raw/PDCH整理结果.xlsx",
     "00_RAW_LINEAGE/PDCH_raw/DAIC_PHQ8_完整标注报表.xlsx"
   ],
-  "last_updated_at": "2026-09-11T20:56:56.0230335Z",
+  "last_updated_at": "2026-09-12T14:16:08.6032591Z",
   "freeze_revision": "raw_to_ai24_lineage_plus_completeness_plus_cross_ai_runs_plus_daic_branch_20260912",
   "completeness_audit": "FREEZE_COMPLETENESS_AUDIT.csv",
   "additional_analyses_bundle": "06_ADDITIONAL_ANALYSES/missing_high_value_analyses.zip",
@@ -93,5 +93,7 @@
   "early_branch_bundle": "08_EARLY_PDCH_BRANCH/early_selected_results.zip",
   "early_branch_status": "SELECTED_HISTORICAL_ARTIFACTS_FROZEN_LARGE_RAW_MATRICES_POINTER_ONLY",
   "early_branch_verification": "08_EARLY_PDCH_BRANCH/EARLY_BRANCH_VERIFICATION.json",
-  "research_completeness_report": "RESEARCH_COMPLETENESS_AND_CHRONOLOGY.md"
+  "research_completeness_report": "RESEARCH_COMPLETENESS_AND_CHRONOLOGY.md",
+  "teacher_generalization_package": "02_FROZEN_STAGE2/CROSS_SUBJECT_GENERALIZATION/TEACHER_REQUEST_INTERPRETATION.md",
+  "teacher_generalization_status": "PASS"
 }

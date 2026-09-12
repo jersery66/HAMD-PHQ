@@ -1,0 +1,27 @@
+{
+  "package_name": "teacher_requested_cross_subject_generalization",
+  "status": "PASS",
+  "source_stage2": "outputs\\hamd_phq_multicondition_path_v1",
+  "source_three_strategy": "outputs\\pdch_heterogeneous_condition_three_strategy_20260827",
+  "primary_estimator": "delta total MAE = learned condition strategy minus C03 original condition",
+  "inference": "subject-level paired sign-flip permutation with bootstrap 95% CI after collapsing repeated outer predictions within subject",
+  "outer_cv": "10 repeats x 5 folds; approximately 80/20 train/test per fold",
+  "inner_cv": "5-fold subject-grouped selection inside outer training only",
+  "new_llm_calls": 0,
+  "raw_data_modified": false,
+  "output_hashes": {
+    "CROSS_SUBJECT_GENERALIZATION_TABLE.csv": {
+      "sha256": "65e62a3d5efe94a6e87748403a04992f40bf3bf6d57ce9f3540c3566cfa8dc25",
+      "bytes": 3067
+    },
+    "THREE_STRATEGY_LEVEL_DECISIONS.csv": {
+      "sha256": "ea7a7e4b42919081b2ea83f97a719765a0f4b041626193ac8a5f14aea4368b0b",
+      "bytes": 11619
+    },
+    "CROSS_SUBJECT_GENERALIZATION_CHECKS.csv": {
+      "sha256": "72e715d7363ad265898651f1d886a6fa0b6539969013b6380b3ed8534b7103c1",
+      "bytes": 1551
+    }
+  },
+  "verification_status": "PASS"
+}
