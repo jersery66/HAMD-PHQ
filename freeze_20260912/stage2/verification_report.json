@@ -1,0 +1,202 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "source_hash_unchanged",
+      "observed": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "expected": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv"
+    },
+    {
+      "check": "index_hash_unchanged",
+      "observed": "1c5acfa6c293939b29cec5da08ed73cd9fdd5435546222a838a68d14c1207eec",
+      "expected": "1c5acfa6c293939b29cec5da08ed73cd9fdd5435546222a838a68d14c1207eec",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\02_统一结果索引.csv"
+    },
+    {
+      "check": "outer_fold_hash_unchanged",
+      "observed": "d502c77e29c238e89f3b741f9ef05bc07ef503f115498d1e297e75cee6e96ad6",
+      "expected": "d502c77e29c238e89f3b741f9ef05bc07ef503f115498d1e297e75cee6e96ad6",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_heterogeneous_condition_total_20260827\\fold_assignments.csv"
+    },
+    {
+      "check": "data_contract_all_pass",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\data_contract.csv"
+    },
+    {
+      "check": "stage1_reproduction_all_pass",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\01_reproduction_check.csv"
+    },
+    {
+      "check": "required_output_files",
+      "observed": [],
+      "expected": [],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1"
+    },
+    {
+      "check": "PHQ_oof_row_contract",
+      "observed": 204480,
+      "expected": 204480,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\PHQ_05_core_oof_predictions.csv"
+    },
+    {
+      "check": "HAMD_core16_oof_row_contract",
+      "observed": 285120,
+      "expected": 285120,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\HAMD_11_core16_oof_predictions.csv"
+    },
+    {
+      "check": "PHQ_oof_only_primary142",
+      "observed": [
+        "primary142"
+      ],
+      "expected": [
+        "primary142"
+      ],
+      "status": "PASS",
+      "evidence": "PHQ_05_core_oof_predictions.csv"
+    },
+    {
+      "check": "PHQ_test_fusion_exact_methods",
+      "observed": [
+        "B",
+        "C03",
+        "ElasticNet",
+        "Mean",
+        "Median",
+        "Ridge"
+      ],
+      "expected": [
+        "B",
+        "C03",
+        "ElasticNet",
+        "Mean",
+        "Median",
+        "Ridge"
+      ],
+      "status": "PASS",
+      "evidence": "PHQ_11_test47_fusion_performance.csv"
+    },
+    {
+      "check": "no_HAMD24_in_stage2_text",
+      "observed": false,
+      "expected": false,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1"
+    },
+    {
+      "check": "PHQ_decomposition_identity",
+      "observed": 0.0,
+      "expected": 0.0,
+      "status": "PASS",
+      "evidence": "PHQ_04_QwenB_error_decomposition.csv"
+    },
+    {
+      "check": "selective_curve_keeps_low_uncertainty_tail",
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "status": "PASS",
+      "evidence": "HAMD_08_selective_prediction.csv"
+    },
+    {
+      "check": "selective_weighted_kappa_present",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "HAMD_08_selective_prediction.csv"
+    },
+    {
+      "check": "oracle_is_unattainable_lower_bound",
+      "observed": [
+        true,
+        true,
+        true
+      ],
+      "expected": [
+        true,
+        true,
+        true
+      ],
+      "status": "PASS",
+      "evidence": "HAMD_06_oracle_upper_bound.csv"
+    },
+    {
+      "check": "H14_condition_rows",
+      "observed": 24,
+      "expected": 24,
+      "status": "PASS",
+      "evidence": "HAMD_02_H14_evaluability_by_condition.csv"
+    },
+    {
+      "check": "H14_lowest_valid_rate_documented",
+      "observed": 0.5,
+      "expected": 0.5,
+      "status": "PASS",
+      "evidence": "HAMD_02_H14_evaluability_by_condition.csv"
+    },
+    {
+      "check": "figure_pair_count",
+      "observed": 9,
+      "expected": 9,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\figures"
+    },
+    {
+      "check": "workbook_exists",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\HAMD_PHQ_multicondition_results.xlsx"
+    },
+    {
+      "check": "workbook_formula_error_scan",
+      "observed": "zero_matches",
+      "expected": "zero_matches",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\workbook_formula_error_scan.ndjson"
+    },
+    {
+      "check": "workbook_sheet_inspect",
+      "observed": 22,
+      "expected": 22,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\hamd_phq_multicondition_path_v1\\workbook_inspect.ndjson"
+    },
+    {
+      "check": "PHQ_14_performance_stability.csv_summary_contract",
+      "observed": 18,
+      "expected": 18,
+      "status": "PASS",
+      "evidence": "PHQ_14_performance_stability.csv"
+    },
+    {
+      "check": "HAMD_14_performance_stability.csv_summary_contract",
+      "observed": 18,
+      "expected": 18,
+      "status": "PASS",
+      "evidence": "HAMD_14_performance_stability.csv"
+    }
+  ],
+  "failed_checks": [],
+  "raw_data_modified": false
+}

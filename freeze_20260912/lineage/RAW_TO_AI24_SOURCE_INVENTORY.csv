@@ -1,0 +1,9 @@
+﻿source_path,role,file_count,bytes,action,note
+PDCH\PDCH,PDCH raw/early source files,16,10182994,bundle_data_files,small source workbook/csv files; includes clinical transcript and early PHQ/HAMD data
+PDCH\hamd_analysis\Analysis\Analysis_History,HAMD analysis history,12,22548540,bundle_data_files,checkpoint and early HAMD result lineage
+DAIC-WOZ\processed_research,DAIC-WOZ processed research layer,1928,235157049,bundle_all,"processed turns, question-answer pairs, labels, splits and conditions C1-C5"
+DAIC-WOZ\压缩包,DAIC-WOZ raw archive,190,92485623629,pointer_only,"190 participant archives; too large for Desktop freeze, pointer only"
+PDCH/实验\outputs\pdch_all_models_all_conditions_v2_20260802,AI24 condition workbooks,3,67449826,bundle_selected_xlsx,historical C01-C24 workbooks; v3_missing9 preserves missing9 semantics
+PDCH/实验\outputs\pdch_all_models_all_conditions_v3_missing9_20260802,AI24 condition workbooks,3,67467223,bundle_selected_xlsx,historical C01-C24 workbooks; v3_missing9 preserves missing9 semantics
+PDCH/实验\outputs\pdch_all_results_fields_20260802,AI24 condition workbooks,5,66820677,bundle_selected_xlsx,historical C01-C24 workbooks; v3_missing9 preserves missing9 semantics
+PDCH/实验\outputs\pdch_prompt_fields_direct_20260802,AI24 condition workbooks,6,110155218,bundle_selected_xlsx,historical C01-C24 workbooks; v3_missing9 preserves missing9 semantics

@@ -1,0 +1,237 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "manifest_status",
+      "observed": "COMPLETE_DIRECT_JOINT_COMBINED_TABLE",
+      "expected": "COMPLETE_DIRECT_JOINT_COMBINED_TABLE",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\run_manifest.json"
+    },
+    {
+      "check": "source_hash_unchanged",
+      "observed": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "expected": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv"
+    },
+    {
+      "check": "direct_package_verified",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\verification_report.json"
+    },
+    {
+      "check": "no_machine_learning_or_llm",
+      "observed": [
+        false,
+        0
+      ],
+      "expected": [
+        false,
+        0
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\run_manifest.json"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_performance.csv",
+      "observed": 52,
+      "expected": 52,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_performance.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_main_table.csv",
+      "observed": 52,
+      "expected": 52,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_main_table.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_compact_table.csv",
+      "observed": 52,
+      "expected": 52,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_compact_table.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_ladder.csv",
+      "observed": 52,
+      "expected": 52,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_ladder.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_result_summary.csv",
+      "observed": 52,
+      "expected": 52,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_result_summary.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_primary_result_summary.csv",
+      "observed": 26,
+      "expected": 26,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_primary_result_summary.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_result_headline.csv",
+      "observed": 52,
+      "expected": 52,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_result_headline.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_comparisons.csv",
+      "observed": 144,
+      "expected": 144,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_comparisons.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_mechanism.csv",
+      "observed": 754,
+      "expected": 754,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_mechanism.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_candidate_table.csv",
+      "observed": 30000,
+      "expected": 30000,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_candidate_table.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_routes.csv",
+      "observed": 5000,
+      "expected": 5000,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_routes.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_old_method_audit.csv",
+      "observed": 7,
+      "expected": 7,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_old_method_audit.csv"
+    },
+    {
+      "check": "rows_CROSS_AI_JOINT_HAMD_PHQ_JointB_oldB_equivalence.csv",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_JointB_oldB_equivalence.csv"
+    },
+    {
+      "check": "neutral_method_coverage",
+      "observed": [
+        "C03_DeepSeek-V4-Pro",
+        "C03_GLM-5.2",
+        "C03_Qwen3.7-Max",
+        "CrossAI_C03",
+        "CrossAI_Conservative-C",
+        "CrossAI_Joint-A",
+        "CrossAI_Joint-B",
+        "WithinAI_DeepSeek-V4-Pro_A",
+        "WithinAI_DeepSeek-V4-Pro_B",
+        "WithinAI_GLM-5.2_A",
+        "WithinAI_GLM-5.2_B",
+        "WithinAI_Kimi-K2.6_A",
+        "WithinAI_Kimi-K2.6_B",
+        "WithinAI_Qwen3.7-Max_A",
+        "WithinAI_Qwen3.7-Max_B"
+      ],
+      "expected": [
+        "C03_DeepSeek-V4-Pro",
+        "C03_GLM-5.2",
+        "C03_Qwen3.7-Max",
+        "CrossAI_C03",
+        "CrossAI_Conservative-C",
+        "CrossAI_Joint-A",
+        "CrossAI_Joint-B",
+        "WithinAI_DeepSeek-V4-Pro_A",
+        "WithinAI_DeepSeek-V4-Pro_B",
+        "WithinAI_GLM-5.2_A",
+        "WithinAI_GLM-5.2_B",
+        "WithinAI_Kimi-K2.6_A",
+        "WithinAI_Kimi-K2.6_B",
+        "WithinAI_Qwen3.7-Max_A",
+        "WithinAI_Qwen3.7-Max_B"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_main_table.csv"
+    },
+    {
+      "check": "separate_scale_layers",
+      "observed": [
+        "HAMD-17|HAMD16_core",
+        "HAMD-17|HAMD17_available",
+        "HAMD-17|HAMD17_strict_complete",
+        "PHQ-8|PHQ189_pooled"
+      ],
+      "expected": "scale-specific layers retained",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_main_table.csv"
+    },
+    {
+      "check": "mechanism_required_columns",
+      "observed": [
+        "cancellation_ratio",
+        "coverage",
+        "item_MAE",
+        "item_NAE"
+      ],
+      "expected": [
+        "cancellation_ratio",
+        "coverage",
+        "item_MAE",
+        "item_NAE"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_mechanism.csv"
+    },
+    {
+      "check": "workbook_exists",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_combined_results.xlsx"
+    },
+    {
+      "check": "workbook_formula_errors",
+      "observed": "zero_matches",
+      "expected": "zero_matches",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\workbook_formula_error_scan.ndjson"
+    },
+    {
+      "check": "workbook_sheet_count",
+      "observed": 12,
+      "expected": 12,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\workbook_inspect.ndjson"
+    },
+    {
+      "check": "workbook_key_sheets_nonempty",
+      "observed": {
+        "02_PHQ比较": true,
+        "03_HAMD比较": true,
+        "10_验证": true
+      },
+      "expected": {
+        "02_PHQ比较": true,
+        "03_HAMD比较": true,
+        "10_验证": true
+      },
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_combined_20260910\\CROSS_AI_JOINT_HAMD_PHQ_combined_results.xlsx"
+    }
+  ],
+  "failed_checks": [],
+  "raw_data_modified": false,
+  "llm_calls": 0
+}

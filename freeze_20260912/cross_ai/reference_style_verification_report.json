@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "manifest_status",
+      "observed": "COMPLETE_DIRECT_JOINT_REFERENCE_STYLE_WORKBOOK",
+      "expected": "COMPLETE_DIRECT_JOINT_REFERENCE_STYLE_WORKBOOK",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\run_manifest.json"
+    },
+    {
+      "check": "reference_template_hash",
+      "observed": "2e7b800d2e1bff59cfd198d0d0b94260d966c0d372e5d6c5fa77af08e7514afb",
+      "expected": "2e7b800d2e1bff59cfd198d0d0b94260d966c0d372e5d6c5fa77af08e7514afb",
+      "status": "PASS",
+      "evidence": "D:\\xwechat_files\\wxid_cuxwetokhbwl22_8706\\temp\\RWTemp\\2026-08\\13f5394206a34b218acf4591ce86cb77\\HAMD-17异构条件总分研究.xlsx"
+    },
+    {
+      "check": "source_hash_unchanged",
+      "observed": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "expected": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\run_manifest.json"
+    },
+    {
+      "check": "direct_package_verified",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\verification_report.json"
+    },
+    {
+      "check": "workbook_exists",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "sheet_count",
+      "observed": 37,
+      "expected": 37,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "required_summary_sheets",
+      "observed": [
+        "00_研究问题与导航",
+        "01_条件选择方法",
+        "02_异构条件总览",
+        "03_核心结果总览",
+        "S01_A_异构总分",
+        "S02_A_微观误差",
+        "S03_A_稳定性与跨AI",
+        "S04_BC_敏感性",
+        "S05_PHQ_test47",
+        "S06_HAMD_Coverage",
+        "S07_最终结论",
+        "T99_技术明细"
+      ],
+      "expected": [
+        "00_研究问题与导航",
+        "01_条件选择方法",
+        "02_异构条件总览",
+        "03_核心结果总览",
+        "S01_A_异构总分",
+        "S02_A_微观误差",
+        "S03_A_稳定性与跨AI",
+        "S04_BC_敏感性",
+        "S05_PHQ_test47",
+        "S06_HAMD_Coverage",
+        "S07_最终结论",
+        "T99_技术明细"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "hamd_item_sheet_count",
+      "observed": 17,
+      "expected": 17,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "phq_item_sheet_count",
+      "observed": 8,
+      "expected": 8,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "core_phq_rows",
+      "observed": [
+        "C03_GLM-5.2",
+        "CrossAI_Conservative-C"
+      ],
+      "expected": [
+        "C03_GLM-5.2",
+        "CrossAI_Conservative-C"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "core_hamd_rows",
+      "observed": [
+        "C03_GLM-5.2",
+        "CrossAI_Conservative-C"
+      ],
+      "expected": [
+        "C03_GLM-5.2",
+        "CrossAI_Conservative-C"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "no_old_wrong_oof_label",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "reference_style_title_fill",
+      "observed": "FF17365D",
+      "expected": "FF17365D",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "formula_count",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\CROSS_AI_JOINT_HAMD_PHQ_reference_style_results.xlsx"
+    },
+    {
+      "check": "artifact_formula_scan",
+      "observed": "zero_matches",
+      "expected": "zero_matches",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_reference_style_20260911\\workbook_formula_error_scan.ndjson"
+    }
+  ],
+  "failed_checks": [],
+  "raw_data_modified": false,
+  "llm_calls": 0
+}

@@ -1,0 +1,538 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "check": "manifest_status",
+      "observed": "COMPLETE_DIRECT_JOINT_EXPLORATORY_OOF",
+      "expected": "COMPLETE_DIRECT_JOINT_EXPLORATORY_OOF",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\run_manifest.json"
+    },
+    {
+      "check": "source_hash_unchanged",
+      "observed": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "expected": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv"
+    },
+    {
+      "check": "no_machine_learning",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\run_manifest.json"
+    },
+    {
+      "check": "llm_calls_zero",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\run_manifest.json"
+    },
+    {
+      "check": "raw_data_unmodified",
+      "observed": false,
+      "expected": false,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\run_manifest.json"
+    },
+    {
+      "check": "HAMD24_excluded",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\run_manifest.json"
+    },
+    {
+      "check": "HAMD14_sentinel_boundary",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\run_manifest.json"
+    },
+    {
+      "check": "PHQ189_pooled_boundary",
+      "observed": true,
+      "expected": true,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\run_manifest.json"
+    },
+    {
+      "check": "PHQ_candidate_rows",
+      "observed": 9600,
+      "expected": 9600,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_route_rows",
+      "observed": 1600,
+      "expected": 1600,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "PHQ_oof_rows",
+      "observed": 196560,
+      "expected": 196560,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_oof_predictions.csv"
+    },
+    {
+      "check": "PHQ_performance_rows",
+      "observed": 13,
+      "expected": 13,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_performance.csv"
+    },
+    {
+      "check": "PHQ_comparison_rows",
+      "observed": 36,
+      "expected": 36,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_comparisons.csv"
+    },
+    {
+      "check": "PHQ_item_performance_rows",
+      "observed": 104,
+      "expected": 104,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_item_performance.csv"
+    },
+    {
+      "check": "PHQ_candidate_keys_unique",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_candidate_scale",
+      "observed": [
+        "PHQ-8"
+      ],
+      "expected": [
+        "PHQ-8"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_candidate_condition_set",
+      "observed": [
+        3,
+        4,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16
+      ],
+      "expected": [
+        3,
+        4,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_all_C03_candidates_present",
+      "observed": 1200,
+      "expected": 1200,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_exactly_one_selection_per_fold_item",
+      "observed": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "expected": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_selected_rows_in_declared_pool",
+      "observed": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "expected": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_route_methods",
+      "observed": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "expected": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "PHQ_route_keys_unique",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "PHQ_C03_route_condition_fixed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "PHQ_routes_match_selection_flags",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_routes.csv + PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "PHQ_oof_method_set",
+      "observed": [
+        "C03_DeepSeek-V4-Pro",
+        "C03_GLM-5.2",
+        "C03_Qwen3.7-Max",
+        "CrossAI_C03",
+        "CrossAI_Conservative-C",
+        "CrossAI_Joint-A",
+        "CrossAI_Joint-B",
+        "WithinAI_DeepSeek-V4-Pro_A",
+        "WithinAI_DeepSeek-V4-Pro_B",
+        "WithinAI_GLM-5.2_A",
+        "WithinAI_GLM-5.2_B",
+        "WithinAI_Qwen3.7-Max_A",
+        "WithinAI_Qwen3.7-Max_B"
+      ],
+      "expected": [
+        "C03_DeepSeek-V4-Pro",
+        "C03_GLM-5.2",
+        "C03_Qwen3.7-Max",
+        "CrossAI_C03",
+        "CrossAI_Conservative-C",
+        "CrossAI_Joint-A",
+        "CrossAI_Joint-B",
+        "WithinAI_DeepSeek-V4-Pro_A",
+        "WithinAI_DeepSeek-V4-Pro_B",
+        "WithinAI_GLM-5.2_A",
+        "WithinAI_GLM-5.2_B",
+        "WithinAI_Qwen3.7-Max_A",
+        "WithinAI_Qwen3.7-Max_B"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_oof_predictions.csv"
+    },
+    {
+      "check": "PHQ_oof_keys_unique",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_oof_predictions.csv"
+    },
+    {
+      "check": "PHQ_route_summary_rows",
+      "observed": 32,
+      "expected": 32,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_route_stability.csv"
+    },
+    {
+      "check": "PHQ_route_summary_methods",
+      "observed": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "expected": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\PHQ_CROSS_AI_JOINT_route_stability.csv"
+    },
+    {
+      "check": "HAMD_candidate_rows",
+      "observed": 20400,
+      "expected": 20400,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_route_rows",
+      "observed": 3400,
+      "expected": 3400,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "HAMD_oof_rows",
+      "observed": 218790,
+      "expected": 218790,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_oof_predictions.csv"
+    },
+    {
+      "check": "HAMD_performance_rows",
+      "observed": 39,
+      "expected": 39,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_performance.csv"
+    },
+    {
+      "check": "HAMD_comparison_rows",
+      "observed": 108,
+      "expected": 108,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_comparisons.csv"
+    },
+    {
+      "check": "HAMD_item_performance_rows",
+      "observed": 650,
+      "expected": 650,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_item_performance.csv"
+    },
+    {
+      "check": "HAMD_candidate_keys_unique",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_candidate_scale",
+      "observed": [
+        "HAMD-17"
+      ],
+      "expected": [
+        "HAMD-17"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_candidate_condition_set",
+      "observed": [
+        3,
+        4,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16
+      ],
+      "expected": [
+        3,
+        4,
+        7,
+        8,
+        11,
+        12,
+        15,
+        16
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_all_C03_candidates_present",
+      "observed": 2550,
+      "expected": 2550,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_exactly_one_selection_per_fold_item",
+      "observed": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "expected": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_selected_rows_in_declared_pool",
+      "observed": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "expected": {
+        "selected_Joint-A": 0,
+        "selected_Joint-B": 0,
+        "selected_CrossAI-C03": 0,
+        "selected_Conservative-C": 0
+      },
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_route_methods",
+      "observed": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "expected": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "HAMD_route_keys_unique",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "HAMD_C03_route_condition_fixed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_routes.csv"
+    },
+    {
+      "check": "HAMD_routes_match_selection_flags",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_routes.csv + PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_candidate_table.csv"
+    },
+    {
+      "check": "HAMD_oof_method_set",
+      "observed": [
+        "C03_GLM-5.2",
+        "C03_Kimi-K2.6",
+        "C03_Qwen3.7-Max",
+        "CrossAI_C03",
+        "CrossAI_Conservative-C",
+        "CrossAI_Joint-A",
+        "CrossAI_Joint-B",
+        "WithinAI_GLM-5.2_A",
+        "WithinAI_GLM-5.2_B",
+        "WithinAI_Kimi-K2.6_A",
+        "WithinAI_Kimi-K2.6_B",
+        "WithinAI_Qwen3.7-Max_A",
+        "WithinAI_Qwen3.7-Max_B"
+      ],
+      "expected": [
+        "C03_GLM-5.2",
+        "C03_Kimi-K2.6",
+        "C03_Qwen3.7-Max",
+        "CrossAI_C03",
+        "CrossAI_Conservative-C",
+        "CrossAI_Joint-A",
+        "CrossAI_Joint-B",
+        "WithinAI_GLM-5.2_A",
+        "WithinAI_GLM-5.2_B",
+        "WithinAI_Kimi-K2.6_A",
+        "WithinAI_Kimi-K2.6_B",
+        "WithinAI_Qwen3.7-Max_A",
+        "WithinAI_Qwen3.7-Max_B"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_oof_predictions.csv"
+    },
+    {
+      "check": "HAMD_oof_keys_unique",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_oof_predictions.csv"
+    },
+    {
+      "check": "HAMD_route_summary_rows",
+      "observed": 68,
+      "expected": 68,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_route_stability.csv"
+    },
+    {
+      "check": "HAMD_route_summary_methods",
+      "observed": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "expected": [
+        "Conservative-C",
+        "CrossAI-C03",
+        "Joint-A",
+        "Joint-B"
+      ],
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\HAMD_CROSS_AI_JOINT_route_stability.csv"
+    },
+    {
+      "check": "oldB_equivalence_summary_rows",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\JointB_oldB_equivalence_summary.csv"
+    },
+    {
+      "check": "old_anchored_methods_marked_two_stage",
+      "observed": 6,
+      "expected": 6,
+      "status": "PASS",
+      "evidence": "PDCH/实验\\outputs\\pdch_cross_ai_joint_hamd_phq_20260910\\CROSS_AI_old_method_audit.csv"
+    }
+  ],
+  "failed_checks": [],
+  "raw_data_modified": false,
+  "llm_calls": 0
+}
