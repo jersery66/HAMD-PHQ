@@ -18,7 +18,7 @@
 
 - `00_RAW_LINEAGE/`：原始来源、DAIC processed layer、AI24 C01–C24 条件工作簿及 raw archive 指针
 - `01_FROZEN_INPUT/`：canonical 输入字段与契约（大型数据以 ZIP 冻结）
-- `02_FROZEN_STAGE2/`：当前正式 Stage 2 多条件融合、H14、coverage、selective、test47，以及老师要求的跨受试者外层泛化检验
+- `02_FROZEN_STAGE2/`：当前正式 Stage 2 多条件融合、H14、coverage、selective、test47、老师要求的跨受试者外层泛化检验和可直接读取的折分文件
 - `03_FROZEN_CROSS_AI/`：最新直接 Joint、旧 anchored、合并表和参考版式工作簿
 - `04_FROZEN_SUPPORTING/`：校正题总相关、条目总相关、误差抵消和 coverage 关键证据
 - `05_REFERENCE_MATERIALS/`：参考工作簿、会议/PPT 材料和研究方向报告
@@ -42,3 +42,6 @@
 
 
 老师要求的跨受试者泛化包见 `02_FROZEN_STAGE2/CROSS_SUBJECT_GENERALIZATION/`：训练折选择条件组合，验证折与 C03 原始条件做受试者层面的 MAE 配对检验。
+
+
+折分索引见 `02_FROZEN_STAGE2/FOLD_DESIGN_INDEX.md`；正式设计为 10 repeats × 5 outer folds，inner training-only 5-fold。
