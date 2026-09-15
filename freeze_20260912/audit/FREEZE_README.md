@@ -1,4 +1,4 @@
-# PDCH 冻结数据与结果包（初始 2026-09-11，更新 2026-09-12）
+# PDCH 冻结数据与结果包（初始 2026-09-11，更新 2026-09-15）
 
 这个目录是研究工作区的冻结快照索引。它不删除、不覆盖工作区原始文件。
 
@@ -30,7 +30,7 @@
 - `FREEZE_COMPLETENESS_AUDIT.csv` / `FREEZE_COMPLETENESS_AUDIT.md`：PDCH/实验\outputs 的 107 个输出目录逐一审计
 
 冻结目录：`freeze_20260911`
-当前冻结 artifact manifest 共 177 条；PDCH outputs 共 107 个目录，其中 19 个已在既有冻结中，29 个高价值历史/支持性目录已追加打包，59 个 smoke/失败/部分完成/重复或不适合进入结果的目录保留为指针。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
+当前冻结 artifact manifest 共 226 条；PDCH outputs 的既有完整性审计仍覆盖截至 2026-09-12 登记的 107 个目录，2026-09-15 新增的老师要求 A/B/C 效应量选择与重复五折外推包已作为独立正式内部验证模块冻结。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
 
 ## 证据等级
 
@@ -44,5 +44,17 @@
 老师要求的跨受试者泛化包见 `02_FROZEN_STAGE2/CROSS_SUBJECT_GENERALIZATION/`：训练折选择条件组合，验证折与 C03 原始条件做受试者层面的 MAE 配对检验。
 
 
-折分索引见 `02_FROZEN_STAGE2/FOLD_DESIGN_INDEX.md`；正式设计为 10 repeats × 5 outer folds，inner training-only 5-fold。`PHQ_05_core_oof_predictions.csv` 和 `HAMD_11_core16_oof_predictions.csv` 是可直接读取的外层 OOF 预测表。
+折分索引见 `02_FROZEN_STAGE2/FOLD_DESIGN_INDEX.md`；正式设计为 10 repeats × 5 outer folds，inner training-only 5-fold。`PHQ_05_core_oof_predictions.csv` 和 `HAMD_11_core16_oof_predictions.csv` 是可直接读取的外层 OOF 预测表。
+
+## 2026-09-15 老师要求的聚焦外推分析
+
+最终包见 `02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/`。本轮先按会议指定的总分 MAE 合并标准化效应量选择 A，再只对 A 做每个 AI 独立的 10 次重复×5 折外推检验。
+
+- A/B/C 跨 PHQ/HAMD 的受试者数加权 Hedges g_z：A=-0.387、B=-0.346、C=-0.341，因此选择 A。
+- PHQ-8：DeepSeek 与 Qwen 的验证折总分 MAE 显著改善；GLM 不改善。
+- HAMD16-core：三个 AI 均未达到稳定外推标准。
+- 六个模型×量表单元的条目 NAE 或误差抵消均未同步改善，因此阳性结果只支持总分 MAE 优化。
+- 证据边界是当前队列内重复跨受试者 OOF，不是独立外部验证；全队列候选映射仅供未来新样本前瞻验证。
+
+主工作簿：`02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/老师要求_A方案选择与重复五折外推结果.xlsx`。分析核验 13 项、独立重算 23 项、保存后工作簿核验 6 项及外部逐页渲染均通过。
 

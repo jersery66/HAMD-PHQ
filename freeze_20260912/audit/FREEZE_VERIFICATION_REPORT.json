@@ -24,8 +24,8 @@
     },
     {
       "check": "artifact_manifest_count",
-      "observed": 177,
-      "expected": 177,
+      "observed": 226,
+      "expected": 226,
       "status": "PASS",
       "evidence": "freeze_20260911\\FREEZE_ARTIFACT_MANIFEST.csv"
     },
@@ -56,6 +56,41 @@
       "expected": [],
       "status": "PASS",
       "evidence": "freeze_20260911"
+    },
+    {
+      "check": "teacher_effect_package_hashes",
+      "observed": [],
+      "expected": [],
+      "status": "PASS",
+      "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_EFFECT_SIZE_GENERALIZATION_20260915\\PACKAGE_FILE_MANIFEST.csv"
+    },
+    {
+      "check": "teacher_effect_selected_strategy",
+      "observed": "A",
+      "expected": "A",
+      "status": "PASS",
+      "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_EFFECT_SIZE_GENERALIZATION_20260915\\run_manifest.json"
+    },
+    {
+      "check": "teacher_effect_analysis_verified",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "PASS",
+      "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_EFFECT_SIZE_GENERALIZATION_20260915\\run_manifest.json"
+    },
+    {
+      "check": "teacher_effect_independent_recomputation",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "PASS",
+      "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_EFFECT_SIZE_GENERALIZATION_20260915\\audit\\independent_verification_report.json"
+    },
+    {
+      "check": "teacher_effect_saved_workbook",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "PASS",
+      "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_EFFECT_SIZE_GENERALIZATION_20260915\\audit\\saved_workbook_verification.json"
     },
     {
       "check": "raw_data_modified",

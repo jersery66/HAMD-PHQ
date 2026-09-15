@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "workbook": "老师要求_A方案选择与重复五折外推结果.xlsx",
+  "checks": [
+    {
+      "check": "six_expected_sheets",
+      "status": "PASS",
+      "observed": [
+        "00_结论",
+        "01_方案选择",
+        "02_外推主结果",
+        "03_折分分布",
+        "04_条目条件映射",
+        "05_方法与核验"
+      ]
+    },
+    {
+      "check": "summary_selects_A",
+      "status": "PASS",
+      "observed": "summary contains A and rounded pooled effects"
+    },
+    {
+      "check": "summary_contains_PHQ_and_HAMD_decisions",
+      "status": "PASS",
+      "observed": "PHQ 2/3; HAMD 0/3"
+    },
+    {
+      "check": "primary_sheet_keeps_formula_columns",
+      "status": "PASS",
+      "observed": "{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"W5\",\"formula\":\"=IF(F5=0,\\\"\\\",(F5-E5)/F5)\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"X5\",\"formula\":\"=IF(AND(G5<0,I5<0,K5<0.05),\\\"支持\\\",\\\"不支持\\\")\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"W6\",\"formula\":\"=IF(F6=0,\\\"\\\",(F6-E6)/F6)\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"X6\",\"formula\":\"=IF(AND(G6<0,I6<0,K6<0.05),\\\"支持\\\",\\\"不支持\\\")\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"W7\",\"formula\":\"=IF(F7=0,\\\"\\\",(F7-E7)/F7)\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"X7\",\"formula\":\"=IF(AND(G7<0,I7<0,K7<0.05),\\\"支持\\\",\\\"不支持\\\")\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"W8\",\"formula\":\"=IF(F8=0,\\\"\\\",(F8-E8)/F8)\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"X8\",\"formula\":\"=IF(AND(G8<0,I8<0,K8<0.05),\\\"支持\\\",\\\"不支持\\\")\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"W9\",\"formula\":\"=IF(F9=0,\\\"\\\",(F9-E9)/F9)\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"X9\",\"formula\":\"=IF(AND(G9<0,I9<0,K9<0.05),\\\"支持\\\",\\\"不支持\\\")\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"W10\",\"formula\":\"=IF(F10=0,\\\"\\\",(F10-E10)/F10)\"}\n{\"kind\":\"formula\",\"sheet\":\"02_外推主结果\",\"address\":\"X10\",\"formula\":\"=IF(AND(G10<0,I10<0,K10<0.05),\\\"支持\\\",\\\"不支持\\\")\"}"
+    },
+    {
+      "check": "saved_workbook_has_no_formula_errors",
+      "status": "PASS",
+      "observed": "{\"kind\":\"notice\",\"message\":\"Cell search matched 0 entries.\"}"
+    },
+    {
+      "check": "summary_has_embedded_forest_figure",
+      "status": "PASS",
+      "observed": "{\"kind\":\"drawing\",\"sheet\":\"00_结论\",\"drawingType\":\"image\",\"id\":\"/xl/media/image.png\",\"anchor\":{\"from\":{\"row\":27,\"col\":0,\"rowOffsetEmu\":0,\"colOffsetEmu\":0,\"rowOffsetPx\":0,\"colOffsetPx\":0},\"extent\":{\"widthEmu\":4953000,\"widthPx\":520,\"heightEmu\":2238375,\"heightPx\":235}}}"
+    }
+  ],
+  "failures": []
+}

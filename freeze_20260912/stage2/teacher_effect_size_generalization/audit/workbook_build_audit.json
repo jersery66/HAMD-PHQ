@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "output": "老师要求_A方案选择与重复五折外推结果.xlsx",
+  "sheets": [
+    "00_结论",
+    "01_方案选择",
+    "02_外推主结果",
+    "03_折分分布",
+    "04_条目条件映射",
+    "05_方法与核验"
+  ],
+  "chartCount": 0,
+  "imageCount": 1,
+  "sourceVerification": "PASS",
+  "independentVerification": "PASS",
+  "visualVerification": "PASS",
+  "visualVerificationMethod": "LibreOffice 26.2.4 headless PDF export plus Poppler PNG rendering",
+  "externalPreviewPdf": "workbook_external_preview_final3/老师要求_A方案选择与重复五折外推结果.pdf",
+  "externalPreviewPages": 43,
+  "inspectedPages": [1, 3, 8, 13, 27, 36],
+  "visualNotes": "All six sheets rendered with readable titles, headers, tables, status colors, and the embedded forest figure. Wide audit tables continue across PDF pages as expected; the XLSX remains scrollable and preserves all columns."
+}

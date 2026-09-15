@@ -1,0 +1,24 @@
+check,status,observed
+canonical_and_fold_hashes_match,PASS,"{'PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv': '34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d', 'PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_189_outer_folds.csv': '12c219dfe3b6d31983f4f0acf5304ed2dee788aa9ee29fea48dd0a1edc5354d4', 'PDCH/实验\\outputs\\pdch_hamd99_cross_ai_heterogeneity_20260909\\HAMD_99_outer_folds.csv': 'ca2feabcf6f175b8092596427f3645b2f95525ae3b6c29535e05266130bbeddf'}"
+unique_selected_strategy_A,PASS,['A']
+A_has_best_pooled_standardized_effect,PASS,"[{'strategy': 'A', 'cross_scale_subject_weighted_gz': -0.3866974716485297}, {'strategy': 'B', 'cross_scale_subject_weighted_gz': -0.3463016282335165}, {'strategy': 'C', 'cross_scale_subject_weighted_gz': -0.3414854835815864}]"
+pooled_effect_recomputed,PASS,5.551115123125783e-17
+candidate_groups_have_eight_conditions,PASS,{8: 3600}
+candidate_selected_matches_route,PASS,0
+all_outer_routes_recomputed_from_training_only,PASS,"{'mismatches': 0, 'max_rho_error': 9.71445146547012e-17}"
+prediction_fold_membership_matches_frozen_folds,PASS,0
+A_prediction_conditions_match_routes,PASS,0
+C03_predictions_are_condition_3,PASS,True
+prediction_keys_unique,PASS,0
+HAMD14_absent,PASS,True
+PHQ_and_HAMD_item_counts_are_8_and_16,PASS,"{'HAMD-17': [16], 'PHQ-8': [8]}"
+subject_repeat_metrics_recomputed,PASS,1.1102230246251565e-16
+each_subject_has_ten_paired_repeats,PASS,{10: 864}
+headline_means_recomputed,PASS,4.440892098500626e-16
+paired_t_tests_recomputed,PASS,1.1102230246251565e-16
+BH_FDR_recomputed_within_scale,PASS,1.1102230246251565e-16
+fold_effects_recomputed,PASS,2.220446049250313e-16
+six_model_scale_cells,PASS,6
+supported_cells_are_PHQ_DeepSeek_and_Qwen,PASS,"[{'scale': 'PHQ-8', 'model': 'DeepSeek-V4-Pro'}, {'scale': 'PHQ-8', 'model': 'Qwen3.7-Max'}]"
+full_cohort_map_has_72_core_rows,PASS,72
+decision_table_has_six_rows,PASS,6

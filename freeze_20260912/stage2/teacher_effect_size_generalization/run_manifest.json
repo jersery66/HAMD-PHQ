@@ -1,0 +1,61 @@
+{
+  "analysis_name": "teacher-focused A/B/C effect-size selection followed by A-only per-AI cross-subject generalization",
+  "status": "PASS",
+  "selected_strategy": "A",
+  "selection_rule": "teacher-specified primary criterion: most negative participant-weighted cross-scale Hedges gz for total MAE; Level1/Level2/test47 are interpretation and tie-break evidence",
+  "stage1_source": "outputs\\pdch_heterogeneous_condition_three_strategy_20260827",
+  "stage2_source": "outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv",
+  "source_sha256": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+  "folds": {
+    "PHQ": "outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_189_outer_folds.csv",
+    "PHQ_sha256": "12c219dfe3b6d31983f4f0acf5304ed2dee788aa9ee29fea48dd0a1edc5354d4",
+    "HAMD": "outputs\\pdch_hamd99_cross_ai_heterogeneity_20260909\\HAMD_99_outer_folds.csv",
+    "HAMD_sha256": "ca2feabcf6f175b8092596427f3645b2f95525ae3b6c29535e05266130bbeddf",
+    "design": "10 repeats x 5 folds; outer-training selection and held-out evaluation"
+  },
+  "scope": {
+    "PHQ": "all189 pooled",
+    "HAMD": "all99 HAMD16 core",
+    "models": {
+      "PHQ": [
+        "DeepSeek-V4-Pro",
+        "GLM-5.2",
+        "Qwen3.7-Max"
+      ],
+      "HAMD": [
+        "GLM-5.2",
+        "Kimi-K2.6",
+        "Qwen3.7-Max"
+      ]
+    }
+  },
+  "strategy_A": "per AI and item, select maximum outer-training corrected item-total Spearman correlation; common-subject comparison; ties prefer C03 then fixed condition order",
+  "baseline": "same AI C03",
+  "inference": "collapse 10 OOF repeats within subject; paired sign-flip permutation and participant bootstrap; paired t and Wilcoxon sensitivity; BH-FDR within scale across 3 AIs",
+  "raw_data_modified": false,
+  "llm_calls": 0,
+  "python": "3.12.8 (tags/v3.12.8:2dc476b, Dec  3 2024, 19:30:04) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "packages": {
+    "numpy": "2.3.3",
+    "pandas": "2.3.3",
+    "scipy": "1.18.0"
+  },
+  "rows": {
+    "01_strategy_selection_effects.csv": 18,
+    "02_strategy_selection_composite.csv": 6,
+    "03_strategy_selection_summary.csv": 3,
+    "04_A_outer_routes.csv": 3600,
+    "05_A_training_candidate_metrics.csv": 28800,
+    "06_A_outer_oof_item_predictions.csv": 185760,
+    "07_A_subject_repeat_metrics.csv": 17280,
+    "08_A_subject_level_inference_data.csv": 864,
+    "09_A_primary_inference.csv": 6,
+    "10_A_fold_effect_distribution.csv": 300,
+    "11_A_route_stability.csv": 72,
+    "12_A_across_AI_composite.csv": 2,
+    "13_A_full_cohort_candidate_maps.csv": 72,
+    "14_interpretation_decision_table.csv": 6
+  },
+  "verification_status": "PASS"
+}
