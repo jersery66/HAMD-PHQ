@@ -33,7 +33,7 @@ from error_cancellation_core import fdr_bh, paired_mean_difference  # noqa: E402
 from run_item_total_all_valid import item_name, load_item_data, seed_for  # noqa: E402
 from run_three_strategy_condition_total import item_condition_metrics  # noqa: E402
 from heterogeneous_condition_total_core import score_item_conditions  # noqa: E402
-from three_strategy_condition_total_core import weighted_kappa  # noqa: E402
+from three_strategy_condition_total_core import choose_strategy_b, weighted_kappa  # noqa: E402
 
 
 SOURCE = ROOT / "outputs" / "pdch_all_prompt_fields_corrected_20260807" / "04_评分维度明细.csv"
@@ -204,45 +204,36 @@ def load_selection_evidence() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame,
         summary_rows.append(row)
     summary = pd.DataFrame(summary_rows)
 
-    # The meeting explicitly made the downstream target held-out total MAE and
-    # asked us to choose the strategy with the largest integrated effect before
-    # testing its generalization. Within each scale, the three correlated AIs
-    # are first averaged for each participant. The resulting PHQ and HAMD
-    # standardized paired effects are then combined with participant-count
-    # weights. This avoids pretending that six model cells are independent
-    # studies while preserving the teacher's stated primary criterion.
-    pooled_rows = []
-    for strategy, group in composite.groupby("strategy", sort=True):
-        weights = group["complete_across_AI_subject_n"].to_numpy(float)
-        effects_g = group["hedges_gz"].to_numpy(float)
-        pooled_rows.append(
-            {
-                "strategy": strategy,
-                "cross_scale_effect_subject_n": int(weights.sum()),
-                "cross_scale_subject_weighted_gz": float(np.average(effects_g, weights=weights)),
-            }
-        )
-    summary = summary.merge(pd.DataFrame(pooled_rows), on="strategy", how="left", validate="one_to_one")
-    ordered = summary.sort_values(
-        [
-            "cross_scale_subject_weighted_gz",
-            "level1_cells",
-            "level2_cells",
-            "test47_replication_support_cells",
-        ],
-        ascending=[True, False, False, False],
-    )
-    selected = str(ordered.iloc[0]["strategy"])
-    rank_map = {strategy: rank for rank, strategy in enumerate(ordered["strategy"], start=1)}
-    summary["cross_scale_effect_rank"] = summary["strategy"].map(rank_map).astype(int)
+    # The meeting correction is important: PHQ and HAMD are different scales
+    # and must be ranked independently. The primary selection quantity is the
+    # scale-specific mean change in total MAE across the three AI cells. The
+    # AI-equal participant Hedges g_z is retained as a standardized forest
+    # companion, not pooled across scales and not used to create one overall
+    # score. If future data nominate different strategies by scale, the caller
+    # can carry those two choices separately; this current dataset nominates A
+    # for both scales.
+    for scale, prefix in (("PHQ-8", "PHQ"), ("HAMD-17", "HAMD")):
+        scale_composite = composite[composite["scale"].eq(scale)].set_index("strategy")
+        summary[f"{prefix}_effect_gz"] = summary["strategy"].map(scale_composite["hedges_gz"])
+        summary[f"{prefix}_effect_gz_CI_low"] = summary["strategy"].map(scale_composite["hedges_gz_CI_low"])
+        summary[f"{prefix}_effect_gz_CI_high"] = summary["strategy"].map(scale_composite["hedges_gz_CI_high"])
+        summary[f"{prefix}_composite_subject_n"] = summary["strategy"].map(scale_composite["complete_across_AI_subject_n"])
+        summary[f"{prefix}_effect_rank"] = summary[f"{prefix}_mean_delta_MAE"].rank(method="min", ascending=True).astype(int)
+    winners = {
+        scale: str(summary.loc[summary[f"{prefix}_effect_rank"].eq(1), "strategy"].iloc[0])
+        for scale, prefix in (("PHQ-8", "PHQ"), ("HAMD-17", "HAMD"))
+    }
+    if len(set(winners.values())) != 1:
+        raise AssertionError(f"current run expects one shared strategy, but scale-specific winners are {winners}")
+    selected = next(iter(winners.values()))
     summary["selected"] = summary["strategy"].eq(selected)
     summary["selection_reason"] = np.where(
         summary["selected"],
-        "按会议指定的总分MAE效应量标准，两量表合并标准化效应绝对值最大；因此进入外推检验",
+        "按会议口径分别看量表整体总分MAE效应量；PHQ和HAMD均排名第1，因此进入外推检验",
         np.where(
             summary["strategy"].eq("B"),
-            "条目真实性证据较完整且有Level2/test47支持，但会议指定的总分MAE合并效应小于A",
-            "稳定性较好，但总分MAE合并效应最弱，且没有Level2或test47支持",
+            "条目真实性证据较完整且有Level2/test47支持，但在PHQ和HAMD的整体总分MAE效应量中均低于A",
+            "稳定性较好，但在PHQ和HAMD的整体总分MAE效应量中均最弱，且没有Level2或test47支持",
         ),
     )
     return effects, composite, summary, selected
@@ -290,8 +281,8 @@ def load_fold_table(path: Path, expected_subjects: int) -> pd.DataFrame:
 
 
 def fit_and_apply_selected(cube: pd.DataFrame, selected_strategy: str) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    if selected_strategy != "A":
-        raise ValueError(f"this teacher-focused run expects strategy A, got {selected_strategy}")
+    if selected_strategy not in {"A", "B"}:
+        raise ValueError(f"teacher-focused runner supports A or B, got {selected_strategy}")
     routes: list[dict[str, object]] = []
     candidates: list[dict[str, object]] = []
     predictions: list[dict[str, object]] = []
@@ -315,12 +306,17 @@ def fit_and_apply_selected(cube: pd.DataFrame, selected_strategy: str) -> tuple[
                 for item_id in items:
                     item_frame = model_frame[model_frame["item_id"] == item_id].copy()
                     training = item_frame[item_frame["subject_id"].isin(train_ids)].copy()
-                    a_input = training[["scale", "item_id", "subject_id", "condition_id", "predicted", "gold_total", "gold_item"]].copy()
-                    scores, winner = score_item_conditions(
-                        a_input,
-                        candidate_conditions=CONDITIONS,
-                        minimum_common_n=30,
-                    )
+                    if selected_strategy == "A":
+                        a_input = training[["scale", "item_id", "subject_id", "condition_id", "predicted", "gold_total", "gold_item"]].copy()
+                        scores, winner = score_item_conditions(
+                            a_input,
+                            candidate_conditions=CONDITIONS,
+                            minimum_common_n=30,
+                        )
+                    else:
+                        metrics_for_b = item_condition_metrics(training)
+                        winner = choose_strategy_b(metrics_for_b)
+                        scores = metrics_for_b[["condition_id", "item_spearman", "coverage"]].rename(columns={"item_spearman": "rho", "coverage": "n_common"})
                     selected_condition = int(winner["selected_condition_id"])
                     routes.append(
                         {
@@ -340,12 +336,15 @@ def fit_and_apply_selected(cube: pd.DataFrame, selected_strategy: str) -> tuple[
                         }
                     )
                     metrics = item_condition_metrics(training)
-                    candidate_table = metrics.merge(
-                        scores.rename(columns={"rho": "corrected_rho", "n_common": "corrected_rho_common_n"}),
-                        on="condition_id",
-                        how="left",
-                        validate="one_to_one",
-                    )
+                    if selected_strategy == "A":
+                        candidate_table = metrics.merge(
+                            scores.rename(columns={"rho": "corrected_rho", "n_common": "corrected_rho_common_n"}),
+                            on="condition_id",
+                            how="left",
+                            validate="one_to_one",
+                        )
+                    else:
+                        candidate_table = metrics.copy()
                     for metric_row in candidate_table.to_dict("records"):
                         candidates.append(
                             {
@@ -641,9 +640,12 @@ def fit_full_cohort_candidate_maps(
                     & cube["model"].eq(model)
                     & cube["item_id"].eq(item_id)
                 ].copy()
-                a_input = frame[["scale", "item_id", "subject_id", "condition_id", "predicted", "gold_total", "gold_item"]].copy()
-                scores, winner = score_item_conditions(a_input, candidate_conditions=CONDITIONS, minimum_common_n=30)
                 metrics = item_condition_metrics(frame)
+                if selected_strategy == "A":
+                    a_input = frame[["scale", "item_id", "subject_id", "condition_id", "predicted", "gold_total", "gold_item"]].copy()
+                    scores, winner = score_item_conditions(a_input, candidate_conditions=CONDITIONS, minimum_common_n=30)
+                else:
+                    winner = choose_strategy_b(metrics)
                 selected_condition = int(winner["selected_condition_id"])
                 selected_metrics = metrics[metrics["condition_id"].eq(selected_condition)].iloc[0]
                 c03_metrics = metrics[metrics["condition_id"].eq(3)].iloc[0]
@@ -679,9 +681,9 @@ def fit_full_cohort_candidate_maps(
                         "full_map_matches_outer_mode": selected_condition == int(stability["top_condition_id"]),
                         "cell_total_generalization_supported": supported,
                         "future_use_status": (
-                            "仅作为未来独立样本的前瞻候选映射；当前只支持总分MAE改善"
+                            f"仅作为未来独立样本的前瞻候选{selected_strategy}映射；当前只支持总分MAE改善"
                             if supported
-                            else "不建议替换C03；仅保留为探索性全样本映射"
+                            else f"不建议替换C03；仅保留{selected_strategy}探索性全样本映射"
                         ),
                     }
                 )
@@ -694,14 +696,14 @@ def build_decision_table(inference: pd.DataFrame) -> pd.DataFrame:
         item_improved = bool(row.delta_item_NAE <= 0 and row.delta_sum_item_AE <= 0)
         cancellation_ok = bool(row.delta_cancellation_ratio <= 0)
         if row.generalization_supported and item_improved and cancellation_ok:
-            claim = "总分与条目层面均支持，可进入外部样本验证"
-            action = "锁定A映射后做独立外部验证"
+            claim = f"总分与条目层面均支持，可进入外部样本验证"
+            action = f"锁定{row.strategy}映射后做独立外部验证"
         elif row.generalization_supported:
-            claim = "仅支持总分MAE改善；条目误差或抵消未改善"
-            action = "作为总分优化候选；不得宣称条目更准，需外部样本验证"
+            claim = f"仅支持总分MAE改善；条目误差或抵消未改善"
+            action = f"作为{row.strategy}总分优化候选；不得宣称条目更准，需外部样本验证"
         else:
-            claim = "不支持A相对C03的稳定外推"
-            action = "保留C03；A仅作阴性或探索性结果"
+            claim = f"不支持{row.strategy}相对C03的稳定外推"
+            action = f"保留C03；{row.strategy}仅作阴性或探索性结果"
         rows.append(
             {
                 "scale": row.scale,
@@ -835,7 +837,8 @@ def build_report(
         selection_lines.append(
             f"- {row.strategy}: PHQ mean ΔMAE={row.PHQ_mean_delta_MAE:+.3f}; "
             f"HAMD mean ΔMAE={row.HAMD_mean_delta_MAE:+.3f}; "
-            f"cross-scale weighted g_z={row.cross_scale_subject_weighted_gz:+.3f} (rank {row.cross_scale_effect_rank}); "
+            f"PHQ AI-equal g_z={row.PHQ_effect_gz:+.3f} (MAE rank {row.PHQ_effect_rank}); "
+            f"HAMD AI-equal g_z={row.HAMD_effect_gz:+.3f} (MAE rank {row.HAMD_effect_rank}); "
             f"Level1={row.level1_cells}, Level2={row.level2_cells}, stability pass={row.stability_acceptable_cells}, "
             f"test47 support={row.test47_replication_support_cells}. {row.selection_reason}。"
         )
@@ -868,11 +871,11 @@ def build_report(
 
 ## 确定方案
 
-确定后续方案为 **{selected}**。会议明确要求后续用验证折总分 MAE 与 C03 比较，因此方案选择也使用同一个主要结局：先在每个量表内把同一受试者的三个 AI 差值等权平均，再把 PHQ 与 HAMD 的配对标准化效应按有效受试者数合并。合并效应越负，代表总分 MAE 改善越大；Level、条目真实性、稳定性和 test47 结果作为解释与风险约束，不用事后加权分数改变主要结局。
+确定后续方案为 **{selected}**。会议明确要求 PHQ 与 HAMD 分开看量表整体总分 MAE 效应量，因此分别在每个量表内比较 A/B/C 的总分 MAE 变化；标准化 Hedges g_z 作为森林图的辅助表达，不把两种量表合并成一个结论。Level、条目真实性、稳定性和 test47 结果作为解释与风险约束。
 
 {chr(10).join(selection_lines)}
 
-A 的两量表合并标准化总分效应最大，所以严格按会议规则选择 A。B 是唯一出现 Level2 且得到 test47 支持的方案，这说明它在条目真实性上更均衡；但它的总分 MAE 合并效应小于 A，因此不进入本轮主外推检验。A 的代价是既有探索结果中经常伴随条目误差和误差抵消增加，所以即使后续总分 MAE 外推成立，也只能解释为“总分误差改善”，不能解释为“每个条目都更准”。
+A 在 PHQ 和 HAMD 两个量表的整体总分 MAE 效应量中都排名第一，所以本轮严格按会议规则选择 A。B 是唯一出现 Level2 且得到 test47 支持的方案，这说明它在条目真实性上更均衡；但在本次以总分 MAE 为主要标准的两个量表内都低于 A，因此不进入主外推检验。A 的代价是既有探索结果中经常伴随条目误差和误差抵消增加，所以即使后续总分 MAE 外推成立，也只能解释为“总分误差改善”，不能解释为“每个条目都更准”。
 
 ## 后续外推怎么做
 
@@ -886,7 +889,7 @@ PHQ 使用全部 189 人，HAMD 使用全部 99 人；HAMD 主分析排除金标
 
 {chr(10).join(composite_lines)}
 
-总体效应是同一受试者在三个 AI 上的 ΔMAE 等权平均，再在受试者层面推断。它不是把三个相关 AI 当成三个独立研究做传统元分析。
+这里的 AI-equal composite 只用于同一量表内的描述和总体推断；PHQ 与 HAMD 的效应量、样本量和选择排名始终分开报告，不能把两种量表合并为一个总效应。
 
 ## 按 AI 的最终处理
 
@@ -896,11 +899,11 @@ PHQ 使用全部 189 人，HAMD 使用全部 99 人；HAMD 主分析排除金标
 
 ## 结论
 
-后续主线按会议规则围绕 A 展开。只有验证折 CI 完全低于 0 且 FDR q<0.05 的 AI，才能称为在当前队列内具有跨受试者泛化证据。点估计改善但区间跨 0 的 AI，只能称方向性结果。即使总分 MAE 显著，若 item NAE、条目绝对误差或抵消变差，结果也只能支持总分层面的优化。Cross-AI 混合路由已经表现更差，保留为补充分析，不再进入后续主路径。
+后续主线按两个量表分别选择的 A 展开。只有验证折 CI 完全低于 0 且 FDR q<0.05 的 AI，才能称为在当前队列内具有跨受试者泛化证据。点估计改善但区间跨 0 的 AI，只能称方向性结果。即使总分 MAE 显著，若 item NAE、条目绝对误差或抵消变差，结果也只能支持总分层面的优化。Cross-AI 混合路由已经表现更差，保留为补充分析，不再进入后续主路径。
 
 ## 统计风险检查
 
-11/11 fallacy types checked。Simpson：按量表和 AI 分层并另报总体复合；ecological：推断单位是受试者；Berkson：临床/DAIC 队列选择限制外推范围；collider：未加入结果导出的协变量；base-rate：本分析不是诊断分类；regression-to-mean：不是极端组前后比较；survivorship：PHQ189 与 HAMD16-core 维持全样本；look-elsewhere：A/B/C 探索后按会议预先指定的总分效应量规则选择 A，并在每个量表内对三个 AI 做 FDR；forking paths：条件、折分和 A 的选择规则均在本轮外推前锁定，但策略探索和外推仍使用重叠受试者，因此这是内部验证；causation：只陈述预测误差，不作因果主张；reverse causality：不涉及时间方向因果。
+11/11 fallacy types checked。Simpson：PHQ 与 HAMD 分开排名和分层报告，并在量表内另报 AI composite；ecological：推断单位是受试者；Berkson：临床/DAIC 队列选择限制外推范围；collider：未加入结果导出的协变量；base-rate：本分析不是诊断分类；regression-to-mean：不是极端组前后比较；survivorship：PHQ189 与 HAMD16-core 维持全样本；look-elsewhere：A/B/C 探索后按两个量表各自的总分 MAE 规则选择 A，并在每个量表内对三个 AI 做 FDR；forking paths：条件、折分和量表内选择规则均在本轮外推前锁定，但策略探索和外推仍使用重叠受试者，因此这是内部验证；causation：只陈述预测误差，不作因果主张；reverse causality：不涉及时间方向因果。
 """
 
 
@@ -983,10 +986,10 @@ def main() -> None:
     (OUT / "workbook_payload.json").write_text(json.dumps(workbook_payload, ensure_ascii=False), encoding="utf-8")
 
     manifest = {
-        "analysis_name": "teacher-focused A/B/C effect-size selection followed by A-only per-AI cross-subject generalization",
+        "analysis_name": "teacher-focused A/B/C scale-specific total-MAE selection followed by A-only per-AI cross-subject generalization",
         "status": status,
         "selected_strategy": selected,
-        "selection_rule": "teacher-specified primary criterion: most negative participant-weighted cross-scale Hedges gz for total MAE; Level1/Level2/test47 are interpretation and tie-break evidence",
+        "selection_rule": "teacher-specified primary criterion: within each scale, most negative mean total-MAE change across AI cells; PHQ and HAMD ranks are independent; Hedges gz is forest companion",
         "stage1_source": str(THREE_DIR.relative_to(ROOT)),
         "stage2_source": str(SOURCE.relative_to(ROOT)),
         "source_sha256": sha256(SOURCE),

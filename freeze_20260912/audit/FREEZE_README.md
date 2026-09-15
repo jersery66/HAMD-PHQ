@@ -30,7 +30,7 @@
 - `FREEZE_COMPLETENESS_AUDIT.csv` / `FREEZE_COMPLETENESS_AUDIT.md`：PDCH/实验\outputs 的 107 个输出目录逐一审计
 
 冻结目录：`freeze_20260911`
-当前冻结 artifact manifest 共 226 条；PDCH outputs 的既有完整性审计仍覆盖截至 2026-09-12 登记的 107 个目录，2026-09-15 新增的老师要求 A/B/C 效应量选择与重复五折外推包已作为独立正式内部验证模块冻结。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
+当前冻结 artifact manifest 共 318 条；PDCH outputs 的既有完整性审计仍覆盖截至 2026-09-12 登记的 107 个目录，2026-09-15 新增的老师要求量表分开 A 主包与 B 补充包已作为独立正式内部验证模块冻结。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
 
 ## 证据等级
 
@@ -48,9 +48,9 @@
 
 ## 2026-09-15 老师要求的聚焦外推分析
 
-最终包见 `02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/`。本轮先按会议指定的总分 MAE 合并标准化效应量选择 A，再只对 A 做每个 AI 独立的 10 次重复×5 折外推检验。
+最终包见 `02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/`，B 补充见 `02_FROZEN_STAGE2/TEACHER_B_SUPPLEMENT_GENERALIZATION_20260915/`。本轮先在 PHQ 和 HAMD 内分别按整体总分 MAE 效应量选择方案，再对主方案 A 做每个 AI 独立的 10 次重复×5 折外推检验；B 另行补充。
 
-- A/B/C 跨 PHQ/HAMD 的受试者数加权 Hedges g_z：A=-0.387、B=-0.346、C=-0.341，因此选择 A。
+- PHQ 平均总分 MAE：A=-0.602、B=-0.292、C=-0.119；HAMD 平均总分 MAE：A=-0.409、B=-0.295、C=-0.145；两个量表分别均选择 A，不合并量表效应。
 - PHQ-8：DeepSeek 与 Qwen 的验证折总分 MAE 显著改善；GLM 不改善。
 - HAMD16-core：三个 AI 均未达到稳定外推标准。
 - 六个模型×量表单元的条目 NAE 或误差抵消均未同步改善，因此阳性结果只支持总分 MAE 优化。

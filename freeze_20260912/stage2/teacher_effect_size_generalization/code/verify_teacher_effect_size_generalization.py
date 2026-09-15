@@ -160,13 +160,13 @@ def main() -> None:
     decisions = pd.read_csv(OUT / "14_interpretation_decision_table.csv")
 
     selected = selection.loc[selection["selected"].astype(str).str.lower().eq("true")]
-    weighted = (
-        selection_composite["hedges_gz"] * selection_composite["complete_across_AI_subject_n"]
-    ).groupby(selection_composite["strategy"]).sum() / selection_composite.groupby("strategy")["complete_across_AI_subject_n"].sum()
-    selection_error = max(
-        abs(float(row.cross_scale_subject_weighted_gz) - float(weighted.loc[row.strategy]))
-        for row in selection.itertuples(index=False)
-    )
+    selection_error = 0.0
+    for row in selection.itertuples(index=False):
+        for scale, prefix in (("PHQ-8", "PHQ"), ("HAMD-17", "HAMD")):
+            observed = selection_composite.loc[
+                selection_composite["scale"].eq(scale) & selection_composite["strategy"].eq(row.strategy), "hedges_gz"
+            ].iloc[0]
+            selection_error = max(selection_error, abs(float(row._asdict()[f"{prefix}_effect_gz"]) - float(observed)))
 
     candidate_selected = candidates[candidates["selected"].astype(str).str.lower().eq("true")]
     candidate_key = ["scale", "model", "repeat", "fold", "item_id"]
@@ -255,8 +255,8 @@ def main() -> None:
     checks: list[tuple[str, bool, object]] = [
         ("canonical_and_fold_hashes_match", all(sha256(path) == expected for path, expected in EXPECTED_HASHES.items()), {str(p): sha256(p) for p in EXPECTED_HASHES}),
         ("unique_selected_strategy_A", len(selected) == 1 and selected.iloc[0]["strategy"] == "A", selected["strategy"].tolist()),
-        ("A_has_best_pooled_standardized_effect", selection.sort_values("cross_scale_effect_rank").iloc[0]["strategy"] == "A", selection.sort_values("cross_scale_effect_rank")[["strategy", "cross_scale_subject_weighted_gz"]].to_dict("records")),
-        ("pooled_effect_recomputed", selection_error < 1e-12, selection_error),
+        ("A_has_best_PHQ_and_HAMD_total_MAE_effect", all(selection.sort_values("PHQ_mean_delta_MAE").iloc[0]["strategy"] == "A" for _ in [0]) and selection.sort_values("HAMD_mean_delta_MAE").iloc[0]["strategy"] == "A", selection[["strategy", "PHQ_mean_delta_MAE", "HAMD_mean_delta_MAE", "PHQ_effect_rank", "HAMD_effect_rank"]].to_dict("records")),
+        ("scale_specific_effect_recomputed", selection_error < 1e-12, selection_error),
         ("candidate_groups_have_eight_conditions", candidates.groupby(candidate_key).size().eq(8).all(), candidates.groupby(candidate_key).size().value_counts().to_dict()),
         ("candidate_selected_matches_route", (candidate_routes["condition_id"] == candidate_routes["selected_condition_id"]).all(), int((candidate_routes["condition_id"] != candidate_routes["selected_condition_id"]).sum())),
         ("all_outer_routes_recomputed_from_training_only", route_mismatches == 0 and max_rho_error < 1e-10, {"mismatches": route_mismatches, "max_rho_error": max_rho_error}),

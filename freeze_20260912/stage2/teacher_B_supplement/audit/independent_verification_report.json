@@ -1,0 +1,109 @@
+{
+  "status": "PASS",
+  "independent_recomputation": true,
+  "checks": [
+    {
+      "check": "source_and_fold_hashes_match",
+      "status": "PASS",
+      "observed": {
+        "PDCH/实验\\outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+        "PDCH/实验\\outputs\\pdch_phq189_cross_ai_heterogeneity_20260909\\PHQ_189_outer_folds.csv": "12c219dfe3b6d31983f4f0acf5304ed2dee788aa9ee29fea48dd0a1edc5354d4",
+        "PDCH/实验\\outputs\\pdch_hamd99_cross_ai_heterogeneity_20260909\\HAMD_99_outer_folds.csv": "ca2feabcf6f175b8092596427f3645b2f95525ae3b6c29535e05266130bbeddf"
+      }
+    },
+    {
+      "check": "nominated_main_strategy_A",
+      "status": "PASS",
+      "observed": "A"
+    },
+    {
+      "check": "supplement_strategy_B",
+      "status": "PASS",
+      "observed": "B"
+    },
+    {
+      "check": "six_inference_rows",
+      "status": "PASS",
+      "observed": 6
+    },
+    {
+      "check": "candidate_groups_have_eight_conditions",
+      "status": "PASS",
+      "observed": {
+        "8": 3600
+      }
+    },
+    {
+      "check": "candidate_selection_matches_routes",
+      "status": "PASS",
+      "observed": "candidate selected vs route"
+    },
+    {
+      "check": "all_routes_recomputed_as_B_training_only",
+      "status": "PASS",
+      "observed": 0
+    },
+    {
+      "check": "prediction_fold_membership_matches",
+      "status": "PASS",
+      "observed": 0
+    },
+    {
+      "check": "B_prediction_conditions_match_routes",
+      "status": "PASS",
+      "observed": 0
+    },
+    {
+      "check": "prediction_keys_unique",
+      "status": "PASS",
+      "observed": 0
+    },
+    {
+      "check": "HAMD14_absent",
+      "status": "PASS",
+      "observed": true
+    },
+    {
+      "check": "recomputed_subject_repeat_metrics",
+      "status": "PASS",
+      "observed": 1.1102230246251565e-16
+    },
+    {
+      "check": "headline_means_recomputed",
+      "status": "PASS",
+      "observed": 4.440892098500626e-16
+    },
+    {
+      "check": "paired_t_recomputed",
+      "status": "PASS",
+      "observed": 5.551115123125783e-17
+    },
+    {
+      "check": "subjects_have_ten_repeats",
+      "status": "PASS",
+      "observed": {
+        "10": 864
+      }
+    },
+    {
+      "check": "supported_cells_are_PHQ_DeepSeek_and_Qwen",
+      "status": "PASS",
+      "observed": [
+        {
+          "scale": "PHQ-8",
+          "model": "DeepSeek-V4-Pro"
+        },
+        {
+          "scale": "PHQ-8",
+          "model": "Qwen3.7-Max"
+        }
+      ]
+    },
+    {
+      "check": "full_maps_have_72_rows",
+      "status": "PASS",
+      "observed": 72
+    }
+  ],
+  "failures": []
+}

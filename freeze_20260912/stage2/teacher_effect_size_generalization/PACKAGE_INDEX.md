@@ -2,13 +2,15 @@
 
 ## 一句话结论
 
-按会议指定的“总分 MAE 合并标准化效应量最大”规则，A 排名第一（跨 PHQ/HAMD 的受试者数加权 Hedges g_z = -0.387；B = -0.346；C = -0.341），因此后续只检验 A。
+按会议指定的“每个量表分别看总分 MAE 整体改善”规则，A 在 PHQ 和 HAMD 中都排名第一，因此后续只检验 A。本轮不把 PHQ 和 HAMD 合并成一个总效应；各量表的 AI-equal Hedges g_z 只作为同量表内的森林图辅助量。
 
 PHQ-8 中，DeepSeek-V4-Pro 和 Qwen3.7-Max 的验证折总分 MAE 显著低于各自 C03；GLM-5.2 不改善。HAMD16-core 中三个 AI 均未达到稳定外推标准。所有六个模型×量表单元的条目 NAE 或误差抵消均未同步改善，因此论文只能把阳性结果写成“总分 MAE 改善”，不能写成“逐条评分更准确”。
 
 ## 为什么这样做
 
-- A/B/C 先按同一个主要结局做选择：下游检验是 held-out 总分 MAE，所以上游也按总分 MAE 的合并标准化效应排名。
+- A/B/C 先按各量表自己的主要结局做选择：下游检验是 held-out 总分 MAE，所以上游也按 PHQ、HAMD 各自的平均总分 MAE 改善排名。
+- PHQ：A 平均 ΔMAE=-0.602，B=-0.292，C=-0.119；A 排名第 1。
+- HAMD：A 平均 ΔMAE=-0.409，B=-0.295，C=-0.145；A 排名第 1。
 - PHQ 使用全 189 人，HAMD 使用全 99 人；HAMD H14 的 gold=9 是不可评估，正式结果使用 HAMD16-core。
 - 复用冻结的 10 次重复×5 折。每个 AI、每个条目只用 outer-training 受试者选择 A 条件，再把映射原样用于 held-out fold。
 - 同一受试者的 10 次 OOF 结果先取均值，再做配对 sign-flip permutation、participant bootstrap CI；paired t 和 Wilcoxon 只作敏感性检验。
@@ -16,7 +18,7 @@ PHQ-8 中，DeepSeek-V4-Pro 和 Qwen3.7-Max 的验证折总分 MAE 显著低于�
 
 ## 先看哪些文件
 
-1. `老师要求_A方案选择与重复五折外推结果.xlsx`：面向汇报的完整结果表。
+1. `老师要求_A方案外推结果.xlsx`：面向汇报的完整结果表。
 2. `RESULTS.md`：方法、结果和主张边界。
 3. `03_strategy_selection_summary.csv`：A/B/C 选择证据。
 4. `09_A_primary_inference.csv`：六个量表×AI 单元的正式外推检验。

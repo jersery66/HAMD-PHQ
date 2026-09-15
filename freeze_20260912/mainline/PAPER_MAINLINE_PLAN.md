@@ -23,11 +23,11 @@
 
 ## 2026-09-15 会议后聚焦主线（优先于下文旧版路径描述）
 
-老师要求先用 A/B/C 的整体效应量确定一种方案，再只验证这一种方案的外推性。按同一受试者三个 AI 的总分 MAE 差值等权合成，并按两量表有效受试者数合并 Hedges g_z，A=-0.387、B=-0.346、C=-0.341，因此本轮正式后续方案确定为 A。B 虽然有唯一的 Level2/test47 条目真实性支持，但总分 MAE 合并效应小于 A，作为选择对照保留，不进入本轮主外推检验。
+老师要求先在 PHQ 和 HAMD 内分别看 A/B/C 的整体总分 MAE 效应量，再确定各量表后续方案；不能把两种量表合并成一个总效应。按量表内平均总分 MAE 改善，PHQ 为 A=-0.602、B=-0.292、C=-0.119，HAMD 为 A=-0.409、B=-0.295、C=-0.145，因此本轮两个量表都确定 A。B 虽然有唯一的 Level2/test47 条目真实性支持，但在两个量表的总分 MAE 主标准下都低于 A，作为选择对照保留，不进入主外推检验。
 
 后续只做 A：PHQ 全 189 人和 HAMD 全 99 人（H14 gold=9 不可评估，主分析为 HAMD16-core），复用冻结的 10 次重复×5 折。每个 AI、每个条目在 outer-training 中按校正题总相关最高选择条件，再原样应用到 held-out fold；比较 A 与同一 AI 的 C03。正式推断先在受试者内平均 10 次 OOF，再做配对 sign-flip permutation、participant bootstrap 95%CI，并对三个 AI 做 BH-FDR。
 
-聚焦结果的论文解释是：PHQ/DeepSeek 和 PHQ/Qwen 支持当前队列内总分 MAE 的跨受试者内部泛化；PHQ/GLM 和 HAMD 三个 AI 不支持稳定外推。六个模型×量表单元的条目 NAE 或误差抵消均未同步改善，所以阳性结果只能写为总分 MAE 优化，不能写成逐条评分更准确。完整表格、A 条件映射和独立核验见 `02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/`。
+聚焦结果的论文解释是：PHQ/DeepSeek 和 PHQ/Qwen 支持当前队列内 A 方案总分 MAE 的跨受试者内部泛化；PHQ/GLM 和 HAMD 三个 AI 不支持稳定外推。六个模型×量表单元的条目 NAE 或误差抵消均未同步改善，所以阳性结果只能写为总分 MAE 优化，不能写成逐条评分更准确。完整表格、A 条件映射和独立核验见 `02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/`；B 补充见 `02_FROZEN_STAGE2/TEACHER_B_SUPPLEMENT_GENERALIZATION_20260915/`。
 
 ## 证据层次
 

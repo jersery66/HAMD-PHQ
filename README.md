@@ -6,7 +6,8 @@
 
 - `mainline/`：文章主线、证据地图、关键结果表和主张边界。
 - `stage2/`：PHQ/HAMD 多条件融合、老师要求的跨受试者外层泛化摘要、关键 CSV、核验报告和结果 ZIP。
-- `stage2/teacher_effect_size_generalization/`：按会议要求先用 A/B/C 合并总分效应量选出 A，再对每个 AI 做全 189/99 队列的重复五折外推结果、工作簿、图和审计代码。
+- `stage2/teacher_effect_size_generalization/`：按会议要求分别在 PHQ/HAMD 内按整体总分 MAE 效应量选择 A，再对每个 AI 做全 189/99 队列的重复五折外推结果、工作簿、图和审计代码。
+- `stage2/teacher_B_supplement/`：按用户要求补充 B 方案的同口径全队列重复五折结果和审计记录。
 - `cross_ai/`：PHQ189/HAMD99 Cross-AI 维度异构、直接 Joint、比较表和参考版式工作簿。
 - `supporting/`：题总相关、点二列相关、误差抵消、coverage 和 HAMD16 支持性结果。
 - `lineage/`：从原始层到 AI24 条件层的来源目录、数据摘要和哈希，不含原始临床/API 数据。
@@ -14,7 +15,7 @@
 
 ## 2026-09-15 聚焦结果
 
-会议指定的总分 MAE 合并标准化效应量排名为 A=-0.387、B=-0.346、C=-0.341，因此后续只检验 A。PHQ-8 的 DeepSeek-V4-Pro 与 Qwen3.7-Max 在 held-out 验证折上支持总分 MAE 改善；GLM-5.2 不支持。HAMD16-core 的三个 AI 均未达到稳定外推标准。条目误差或误差抵消未同步改善，阳性结果只能解释为总分 MAE 优化。
+会议要求 PHQ 和 HAMD 分开看整体总分 MAE 效应量：PHQ 平均 ΔMAE 为 A=-0.602、B=-0.292、C=-0.119；HAMD 为 A=-0.409、B=-0.295、C=-0.145，因此两个量表均选择 A；B 另行补充。PHQ-8 的 DeepSeek-V4-Pro 与 Qwen3.7-Max 在 held-out 验证折上支持总分 MAE 改善；GLM-5.2 不支持。HAMD16-core 的三个 AI 均未达到稳定外推标准。条目误差或误差抵消未同步改善，阳性结果只能解释为总分 MAE 优化。
 
 ## 数据边界
 

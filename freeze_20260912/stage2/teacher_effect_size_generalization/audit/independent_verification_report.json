@@ -19,27 +19,36 @@
       ]
     },
     {
-      "check": "A_has_best_pooled_standardized_effect",
+      "check": "A_has_best_PHQ_and_HAMD_total_MAE_effect",
       "status": "PASS",
       "observed": [
         {
           "strategy": "A",
-          "cross_scale_subject_weighted_gz": -0.3866974716485297
+          "PHQ_mean_delta_MAE": -0.6023474178403756,
+          "HAMD_mean_delta_MAE": -0.4091250250100041,
+          "PHQ_effect_rank": 1,
+          "HAMD_effect_rank": 1
         },
         {
           "strategy": "B",
-          "cross_scale_subject_weighted_gz": -0.3463016282335165
+          "PHQ_mean_delta_MAE": -0.2917840375586854,
+          "HAMD_mean_delta_MAE": -0.2945292519181585,
+          "PHQ_effect_rank": 2,
+          "HAMD_effect_rank": 2
         },
         {
           "strategy": "C",
-          "cross_scale_subject_weighted_gz": -0.3414854835815864
+          "PHQ_mean_delta_MAE": -0.1185446009389671,
+          "HAMD_mean_delta_MAE": -0.1445470132497442,
+          "PHQ_effect_rank": 3,
+          "HAMD_effect_rank": 3
         }
       ]
     },
     {
-      "check": "pooled_effect_recomputed",
+      "check": "scale_specific_effect_recomputed",
       "status": "PASS",
-      "observed": 5.551115123125783e-17
+      "observed": 0.0
     },
     {
       "check": "candidate_groups_have_eight_conditions",

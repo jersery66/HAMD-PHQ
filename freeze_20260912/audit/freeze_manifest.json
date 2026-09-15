@@ -17,7 +17,7 @@
   },
   "outputs_inventory_rows": 107,
   "pointer_only_directory_count": 59,
-  "artifact_count": 226,
+  "artifact_count": 318,
   "desktop_free_bytes_before": 838574080,
   "desktop_free_bytes_after": 735539200,
   "raw_data_modified": false,
@@ -57,7 +57,7 @@
     "status": "pointer_only",
     "reason": "approximately 86 GB"
   },
-  "verification_checks": 15,
+  "verification_checks": 20,
   "source_path_movement_note": "If a pre-existing Desktop reference file is moved, the frozen copy and recorded hash remain authoritative.",
   "raw_lineage_dataset_summary": "00_RAW_LINEAGE/RAW_TO_AI24_DATASET_SUMMARY.csv",
   "uncompressed_lineage_access": [
@@ -77,8 +77,8 @@
     "00_RAW_LINEAGE/PDCH_raw/PDCH整理结果.xlsx",
     "00_RAW_LINEAGE/PDCH_raw/DAIC_PHQ8_完整标注报表.xlsx"
   ],
-  "last_updated_at": "2026-09-15T04:35:52.761750+00:00",
-  "freeze_revision": "teacher_effect_size_selected_A_repeated_10x5_generalization_20260915",
+  "last_updated_at": "2026-09-15T10:09:13.179889+00:00",
+  "freeze_revision": "teacher_scale_specific_A_main_plus_B_supplement_20260915",
   "completeness_audit": "FREEZE_COMPLETENESS_AUDIT.csv",
   "additional_analyses_bundle": "06_ADDITIONAL_ANALYSES/missing_high_value_analyses.zip",
   "additional_analyses_member_index": "06_ADDITIONAL_ANALYSES/MISSING_ANALYSIS_BUNDLE_INDEX.csv",
@@ -104,13 +104,23 @@
     "02_FROZEN_STAGE2/HAMD_11_core16_oof_predictions.csv"
   ],
   "stage2_oof_tables_status": "DIRECTLY_READABLE_OUTER_OOF",
-  "teacher_effect_size_generalization_package": "02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/PACKAGE_INDEX.md",
+  "teacher_effect_size_generalization_package": "02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_SCALE_SPECIFIC_20260915/PACKAGE_INDEX.md",
   "teacher_effect_size_selected_strategy": "A",
   "teacher_effect_size_selection_gz": -0.3866974716485297,
   "teacher_effect_size_generalization_status": "PASS",
   "teacher_effect_size_generalization_boundary": "internal repeated cross-subject OOF; not independent external validation",
-  "teacher_effect_size_workbook": "02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/老师要求_A方案选择与重复五折外推结果.xlsx",
+  "teacher_effect_size_workbook": "02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_SCALE_SPECIFIC_20260915/老师要求_A方案外推结果.xlsx",
   "teacher_effect_size_independent_checks": 23,
   "teacher_effect_size_saved_workbook_checks": 6,
-  "teacher_effect_package_hash_count": 48
+  "teacher_effect_package_hash_count": {
+    "teacher_effect": 48,
+    "teacher_B": 42
+  },
+  "teacher_effect_size_selection_metric": "within-scale mean total-MAE change; PHQ=-0.602, HAMD=-0.409; scales kept independent",
+  "teacher_B_supplement_package": "02_FROZEN_STAGE2/TEACHER_B_SUPPLEMENT_GENERALIZATION_20260915/PACKAGE_INDEX.md",
+  "teacher_B_supplement_status": "PASS",
+  "teacher_B_supplement_boundary": "internal repeated cross-subject OOF; not independent external validation",
+  "teacher_B_supplement_workbook": "02_FROZEN_STAGE2/TEACHER_B_SUPPLEMENT_GENERALIZATION_20260915/老师要求_B方案外推结果.xlsx",
+  "teacher_B_supplement_independent_checks": 17,
+  "teacher_B_supplement_saved_workbook_checks": 6
 }

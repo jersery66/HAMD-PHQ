@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "workbook": "老师要求_A方案外推结果.xlsx",
+  "workbook": "老师要求_B方案外推结果.xlsx",
   "checks": [
     {
       "check": "six_expected_sheets",
@@ -17,7 +17,7 @@
     {
       "check": "summary_contains_requested_strategy",
       "status": "PASS",
-      "observed": "summary contains A"
+      "observed": "summary contains B"
     },
     {
       "check": "summary_contains_PHQ_and_HAMD_decisions",
