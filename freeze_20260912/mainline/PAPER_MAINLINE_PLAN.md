@@ -19,15 +19,24 @@
 
 ## 中心论点
 
-本文不应把贡献写成“某个模型或 condition 获胜”。最稳的论点是：**多条件信息确实包含潜在互补性，但其收益依赖量表、模型、条目和评价层；总分层改善不能自动转化为条目级真实性或临床可用性，因此可靠路径必须把评分、可评估性和不确定性共同纳入评价。**
+本文不应把贡献写成“某个模型或 condition 获胜”。最稳的论点是：**多条件信息确实包含潜在互补性，但其收益依赖量表、模型、条目和评价层；总分层改善不能自动转化为条目级真实性或临床可用性，因此可靠路径必须把评分、可评估性和不确定性共同纳入评价。**
+
+## 2026-09-15 会议后聚焦主线（优先于下文旧版路径描述）
+
+老师要求先用 A/B/C 的整体效应量确定一种方案，再只验证这一种方案的外推性。按同一受试者三个 AI 的总分 MAE 差值等权合成，并按两量表有效受试者数合并 Hedges g_z，A=-0.387、B=-0.346、C=-0.341，因此本轮正式后续方案确定为 A。B 虽然有唯一的 Level2/test47 条目真实性支持，但总分 MAE 合并效应小于 A，作为选择对照保留，不进入本轮主外推检验。
+
+后续只做 A：PHQ 全 189 人和 HAMD 全 99 人（H14 gold=9 不可评估，主分析为 HAMD16-core），复用冻结的 10 次重复×5 折。每个 AI、每个条目在 outer-training 中按校正题总相关最高选择条件，再原样应用到 held-out fold；比较 A 与同一 AI 的 C03。正式推断先在受试者内平均 10 次 OOF，再做配对 sign-flip permutation、participant bootstrap 95%CI，并对三个 AI 做 BH-FDR。
+
+聚焦结果的论文解释是：PHQ/DeepSeek 和 PHQ/Qwen 支持当前队列内总分 MAE 的跨受试者内部泛化；PHQ/GLM 和 HAMD 三个 AI 不支持稳定外推。六个模型×量表单元的条目 NAE 或误差抵消均未同步改善，所以阳性结果只能写为总分 MAE 优化，不能写成逐条评分更准确。完整表格、A 条件映射和独立核验见 `02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/`。
 
 ## 证据层次
 
-### 主结果层
-
-- PHQ-8：primary142 是正式主分析边界，test47 是已接触后的 secondary replication；本次 PHQ189 pooled Cross-AI 结果明确标为 exploratory。
-- HAMD：HAMD-17 strict/available 作为敏感性层，HAMD16 core（99 人，排除 H14）作为主要干净方法学层；H14 gold=9 永远不可评估。
-- 主比较：C03 基线、既有 B/Mean/Median/Ridge/ElasticNet 融合路径、条目误差和被试层配对不确定性。
+### 主结果层
+
+- 方案选择层：A/B/C 只用于一次性探索和总分 MAE 效应量排名；A 是本轮聚焦的后续方案，B/test47 证据保留为选择解释。
+- PHQ-8：primary142 仍是既有开发证据；本轮新增 PHQ189 pooled A-only repeated OOF 是当前队列内内部泛化，不称独立外部验证。
+- HAMD：HAMD-17 strict/available 作为敏感性层，HAMD16 core（99 人，排除 H14）作为主要干净方法学层；H14 gold=9 永远不可评估。本轮 A-only repeated OOF 未得到稳定 AI 外推。
+- 主比较：A 条件映射与同一 AI 的 C03 基线，报告总分 MAE、条目 NAE、条目绝对误差、抵消、coverage、weighted kappa 和受试者层配对不确定性。
 
 ### 直接 Joint Cross-AI 层
 
@@ -47,7 +56,11 @@
 
 说明 DAIC-WOZ PHQ189、PDCH HAMD99、模型/条件、标签和 H14 规则。明确 C03、B/Mean/Median 等既有路径与直接 Joint Cross-AI 的不同定义。描述 outer 10×5 OOF、inner one-SE（仅 Conservative-C）、被试层配对比较、MAE/NAE/sum item AE/cancellation/coverage/weighted kappa，以及 FDR family。把 HAMD16 定义为 methodological core，不能替代 HAMD17。
 
-### 3. Results（约 1,500–1,800 字）
+### 3. Results（约 1,500–1,800 字）
+
+#### 3.0 方案选择与外推性（本轮核心结果）
+
+先用 A/B/C 的跨量表合并总分 MAE 效应量说明为什么选 A，再报告 A 在六个模型×量表单元上的 10×5 held-out 结果。把 PHQ/DeepSeek、PHQ/Qwen 的总分改善与 HAMD/GLM、HAMD/Kimi、HAMD/Qwen、PHQ/GLM 的阴性或方向性结果并列。随后明确条目 NAE、条目绝对误差和抵消没有同步改善，避免把总分结论扩展为条目真实性结论。
 
 #### 3.1 数据完整性与条件异质性
 
@@ -92,12 +105,12 @@
 - 避免：`clinical validity`、`clinical safety`、`diagnostic accuracy`、`causal mechanism`、`universal winner`、`HAMD16 replaces HAMD17`。
 - 所有数字必须带 `scale + cohort/layer + method + N + CI/q`，不能把 HAMD strict、HAMD16、available 或不同 FDR family 的数字合并。
 
-## 真正值得继续的工作
-
-1. 完成 2,000 行 evidence 双评者人工审核，之后再决定是否能写内容效度相关结论。
-2. 为 HAMD selective prediction 补被试层 bootstrap CI、自动保留率和人工复核成本。
-3. 如果文章要声称泛化或临床应用，再补独立 HAMD 队列和预注册外部验证。
-4. 暂停新增模型、condition winner 规则和大规模海选；当前数据已经足以写一篇方法评价文章。
+## 真正值得继续的工作
+
+1. 锁定 A 的全队列候选映射，在新的独立 PHQ/HAMD 样本或新中心前瞻验证；在此之前不能写独立外部验证、临床部署或普遍泛化。
+2. 完成 2,000 行 evidence 双评者人工审核，之后再决定是否能写内容效度相关结论。
+3. 为 HAMD selective prediction 补被试层 bootstrap CI、自动保留率和人工复核成本。
+4. 暂停新增模型、condition winner 规则和大规模海选；当前数据已经足以写一篇以“总分改善与条目真实性分离”为核心的方法评价文章。
 
 ## 既有分析的文章归位
 

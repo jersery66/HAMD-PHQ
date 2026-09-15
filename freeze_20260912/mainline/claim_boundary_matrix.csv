@@ -7,5 +7,8 @@ C05,HAMD16 可替代标准 HAMD17,forbidden,只能称 HAMD16 methodological core
 C06,H14 是结构性可评估性瓶颈,supported_with_limits,报告 gold=9、AI 无效率、rescue 和 coverage,不能把 9 转成 0 或临床安全性结论,Stage2/HAMD_02_H14_evaluability_by_condition.csv
 C07,condition disagreement 可用于人工复核排序,promising_exploratory,作为选择性自动化探索信号,不能称临床安全性验证；缺少人工成本和双评者审核,Stage2/HAMD_07_disagreement_error.csv; HAMD_08_selective_prediction.csv
 C08,直接 Joint Cross-AI 已验证优于单模型,not_supported,报告候选池、路由和没有稳定优势的结果,不能宣布 Cross-AI 是最终评分方案,direct Joint result summary and comparisons
-C09,自动 evidence 字段具有内容效度,blocked,只能写自动匹配和待审核状态,"不能替代 2,000 行双评者人工审核",outputs/pdch_twostage_corrected_20260821/evidence_audit_blinded_sample.csv
+C09,自动 evidence 字段具有内容效度,blocked,只能写自动匹配和待审核状态,"不能替代 2,000 行双评者人工审核",outputs/pdch_twostage_corrected_20260821/evidence_audit_blinded_sample.csv
+C10,按会议总分MAE效应量规则应选A,formal_internal,两量表合并标准化总分误差效应量中A排名第一,不能写成A在条目真实性或临床效用上普遍最好,02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/03_strategy_selection_summary.csv
+C11,PHQ/DeepSeek与PHQ/Qwen的A方案具有当前队列内跨受试者总分MAE外推证据,conditional_internal,重复10×5外层OOF中CI完全低于0且量表内FDR通过,不能写成独立外部验证、临床部署或逐条准确性改善,02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/09_A_primary_inference.csv
+C12,A方案总分改善与条目真实性并不一致,not_supported_as_item_claim,六个模型×量表单元的item NAE或误差抵消没有同步改善,不能只用总分MAE证明条目有效或症状层面更准,02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/14_interpretation_decision_table.csv
 C10,当前研究具备临床部署或外部验证资格,forbidden,限定为内部 OOF/secondary replication 方法评估,不能写临床部署、诊断效度或独立外部验证,DATA_GAP_REPORT.md

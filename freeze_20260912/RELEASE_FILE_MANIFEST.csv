@@ -51,10 +51,10 @@ cross_ai/RESULTS.md,3824
 lineage/RAW_TO_AI24_DATASET_SUMMARY.csv,7561
 lineage/RAW_TO_AI24_LINEAGE.md,2320
 lineage/RAW_TO_AI24_SOURCE_INVENTORY.csv,1412
-mainline/claim_boundary_matrix.csv,2159
-mainline/PAPER_EVIDENCE_MAP.csv,6071
-mainline/PAPER_KEY_RESULTS_TABLE.csv,10839
-mainline/PAPER_MAINLINE_PLAN.md,8601
+mainline/claim_boundary_matrix.csv,3084
+mainline/PAPER_EVIDENCE_MAP.csv,8351
+mainline/PAPER_KEY_RESULTS_TABLE.csv,12455
+mainline/PAPER_MAINLINE_PLAN.md,10885
 mainline/research_stage_ledger.csv,3760
 README.md,2281
 stage2/fold_assignments.csv,109794
