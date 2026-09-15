@@ -4,11 +4,11 @@ audit/DAIC_BRANCH_RESULT_CATALOG.csv,2422
 audit/EARLY_BRANCH_BOUNDARY.md,1739
 audit/EARLY_WORKSPACE_COUNTS.csv,602
 audit/EARLY_WORKSPACE_INVENTORY.csv,1774119
-audit/FREEZE_ARTIFACT_MANIFEST.csv,60556
+audit/FREEZE_ARTIFACT_MANIFEST.csv,61216
 audit/FREEZE_COMPLETENESS_AUDIT.csv,28006
 audit/FREEZE_COMPLETENESS_AUDIT.md,48928
-audit/freeze_manifest.json,5819
-audit/FREEZE_README.md,3558
+audit/freeze_manifest.json,6034
+audit/FREEZE_README.md,3677
 audit/FREEZE_VERIFICATION_REPORT.json,3108
 audit/FREEZE_VERIFICATION_REPORT.md,3030
 audit/FREEZE_ZIP_MEMBERS.csv,8489730
@@ -65,6 +65,7 @@ stage2/HAMD_03_H14_rescue.csv,29761
 stage2/HAMD_06_oracle_upper_bound.csv,85194
 stage2/HAMD_07_disagreement_error.csv,440208
 stage2/HAMD_08_selective_prediction.csv,2913
+stage2/HAMD_11_core16_oof_predictions.csv,16184308
 stage2/HAMD_12_core16_performance.csv,5977
 stage2/HAMD_14_performance_stability.csv,159130
 stage2/HAMD_final_summary.md,272
@@ -72,6 +73,7 @@ stage2/HAMD_PHQ_multicondition_results.xlsx,72593
 stage2/locked_inner_fold_mae.csv,63368
 stage2/outer_fold_strategy_maps.csv,1898676
 stage2/outer_inner_fold_mae.csv,3373635
+stage2/PHQ_05_core_oof_predictions.csv,12103805
 stage2/PHQ_06_total_performance.csv,6177
 stage2/PHQ_07_item_performance.csv,32881
 stage2/PHQ_08_error_mechanism.csv,2550

@@ -44,4 +44,4 @@
 老师要求的跨受试者泛化包见 `02_FROZEN_STAGE2/CROSS_SUBJECT_GENERALIZATION/`：训练折选择条件组合，验证折与 C03 原始条件做受试者层面的 MAE 配对检验。
 
 
-折分索引见 `02_FROZEN_STAGE2/FOLD_DESIGN_INDEX.md`；正式设计为 10 repeats × 5 outer folds，inner training-only 5-fold。
+折分索引见 `02_FROZEN_STAGE2/FOLD_DESIGN_INDEX.md`；正式设计为 10 repeats × 5 outer folds，inner training-only 5-fold。`PHQ_05_core_oof_predictions.csv` 和 `HAMD_11_core16_oof_predictions.csv` 是可直接读取的外层 OOF 预测表。

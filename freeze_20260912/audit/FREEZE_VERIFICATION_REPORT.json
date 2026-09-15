@@ -24,8 +24,8 @@
     },
     {
       "check": "artifact_manifest_count",
-      "observed": 175,
-      "expected": 175,
+      "observed": 177,
+      "expected": 177,
       "status": "PASS",
       "evidence": "freeze_20260911\\FREEZE_ARTIFACT_MANIFEST.csv"
     },
