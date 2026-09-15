@@ -30,7 +30,7 @@
 - `FREEZE_COMPLETENESS_AUDIT.csv` / `FREEZE_COMPLETENESS_AUDIT.md`：PDCH/实验\outputs 的 107 个输出目录逐一审计
 
 冻结目录：`freeze_20260911`
-当前冻结 artifact manifest 共 164 条；PDCH outputs 共 107 个目录，其中 19 个已在既有冻结中，29 个高价值历史/支持性目录已追加打包，59 个 smoke/失败/部分完成/重复或不适合进入结果的目录保留为指针。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
+当前冻结 artifact manifest 共 177 条；PDCH outputs 共 107 个目录，其中 19 个已在既有冻结中，29 个高价值历史/支持性目录已追加打包，59 个 smoke/失败/部分完成/重复或不适合进入结果的目录保留为指针。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
 
 ## 证据等级
 
@@ -45,3 +45,4 @@
 
 
 折分索引见 `02_FROZEN_STAGE2/FOLD_DESIGN_INDEX.md`；正式设计为 10 repeats × 5 outer folds，inner training-only 5-fold。`PHQ_05_core_oof_predictions.csv` 和 `HAMD_11_core16_oof_predictions.csv` 是可直接读取的外层 OOF 预测表。
+
