@@ -30,7 +30,7 @@
 - `FREEZE_COMPLETENESS_AUDIT.csv` / `FREEZE_COMPLETENESS_AUDIT.md`：PDCH/实验\outputs 的 107 个输出目录逐一审计
 
 冻结目录：`freeze_20260911`
-当前冻结 artifact manifest 共 318 条；PDCH outputs 的既有完整性审计仍覆盖截至 2026-09-12 登记的 107 个目录，2026-09-15 新增的老师要求量表分开 A 主包与 B 补充包已作为独立正式内部验证模块冻结。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
+当前冻结 artifact manifest 共 335 条；PDCH outputs 的既有完整性审计仍覆盖截至 2026-09-12 登记的 107 个目录，2026-09-15 新增的老师要求量表分开 A 主包、B 补充包和 A/B 完整总表已作为独立正式内部验证模块冻结。早期外部工作区另列 6331 个文件，其中 2415 个选中冻结、3916 个保留指针；DAIC-WOZ 支线另有独立目录和结果目录表。
 
 ## 证据等级
 
@@ -56,5 +56,7 @@
 - 六个模型×量表单元的条目 NAE 或误差抵消均未同步改善，因此阳性结果只支持总分 MAE 优化。
 - 证据边界是当前队列内重复跨受试者 OOF，不是独立外部验证；全队列候选映射仅供未来新样本前瞻验证。
 
-主工作簿：`02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_20260915/老师要求_A方案选择与重复五折外推结果.xlsx`。分析核验 13 项、独立重算 23 项、保存后工作簿核验 6 项及外部逐页渲染均通过。
+主工作簿：`02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_SCALE_SPECIFIC_20260915/老师要求_A方案外推结果.xlsx`。分析核验 13 项、独立重算 23 项、保存后工作簿核验 6 项及外部逐页渲染均通过。
+
+完整 A/B 对照总表：`02_FROZEN_STAGE2/TEACHER_A_B_COMPLETE_COMPARISON_20260915/A_B方案完整分析总表.xlsx`。该表把量表内 A/B/C 选择、A 主结果、B 补充、NAE、抵消和稳定性放在同一张可汇报工作簿中。
 

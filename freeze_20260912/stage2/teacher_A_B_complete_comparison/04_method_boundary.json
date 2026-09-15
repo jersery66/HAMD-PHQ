@@ -1,0 +1,39 @@
+{
+  "methods": {
+    "source": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",
+    "PHQ_folds": "12c219dfe3b6d31983f4f0acf5304ed2dee788aa9ee29fea48dd0a1edc5354d4",
+    "HAMD_folds": "ca2feabcf6f175b8092596427f3645b2f95525ae3b6c29535e05266130bbeddf",
+    "A_analysis": "PASS",
+    "B_analysis": "PASS",
+    "A_independent": "23 checks PASS",
+    "B_independent": "17 checks PASS",
+    "A_workbook": "6 checks PASS",
+    "B_workbook": "6 checks PASS"
+  },
+  "methodRows": [
+    {
+      "topic": "第一步：量表内选方案",
+      "why": "PHQ 和 HAMD 分开比较 A/B/C 的整体总分 MAE；本数据中两个量表均选 A。"
+    },
+    {
+      "topic": "第二步：锁定方案",
+      "why": "A 选定后不再用验证折重新找方案；B 作为独立补充，使用同一数据、同一折分、同一 C03 基线。"
+    },
+    {
+      "topic": "第三步：外推检验",
+      "why": "每个 AI、每个条目只在 outer-training 受试者中选 condition，再原样应用到 held-out 受试者。"
+    },
+    {
+      "topic": "第四步：稳定性",
+      "why": "受试者内平均 10 次 OOF 后做配对 sign-flip、bootstrap CI、t/Wilcoxon；50 个折只描述方向和路由稳定性。"
+    },
+    {
+      "topic": "NAE 如何处理",
+      "why": "NAE 是条目层辅助结局。A 的总分改善不能覆盖 NAE 变差；因此最终结论必须把总分 MAE 和条目 NAE/抵消并列。"
+    },
+    {
+      "topic": "最终边界",
+      "why": "结果是当前队列内的内部跨受试者 OOF，不是新中心外部验证，也不能直接推到临床部署。"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "output": "A_B方案完整分析总表.xlsx",
+  "sheets": [
+    "00_总览",
+    "01_方案选择",
+    "02_A主结果",
+    "03_B补充结果",
+    "04_A_B对照",
+    "05_方法与边界"
+  ],
+  "chartCount": 0,
+  "imageCount": 2,
+  "sourceVerification": "A/B source packages independently verified",
+  "visualVerification": "PASS",
+  "visualVerificationMethod": "LibreOffice 26.2.4 headless PDF export plus Poppler PNG rendering",
+  "externalPreviewPdf": "workbook_external_preview_final/A_B方案完整分析总表.pdf",
+  "externalPreviewPages": 20,
+  "inspectedPages": [1, 2, 4, 6, 8, 10],
+  "visualNotes": "All six sheets rendered with readable titles, A/B tables, figures, status colors and method boundary text."
+}
