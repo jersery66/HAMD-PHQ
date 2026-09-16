@@ -59,4 +59,6 @@
 主工作簿：`02_FROZEN_STAGE2/TEACHER_EFFECT_SIZE_GENERALIZATION_SCALE_SPECIFIC_20260915/老师要求_A方案外推结果.xlsx`。分析核验 13 项、独立重算 23 项、保存后工作簿核验 6 项及外部逐页渲染均通过。
 
 完整 A/B 对照总表：`02_FROZEN_STAGE2/TEACHER_A_B_COMPLETE_COMPARISON_20260915/A_B方案完整分析总表.xlsx`。该表把量表内 A/B/C 选择、A 主结果、B 补充、NAE、抵消和稳定性放在同一张可汇报工作簿中。
+
+双语 v2 图见 `02_FROZEN_STAGE2/TEACHER_A_B_FIGURE_V2_20260916/`。v2 已取消重复嵌套排版，使用四个独立面板；按要求，图文件已从 GitHub 公开树删除，仅保留在本地冻结包。
 
