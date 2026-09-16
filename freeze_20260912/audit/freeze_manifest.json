@@ -17,7 +17,7 @@
   },
   "outputs_inventory_rows": 107,
   "pointer_only_directory_count": 59,
-  "artifact_count": 364,
+  "artifact_count": 376,
   "desktop_free_bytes_before": 838574080,
   "desktop_free_bytes_after": 735539200,
   "raw_data_modified": false,
@@ -77,7 +77,7 @@
     "00_RAW_LINEAGE/PDCH_raw/PDCH整理结果.xlsx",
     "00_RAW_LINEAGE/PDCH_raw/DAIC_PHQ8_完整标注报表.xlsx"
   ],
-  "last_updated_at": "2026-09-16T03:09:01.837474+00:00",
+  "last_updated_at": "2026-09-16T03:23:18.325453+00:00",
   "freeze_revision": "teacher_scale_specific_A_main_plus_B_supplement_20260915",
   "completeness_audit": "FREEZE_COMPLETENESS_AUDIT.csv",
   "additional_analyses_bundle": "06_ADDITIONAL_ANALYSES/missing_high_value_analyses.zip",
@@ -127,5 +127,9 @@
   "teacher_A_B_complete_comparison_status": "PASS",
   "teacher_A_B_complete_comparison_boundary": "combined summary of internal repeated OOF packages; not independent external validation",
   "teacher_A_B_complete_comparison_workbook": "02_FROZEN_STAGE2/TEACHER_A_B_COMPLETE_COMPARISON_WITH_FIGURE_20260916/A_B方案完整分析总表.xlsx",
-  "teacher_A_B_figure_package_hash_count": 28
+  "teacher_A_B_figure_package_hash_count": 28,
+  "teacher_A_B_bilingual_figure_v2_package": "02_FROZEN_STAGE2/TEACHER_A_B_FIGURE_V2_20260916/PACKAGE_FILE_MANIFEST.csv",
+  "teacher_A_B_bilingual_figure_v2_status": "PASS",
+  "teacher_A_B_bilingual_figure_v2_backend": "Python/matplotlib",
+  "teacher_A_B_bilingual_figure_v2_public_release": "deleted from GitHub public tree by design"
 }
