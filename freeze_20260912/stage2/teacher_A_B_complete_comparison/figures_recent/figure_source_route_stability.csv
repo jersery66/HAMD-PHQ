@@ -1,7 +1,0 @@
-scale,model,A_route_top_frequency,B_route_top_frequency
-HAMD-17,GLM-5.2,0.61,0.74
-HAMD-17,Kimi-K2.6,0.6799999999999999,0.66
-HAMD-17,Qwen3.7-Max,0.68,0.77
-PHQ-8,DeepSeek-V4-Pro,0.6799999999999999,0.74
-PHQ-8,GLM-5.2,0.6799999999999999,0.67
-PHQ-8,Qwen3.7-Max,0.74,0.67
