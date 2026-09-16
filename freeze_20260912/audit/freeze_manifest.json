@@ -77,7 +77,7 @@
     "00_RAW_LINEAGE/PDCH_raw/PDCH整理结果.xlsx",
     "00_RAW_LINEAGE/PDCH_raw/DAIC_PHQ8_完整标注报表.xlsx"
   ],
-  "last_updated_at": "2026-09-16T02:54:57.229692+00:00",
+  "last_updated_at": "2026-09-16T03:09:01.837474+00:00",
   "freeze_revision": "teacher_scale_specific_A_main_plus_B_supplement_20260915",
   "completeness_audit": "FREEZE_COMPLETENESS_AUDIT.csv",
   "additional_analyses_bundle": "06_ADDITIONAL_ANALYSES/missing_high_value_analyses.zip",

@@ -9,3 +9,4 @@
 - Fold bars: descriptive 50-fold direction; repeated folds are not treated as independent tests
 - Source tables written beside the figure; no raw data modified
 - Visual QA: rendered PNG inspected at 100% and 600 dpi
+- Bilingual labels: Chinese/English title, axes, panel notes and legends
