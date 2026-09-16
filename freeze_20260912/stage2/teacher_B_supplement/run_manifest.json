@@ -3,7 +3,7 @@
   "status": "PASS",
   "nominated_main_strategy": "A",
   "selected_strategy": "B",
-  "selection_context": "A ranked first by participant-weighted cross-scale total-MAE Hedges gz; B is a requested supplement",
+  "selection_context": "A ranked first separately by within-scale mean total-MAE change in PHQ and HAMD; B is a requested supplement",
   "stage1_source": "outputs\\pdch_heterogeneous_condition_three_strategy_20260827",
   "stage2_source": "outputs\\pdch_all_prompt_fields_corrected_20260807\\04_评分维度明细.csv",
   "source_sha256": "34ec669d677860b2b671d01f3f3d77a66d669ec693cd64cf42347eb1bdc2fa4d",

@@ -106,7 +106,7 @@ stage2/teacher_B_supplement/audit/independent_verification_report.json,2918
 stage2/teacher_B_supplement/audit/saved_workbook_verification.json,3063
 stage2/teacher_B_supplement/audit/workbook_build_audit.json,933
 stage2/teacher_B_supplement/code/build_teacher_effect_size_generalization_workbook.mjs,28613
-stage2/teacher_B_supplement/code/run_teacher_B_supplement.py,10742
+stage2/teacher_B_supplement/code/run_teacher_B_supplement.py,10833
 stage2/teacher_B_supplement/code/verify_teacher_B_supplement.py,12011
 stage2/teacher_B_supplement/code/verify_teacher_effect_size_generalization_workbook.mjs,3516
 stage2/teacher_B_supplement/figures/F1_strategy_effect_forest.png,137500
@@ -116,8 +116,8 @@ stage2/teacher_B_supplement/folds/HAMD_99_outer_folds.csv,10915
 stage2/teacher_B_supplement/folds/PHQ_189_outer_folds.csv,18925
 stage2/teacher_B_supplement/PACKAGE_FILE_MANIFEST.csv,8650
 stage2/teacher_B_supplement/PACKAGE_INDEX.md,1285
-stage2/teacher_B_supplement/RESULTS.md,3921
-stage2/teacher_B_supplement/run_manifest.json,2725
+stage2/teacher_B_supplement/RESULTS.md,4002
+stage2/teacher_B_supplement/run_manifest.json,2735
 stage2/teacher_B_supplement/老师要求_B方案外推结果.xlsx,127245
 stage2/teacher_effect_size_generalization/01_strategy_selection_effects.csv,4914
 stage2/teacher_effect_size_generalization/02_strategy_selection_composite.csv,1227

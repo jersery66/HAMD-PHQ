@@ -82,7 +82,7 @@ def build_report(selection: pd.DataFrame, inference: pd.DataFrame, composite: pd
 
 ## 定位
 
-会议指定的总分 MAE 合并效应量排名为 A=-0.387、B=-0.346、C=-0.341，因此主分析选择 A。本包按用户要求补充 B，不能替换 A 的主结果。B 的既有优势是条目真实性证据更均衡，并出现唯一 Level2/test47 支持；本次结果检验的是这些优势能否在全队列外层折中保持。
+会议要求 PHQ 和 HAMD 分开看整体总分 MAE 效应量：PHQ 平均 ΔMAE 为 A=-0.602、B=-0.292、C=-0.119；HAMD 为 A=-0.409、B=-0.295、C=-0.145，因此主分析分别选择 A。本包按用户要求补充 B，不能替换 A 的主结果。B 的既有优势是条目真实性证据更均衡，并出现唯一 Level2/test47 支持；本次结果检验的是这些优势能否在全队列外层折中保持。
 
 ## B怎么做
 
@@ -168,7 +168,7 @@ def main() -> None:
         "status": status,
         "nominated_main_strategy": "A",
         "selected_strategy": "B",
-        "selection_context": "A ranked first by participant-weighted cross-scale total-MAE Hedges gz; B is a requested supplement",
+        "selection_context": "A ranked first separately by within-scale mean total-MAE change in PHQ and HAMD; B is a requested supplement",
         "stage1_source": str(THREE_DIR.relative_to(ROOT)),
         "stage2_source": str(SOURCE.relative_to(ROOT)),
         "source_sha256": sha256(SOURCE),
