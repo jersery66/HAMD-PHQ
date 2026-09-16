@@ -12,6 +12,6 @@
 
 ## 先看
 
-`A_B方案完整分析总表.xlsx` 是汇报用总表；`00_scale_specific_selection.csv` 是 PHQ/HAMD 分开选择的结构化表；`03_A_B_comparison.csv` 是六个模型×量表单元的 A/B 外推对照。
+`A_B方案完整分析总表.xlsx` 是汇报用总表；`00_scale_specific_selection.csv` 是 PHQ/HAMD 分开选择的结构化表；`03_A_B_comparison.csv` 是六个模型×量表单元的 A/B 外推对照；`figures_recent/Figure_recent_A_B_analysis_results.svg` 是本阶段的论文式四面板总图，包含方案选择、外推、折分/路由稳定性和 NAE/抵消边界。
 
 结果属于当前队列内的重复交叉验证，不是独立外部验证，也不构成临床部署证据。

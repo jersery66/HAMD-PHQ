@@ -24,8 +24,8 @@
     },
     {
       "check": "artifact_manifest_count",
-      "observed": 335,
-      "expected": 335,
+      "observed": 364,
+      "expected": 364,
       "status": "PASS",
       "evidence": "freeze_20260911\\FREEZE_ARTIFACT_MANIFEST.csv"
     },
@@ -126,6 +126,20 @@
       "expected": "PASS",
       "status": "PASS",
       "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_B_SUPPLEMENT_GENERALIZATION_20260915\\audit\\saved_workbook_verification.json"
+    },
+    {
+      "check": "combined_A_B_figure_package_hashes",
+      "observed": [],
+      "expected": [],
+      "status": "PASS",
+      "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_A_B_COMPLETE_COMPARISON_WITH_FIGURE_20260916\\PACKAGE_FILE_MANIFEST.csv"
+    },
+    {
+      "check": "combined_A_B_figure_workbook_audit",
+      "observed": "PASS",
+      "expected": "PASS",
+      "status": "PASS",
+      "evidence": "freeze_20260911\\02_FROZEN_STAGE2\\TEACHER_A_B_COMPLETE_COMPARISON_WITH_FIGURE_20260916\\workbook_build_audit.json"
     },
     {
       "check": "raw_data_modified",
